@@ -16,28 +16,33 @@ li {
 .col-line-bg {
   background: #e2ba60;
 }
-.nav-top-wrap {
+nav {
+  position: relative;
+  overflow: hidden;
+}
+nav .nav-top-wrap {
   background: #000000;
   opacity: 0.85;
   padding: 1.166667rem 0 0.3333rem;
   color: #ffffff;
   overflow: hidden;
+  position: relative;
 }
-.nav-top-wrap .nav-top-menu {
+nav .nav-top-wrap .nav-top-menu {
   overflow: hidden;
   margin-bottom: 0.2333rem;
 }
-.nav-top-wrap .nav-top-menu li {
+nav .nav-top-wrap .nav-top-menu li {
   display: inline-block;
   padding: 0.03333rem 0.766667rem 0.53333rem;
   position: relative;
   text-align: center;
 }
-.nav-top-wrap .nav-top-menu li span {
+nav .nav-top-wrap .nav-top-menu li span {
   font-size: 0.66667rem;
   color: #ffffff;
 }
-.nav-top-wrap .nav-top-menu li .row-line {
+nav .nav-top-wrap .nav-top-menu li .row-line {
   position: absolute;
   width: 0.066667rem;
   height: 0.577778rem;
@@ -49,7 +54,7 @@ li {
   top: 25%;
   right: 0;
 }
-.nav-top-wrap .nav-top-menu li .col-line {
+nav .nav-top-wrap .nav-top-menu li .col-line {
   height: 0.133333rem;
   background: #e2ba60;
   position: absolute;
@@ -62,9 +67,59 @@ li {
   left: 50%;
   bottom: 0;
 }
-.nav-top-wrap .nav-top-fun {
+nav .nav-top-wrap .nav-top-fun {
+  overflow: hidden;
+  margin: 0.3333rem 2rem 0 3rem;
+}
+nav .nav-top-wrap .nav-top-fun .nav-user {
+  margin-left: 1.7rem;
+  position: relative;
+}
+nav .nav-top-wrap .nav-top-fun .nav-user .caret {
+  vertical-align: inherit;
+}
+nav .nav-top-wrap .nav-top-fun .nav-user .nav-user-menu {
+  position: absolute;
+  display: none;
+}
+aside {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+aside .nav-slide {
+  padding: 2rem 1rem 12.6rem;
   overflow: hidden;
 }
-.nav-top-wrap .nav-top-fun .caret {
-  vertical-align: inherit;
+aside .nav-slide .nav-slide-logo {
+  overflow: hidden;
+  text-align: center;
+}
+aside .nav-slide .nav-slide-logo a {
+  display: inline-block;
+  margin-top: 3.8rem;
+  width: 3.433333rem;
+  height: 3.33333rem;
+}
+aside .nav-slide .nav-slide-logo a img {
+  width: 100%;
+}
+aside .nav-slide .nav-slide-logo .nav-slide-name {
+  text-align: center;
+  overflow: hidden;
+}
+aside .nav-slide .nav-slide-logo .nav-slide-name p {
+  writing-mode: vertical-rl;
+  writing-mode: tb-rl;
+  display: inline-block;
+  vertical-align: top;
+}
+aside .nav-slide .nav-slide-title {
+  width: 4.6rem;
+  height: 4.6666rem;
+  margin-top: 2.7333rem;
+  text-align: center;
+  writing-mode: vertical-lr;
+  writing-mode: tb-lr;
 }
