@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>巴林石</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script>
+        let pixelRatio = 1 / window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,initial-scale=' + pixelRatio + ',minimum-scale=' + pixelRatio + ',maximum-scale=' + pixelRatio + ',user-scalable=no" />');
+        let html = document.getElementsByTagName('html')[0];
+        getRem();
+        window.addEventListener('resize', getRem, false);
+
+        function getRem() {
+            let pageWidth = html.getBoundingClientRect().width;
+            html.style.fontSize = pageWidth / 64 + 'px';
+        }
+    </script>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--首页头部-->
+<header>
+    <!--导航-->
+    <nav>
+        <div class="nav-top-wrap">
+            <div class="nav-top-fun pull-right">
+                <span class="glyphicon glyphicon-search"></span>
+                <div class="nav-user pull-right">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <div class="caret"></div>
+                </div>
+            </div>
+            <ul class="nav-top-menu text-center pull-right">
+                <li><a href="">
+                    <span>国石商场</span>
+                    <span class="row-line"></span>
+                </a></li>
+                <li><a href="">
+                    <span>奇石鉴赏</span>
+                    <span class="col-line"></span>
+                    <span class="row-line"></span>
+                </a></li>
+                <li><a href="">
+                    <span>国石文化</span>
+                    <span class="col-line"></span>
+                    <span class="row-line"></span>
+                </a></li>
+                <li><a href="">
+                    <span>雕刻大师</span>
+                    <span class="col-line"></span>
+                    <span class="row-line"></span>
+                </a></li>
+                <li><a href="">
+                    <span>官方论坛</span>
+                    <span class="col-line"></span>
+                    <span class="row-line"></span>
+                </a></li>
+                <li><a href="">
+                    <span>咨询中心</span>
+                    <span class="col-line"></span>
+                    <span class="row-line"></span>
+                </a></li>
+                <li><a href="">
+                    <span>关于我们</span>
+                    <span class="col-line"></span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--分页及内容-->
+<div class="container"></div>
+<!--脚部-->
+<footer class="">
+</footer>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+</script>
+</html>
