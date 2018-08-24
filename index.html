@@ -16,7 +16,6 @@
             html.style.fontSize = pageWidth / 64 + 'px';
         }
     </script>
-    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -26,14 +25,23 @@
     <!--导航-->
     <nav>
         <div class="nav-top-wrap">
-            <!--login && sarch-->
+            <!--login && search-->
             <div class="nav-top-fun pull-right">
-                <span class="glyphicon glyphicon-search"></span>
+                <a class="nav-top-search">
+                    <img src="img/searchIcon.png" alt="">
+                </a>
                 <div class="nav-user pull-right">
-                    <span class="glyphicon glyphicon-user"></span>
+                    <a class="nav-top-user">
+                        <img src="img/userIcon.png" alt="">
+                    </a>
                     <span class="caret"></span>
                     <ul class="nav-user-menu">
-
+                        <li><a class="nav-login">
+                            <span>登录</span>
+                        </a></li>
+                        <li><a class="nav-login-off">
+                            <span>注销</span>
+                        </a></li>
                     </ul>
                 </div>
             </div>
@@ -76,7 +84,7 @@
         </div>
     </nav>
 </header>
-<!--分页及内容-->
+<!--侧边栏-->
 <aside>
     <div class="nav-slide pull-left">
         <div class="nav-slide-logo">
@@ -87,18 +95,81 @@
             </div>
         </div>
         <div class="nav-slide-title">
-            <p>首页</p>
+            <div>
+                <p>首</p>
+                <p>页</p>
+            </div>
         </div>
     </div>
 </aside>
+<!--分页及内容-->
 <div class="container-fluid">
-123
+    <div class="page-wrap">
+        <ul class="page-list">
+            <li class="page-item page-home">
+                <div>
+                    <a class="page-home-shorts">
+                        <img src="img/page-home-shorts.png">
+                        <p>奇石鉴赏</p>
+                    </a>
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img/carouse-img1.png" alt="...">
+                            </div>
+                            <div class="item">
+                                <img src="img/carouse-img1.png" alt="...">
+                            </div>
+                            <div class="item">
+                                <img src="img/carouse-img1.png" alt="...">
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="carouselIcon carousel-left" aria-hidden="true"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="carouselIcon carousel-right" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="page-item page-">
+                <div>
+                    2
+                </div>
+            </li>
+            <li class="page-item page-home">
+                <div>
+                    3
+                </div>
+            </li>
+            <li class="page-item page-home">
+                <div>
+                    4
+                </div>
+            </li>
+            <li class="page-item page-home">
+                <div>
+                    5
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
 <!--脚部-->
 <footer class="">
 </footer>
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script>
