@@ -27,20 +27,18 @@ body {
   font-family: adobeHTStdRegular;
   overflow: hidden;
 }
-.col-line-bg {
-  background: #e2ba60;
-}
 header {
-  display: none;
   width: 100%;
   position: fixed;
   overflow: hidden;
   right: 0;
+  z-index: 9999;
 }
 header nav {
   width: 100%;
 }
 header nav .nav-top-wrap {
+  display: none;
   background: #000000;
   opacity: 0.85;
   padding: 1.166667rem 0 0.3333rem;
@@ -57,6 +55,7 @@ header nav .nav-top-wrap .nav-top-menu li {
   padding: 0.03333rem 0.766667rem 0.53333rem;
   position: relative;
   text-align: center;
+  cursor: pointer;
 }
 header nav .nav-top-wrap .nav-top-menu li span {
   font-size: 0.66667rem;
@@ -76,7 +75,7 @@ header nav .nav-top-wrap .nav-top-menu li .row-line {
 }
 header nav .nav-top-wrap .nav-top-menu li .col-line {
   height: 0.133333rem;
-  background: #e2ba60;
+  background: transparent;
   position: absolute;
   border-radius: 0.066667rem;
   transform: translateX(-50%);
@@ -86,6 +85,12 @@ header nav .nav-top-wrap .nav-top-menu li .col-line {
   width: 2rem;
   left: 50%;
   bottom: 0;
+}
+header nav .nav-top-wrap .nav-top-menu li:first-of-type .col-line {
+  background: #e2ba60;
+}
+header nav .nav-top-wrap .nav-top-menu li:hover a .col-line {
+  background: #e2ba60;
 }
 header nav .nav-top-wrap .nav-top-fun {
   position: relative;
@@ -103,6 +108,8 @@ header nav .nav-top-wrap .nav-top-fun .nav-top-search img {
 header nav .nav-top-wrap .nav-top-fun .nav-user {
   margin-left: 1.8rem;
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 header nav .nav-top-wrap .nav-top-fun .nav-user .nav-top-user {
   display: inline-block;
@@ -116,15 +123,43 @@ header nav .nav-top-wrap .nav-top-fun .nav-user .caret {
   vertical-align: inherit;
 }
 header nav .nav-top-wrap .nav-top-fun .nav-user .nav-user-menu {
-  background: #ffffff;
-  position: fixed;
   display: none;
-  width: 2rem;
+  background: #000000;
+  padding-top: 0.8rem;
+  position: fixed;
+  width: 4rem;
   z-index: 2;
-  margin-top: 1rem;
+  right: 0;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  overflow: hidden;
+}
+header nav .nav-top-wrap .nav-top-fun .nav-user .nav-user-menu li {
+  padding: 0.5rem 0.9rem;
+  text-align: center;
 }
 header nav .nav-top-wrap .nav-top-fun .nav-user .nav-user-menu li a {
   display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+}
+header nav .nav-top-wrap .nav-top-fun .nav-user .nav-user-menu li:hover {
+  background: #262626;
+}
+header nav .nav-down {
+  display: inline-block;
+  position: relative;
+  width: 1.9333rem;
+  height: 1.9333rem;
+  left: 91%;
+  top: 0;
+}
+header nav .nav-down img {
+  width: 100%;
+  transform: rotateZ(-90deg);
+}
+.col-line-bg {
+  background: #e2ba60;
 }
 aside {
   width: 6rem;
@@ -165,7 +200,6 @@ aside .nav-slide .nav-slide-logo .nav-slide-name {
 }
 aside .nav-slide .nav-slide-logo .nav-slide-name p {
   writing-mode: vertical-rl;
-  writing-mode: tb-rl;
   display: inline-block;
   vertical-align: top;
   color: #000000;
@@ -212,11 +246,14 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list {
   width: 1000%;
+  height: 100%;
+  overflow: hidden;
   position: relative;
 }
 .container-fluid .page-wrap .page-list .page-item {
   width: 10%;
   height: 100%;
+  overflow: hidden;
   display: inline-block;
 }
 .container-fluid .page-wrap .page-list .page-item div a {
@@ -298,9 +335,9 @@ aside .nav-slide .nav-slide-title div p {
   -o-background-size: 100%;
   position: absolute;
   top: 45%;
-  -ms-transform: translateY(-10%, -45%);
-  -moz-transform: translateY(-10%, -45%);
-  -o-transform: translateY(-10%, -45%);
+  -ms-transform: translateY(-10%);
+  -moz-transform: translateY(-10%);
+  -o-transform: translateY(-10%);
 }
 .container-fluid .page-wrap .page-list .page-home .carousel .carousel-left {
   background: url("../img/carouselIcon.png") no-repeat;
@@ -311,4 +348,176 @@ aside .nav-slide .nav-slide-title div p {
   background: url("../img/carouselIcon.png") no-repeat;
   transform: rotateY(180deg);
   right: 10%;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-shop {
+  width: 31.43333rem;
+  min-height: 15.33333rem;
+  height: 15.33333rem;
+  margin-top: 0.6667rem;
+  float: left;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-shop img {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-LR,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster,
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum,
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy {
+  width: 11.86666rem;
+  min-height: 7.2rem;
+  height: 7.2rem;
+  margin: 0.6667rem 0 0 0.6667rem;
+  background: #d6b977;
+  overflow: hidden;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-LR p,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster p,
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum p,
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy p {
+  padding-bottom: 0;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-LR img,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster img,
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum img,
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy img {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-LR .page-home-offForum-content,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster .page-home-offForum-content,
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum .page-home-offForum-content,
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy .page-home-offForum-content,
+.container-fluid .page-wrap .page-list .page-home .page-home-LR .page-home-newDy-content,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster .page-home-newDy-content,
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum .page-home-newDy-content,
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy .page-home-newDy-content {
+  position: relative;
+  top: 35%;
+  padding: 0 1rem;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-LR .page-home-offForum-content li,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster .page-home-offForum-content li,
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum .page-home-offForum-content li,
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy .page-home-offForum-content li,
+.container-fluid .page-wrap .page-list .page-home .page-home-LR .page-home-newDy-content li,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster .page-home-newDy-content li,
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum .page-home-newDy-content li,
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy .page-home-newDy-content li {
+  overflow: hidden;
+  position: relative;
+  margin-top: 0.2rem;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-LR .page-home-offForum-content li span,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster .page-home-offForum-content li span,
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum .page-home-offForum-content li span,
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy .page-home-offForum-content li span,
+.container-fluid .page-wrap .page-list .page-home .page-home-LR .page-home-newDy-content li span,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster .page-home-newDy-content li span,
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum .page-home-newDy-content li span,
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy .page-home-newDy-content li span {
+  color: #ffffff;
+  font-size: 0.4666667rem;
+  float: left;
+  max-width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-LR .page-home-offForum-content li span:nth-of-type(2),
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster .page-home-offForum-content li span:nth-of-type(2),
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum .page-home-offForum-content li span:nth-of-type(2),
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy .page-home-offForum-content li span:nth-of-type(2),
+.container-fluid .page-wrap .page-list .page-home .page-home-LR .page-home-newDy-content li span:nth-of-type(2),
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster .page-home-newDy-content li span:nth-of-type(2),
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum .page-home-newDy-content li span:nth-of-type(2),
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy .page-home-newDy-content li span:nth-of-type(2) {
+  float: right;
+  max-width: 30%;
+}
+.container-fluid .page-wrap .page-list .page-shorts {
+  text-align: center;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-short-top {
+  width: 52.266667rem;
+  height: 16.13333rem;
+  overflow: hidden;
+  display: inline-block;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-short-top img {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list {
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  margin-top: 1.4666rem;
+  margin-right: 2rem;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li .page-shorts-item-top {
+  margin: 0 auto 0.5333rem;
+  width: 3.3333rem;
+  height: 3.3333rem;
+  display: block;
+  vertical-align: top;
+  background: url("../img/page-short-item-off.png") no-repeat;
+  background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li a {
+  width: 5.63333rem;
+  height: 12.73333rem;
+  display: block;
+  overflow: hidden;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li a span {
+  font-size: 0.46667rem;
+  color: #000000;
+  margin-bottom: 1.333rem;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li a img {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li:nth-of-type(2n) {
+  margin-top: 0.86666rem;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li:last-of-type {
+  margin-right: 0;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li:hover .page-shorts-item-top {
+  background: url("../img/page-short-item-on.png") no-repeat;
+  background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li:hover a span {
+  color: #e2ba60;
+}
+.container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-top {
+  width: 52.266667rem;
+  height: 16.13333rem;
+  overflow: hidden;
+  display: inline-block;
+}
+.container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-top img {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid .page-wrap .page-list .page-about-our-top {
+  width: 52.266667rem;
+  height: 16.13333rem;
+  overflow: hidden;
+  display: inline-block;
+}
+.container-fluid .page-wrap .page-list .page-about-our-top img {
+  width: 100%;
+  height: 100%;
 }
