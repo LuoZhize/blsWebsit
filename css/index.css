@@ -511,6 +511,16 @@ aside .nav-slide .nav-slide-title div p {
   width: 100%;
   height: 100%;
 }
+.container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-content #carousel-example-generic-carve {
+  overflow: hidden;
+}
+.container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-content #carousel-example-generic-carve .carousel-inner {
+  overflow: hidden;
+}
+.container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-content #carousel-example-generic-carve .carousel-inner a img {
+  width: 100%;
+  height: 100%;
+}
 .container-fluid .page-wrap .page-list .page-about-our-top {
   width: 52.266667rem;
   height: 16.13333rem;
