@@ -441,6 +441,7 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-shorts {
   text-align: center;
+  position: relative;
 }
 .container-fluid .page-wrap .page-list .page-shorts .page-short-top {
   width: 56.2rem;
@@ -454,7 +455,7 @@ aside .nav-slide .nav-slide-title div p {
   height: 100%;
 }
 .container-fluid .page-wrap .page-list .page-shorts .page-shorts-list {
-  display: inline-block;
+  display: none;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -464,6 +465,8 @@ aside .nav-slide .nav-slide-title div p {
   text-align: center;
   margin-top: 1.4666rem;
   margin-right: 2rem;
+  transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
 }
 .container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li .page-shorts-item-top {
   margin: 0 auto 0.5333rem;
@@ -506,7 +509,60 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li:hover a span {
   color: #e2ba60;
 }
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-list li:hover {
+  transform: translateY(-0.5rem);
+  -moz-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-nav {
+  margin: 0 auto;
+  background: #eeeeee;
+  padding: 0.3rem 0 0;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-nav li {
+  display: inline-block;
+  margin-right: 5.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.1rem solid transparent;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-nav li:last-of-type {
+  margin-right: 0;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-nav li:hover {
+  cursor: pointer;
+  color: #e2ba60;
+  border-bottom: 0.1rem solid #e2ba60;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-list-all {
+  width: 100%;
+  padding: 0.5rem 9rem;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-list-all li {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-list-all li:nth-of-type(5n) {
+  margin-right: 0;
+  color: red;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-list-all li p {
+  font-size: 0.4666rem;
+  color: #000000;
+  margin-bottom: 0;
+  margin-top: 0.4rem;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-list-all .page-shorts-sub-list-item {
+  width: 6.666rem;
+  height: 6rem;
+  overflow: hidden;
+}
+.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-list-all .page-shorts-sub-list-item img {
+  width: 100%;
+}
 .container-fluid .page-wrap .page-list .page-ns-store {
+  padding-left: 1rem;
   background: url("../img/ns-bg.png");
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-title {
@@ -545,6 +601,7 @@ aside .nav-slide .nav-slide-title div p {
   color: #000000;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-item {
+  padding-right: 4rem;
   background: #f1f1f1;
   margin-bottom: 0.6rem;
   display: inline-block;
@@ -562,10 +619,11 @@ aside .nav-slide .nav-slide-title div p {
   width: 100%;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-item .page-ns-item-content {
-  overflow: hidden;
+  width: 34rem;
   display: inline-block;
   vertical-align: top;
   margin-left: 1.46667rem;
+  overflow: hidden;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-item .page-ns-item-content .page-ns-item-title {
   font-size: 0.63333rem;
@@ -576,13 +634,23 @@ aside .nav-slide .nav-slide-title div p {
   font-size: 0.43333rem;
   color: #777777;
   margin-bottom: 1.8rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-item .page-ns-detail {
-  margin: 1rem 4rem 0 6rem;
+  margin: 1rem 0 0 1rem;
   vertical-align: top;
   display: inline-block;
-  color: #b5964e;
+  color: #000000;
   padding: 0;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-item .page-ns-detail:hover {
+  color: #b5964e;
+  text-decoration: inherit;
+}
+.container-fluid .page-wrap .page-list .page-carve-master {
+  padding-left: 0.5rem;
 }
 .container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-top {
   width: 56.2rem;
@@ -636,7 +704,6 @@ aside .nav-slide .nav-slide-title div p {
   z-index: 2;
 }
 .container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-content #carousel-example-generic-carve .carousel-inner .item .carve-master-user-img {
-  background: url("../img/carve-master-user-img.png");
   width: 9.333rem;
   height: 9.333rem;
   position: absolute;
@@ -645,6 +712,9 @@ aside .nav-slide .nav-slide-title div p {
   transform: translate(-50%, -20%);
   -ms-transform: translate(-50%, -20%);
   -moz-transform: translate(-50%, -20%);
+}
+.container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-content #carousel-example-generic-carve .carousel-inner .item .carve-master-user-img img {
+  width: 100%;
 }
 .container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-content #carousel-example-generic-carve .carousel-inner .item a {
   display: inline-block;
@@ -725,6 +795,9 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-content #carousel-example-generic-carve .carousel-control:hover {
   background: white;
   opacity: 1;
+}
+.container-fluid .page-wrap .page-list .page-off-forum {
+  padding-left: 0.5rem;
 }
 .container-fluid .page-wrap .page-list .page-off-forum .page-forum-title {
   font-size: 0.73333rem;
@@ -860,6 +933,9 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-off-forum .page-forum-right .page-forum-right-item a:hover {
   color: #000000;
 }
+.container-fluid .page-wrap .page-list .page-consultation-content {
+  padding-left: 0.5rem;
+}
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-title {
   font-size: 0.73333rem;
   color: #b5964e;
@@ -953,8 +1029,12 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item .page-consultation-item-img {
   width: 12.2rem;
   height: 9rem;
+  min-height: 8rem;
   overflow: hidden;
   margin-right: 1.8rem;
+}
+.container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item .page-consultation-item-img img {
+  width: 100%;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item .page-consultation-item-info {
   margin-top: 0.3rem;
@@ -1051,4 +1131,68 @@ aside .nav-slide .nav-slide-title div p {
   font-size: 0.53333rem;
   color: #222222;
   font-weight: bold;
+}
+.page-shorts-zhe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #000000;
+  opacity: 0.7;
+  z-index: 10;
+}
+.page-shorts-sub-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  padding: 2.4666rem 0 3rem 1.5rem;
+}
+.page-shorts-sub-dialog .page-shorts-sub-dialog-head {
+  font-size: 0.5333rem;
+  color: #c4c4c4;
+}
+.page-shorts-sub-dialog .page-shorts-sub-dialog-head .page-shorts-sub-dialog-title {
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+.page-shorts-sub-dialog .page-shorts-sub-dialog-head .page-shorts-sub-dialog-time {
+  margin-right: 2rem;
+}
+.page-shorts-sub-dialog .page-shorts-sub-dialog-img {
+  width: 16.6rem;
+  height: 12.4rem;
+  overflow: hidden;
+}
+.page-shorts-sub-dialog .page-shorts-sub-dialog-img img {
+  width: 100%;
+}
+.page-shorts-sub-dialog .page-shorts-sub-dialog-area,
+.page-shorts-sub-dialog .page-shorts-sub-dialog-info {
+  color: #c4c4c4;
+  font-size: 0.5333rem;
+}
+.page-shorts-sub-dialog .page-shorts-sub-dialog-area {
+  margin: 0 auto;
+  text-align: center;
+}
+.page-shorts-sub-dialog .page-shorts-sub-dialog-area p {
+  display: inline-block;
+}
+.page-shorts-sub-dialog .page-shorts-sub-dialog-info {
+  line-height: 0.8rem;
+}
+.page-shorts-sub-dialog-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  overflow: hidden;
+  z-index: 12;
+}
+.page-shorts-sub-dialog-close img {
+  width: 100%;
 }
