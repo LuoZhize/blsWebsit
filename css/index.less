@@ -255,7 +255,7 @@ aside {
   height: 100%;
   position: absolute;
   overflow: hidden;
-  padding: 0.66666rem 0 0 6.66666rem;
+  padding: 0.66666rem 0 0 6rem;
   .page-wrap {
     width: 100%;
     height: 100%;
@@ -266,7 +266,7 @@ aside {
       overflow: hidden;
       position: relative;
       .page-item {
-        width: 10%;
+        width: 9.99%;
         height: 100%;
         overflow: hidden;
         display: inline-block;
@@ -288,10 +288,11 @@ aside {
         }
       }
       .page-home {
+        padding-left: 0.6rem;
         .page-home-shorts {
           width: 14.86667rem;
-          min-height: 15.33333rem;
-          height: 15.33333rem;
+          min-height: 14.33333rem;
+          height: 14.33333rem;
           img {
             width: 100%;
             height: 100%;
@@ -301,7 +302,8 @@ aside {
           display: inline-block;
           min-width: 40.83333rem;
           width: 41rem;
-          min-height: 15.33333rem;
+          min-height: 14.33333rem;
+          height: 14.33333rem;
           overflow: hidden;
           position: relative;
           margin-left: 0.66667rem;
@@ -312,7 +314,7 @@ aside {
               height: 0.66667rem;
               background: #bfbfbf;
               margin-right: 1rem;
-              border: 0rem solid transparent;
+              border: 0 solid transparent;
             }
             .active {
               width: 0.66667rem;
@@ -323,7 +325,7 @@ aside {
           .carousel-inner {
             .item {
               width: 41rem;
-              height: 15.33333rem;
+              height: 14.33333rem;
               overflow: hidden;
               img {
                 max-width: 130%;
@@ -371,8 +373,8 @@ aside {
         }
         .page-home-shop {
           width: 31.43333rem;
-          min-height: 15.33333rem;
-          height: 15.33333rem;
+          min-height: 14.9rem;
+          height: 14.9rem;
           margin-top: 0.6667rem;
           float: left;
           img {
@@ -382,8 +384,8 @@ aside {
         }
         .page-home-LR, .page-home-carveMaster, .page-home-offForum, .page-home-newDy {
           width: 11.86666rem;
-          min-height: 7.2rem;
-          height: 7.2rem;
+          min-height: 7rem;
+          height: 7rem;
           margin: 0.6667rem 0 0 0.6667rem;
           background: #d6b977;
           overflow: hidden;
@@ -419,12 +421,13 @@ aside {
           }
         }
       }
-      //end pageShorts
+      //pageShorts start
       .page-shorts {
         text-align: center;
         .page-short-top {
-          width: 52.266667rem;
-          height: 16.13333rem;
+          width: 56.2rem;
+          min-height: 13.33333rem;
+          height: 13.33333rem;
           overflow: hidden;
           display: inline-block;
           img {
@@ -453,19 +456,21 @@ aside {
               -moz-background-size: 100%;
               -o-background-size: 100%;
             }
-            a {
-              width: 5.63333rem;
-              height: 12.73333rem;
-              display: block;
-              overflow: hidden;
+            .page-shorts-item-info {
               span {
                 font-size: 0.46667rem;
                 color: #000000;
-                margin-bottom: 1.333rem;
+                margin-bottom: 0.6rem;
+                display: block;
               }
-              img {
-                width: 100%;
-                height: 100%;
+              a {
+                width: 5rem;
+                height: 9.73333rem;
+                display: inline-block;
+                overflow: hidden;
+                img {
+                  width: 100%;
+                }
               }
             }
             &:nth-of-type(2n) {
@@ -483,7 +488,7 @@ aside {
               }
               a {
                 span {
-                  color: rgb(226,186,96);
+                  color: rgb(226, 186, 96);
                 }
               }
             }
@@ -491,12 +496,94 @@ aside {
         }
       }
 
-      //end carveMaster start
-
+      //pageShorts end ns-store start
+      .page-ns-store {
+        background: url("../img/ns-bg.png");
+        .page-ns-title {
+          font-size: 0.73333rem;
+          color: rgb(181, 150, 78);
+          border-bottom: 0.1rem solid rgb(181, 150, 78);
+          padding-bottom: 0.1rem;
+        }
+        .page-ns-head-line {
+          border-bottom: 0.06666rem solid #eeeeee;
+        }
+        .page-place {
+          margin: 0.5333rem 0 0.4rem;
+          .page-ns-head-home {
+            width: 0.53333rem;
+            height: 0.53333rem;
+            display: inline-block;
+            background: url("../img/page-consultation-head-home.png") no-repeat;
+            background-size: 100%;
+            -o-background-size: 100%;
+            -moz-background-size: 100%;
+            margin-right: 0.1666rem;
+          }
+          span {
+            font-size: 0.46666rem;
+            color: rgb(136, 136, 136);
+            vertical-align: top;
+          }
+          .page-place-home, .page-place-ns {
+            &:hover {
+              border-bottom: 0.03rem solid #000000;
+            }
+          }
+          &:hover {
+            text-decoration: none;
+            color: #000000;
+          }
+        }
+        .page-ns-list {
+          .page-ns-item {
+            background: #f1f1f1;
+            margin-bottom: 0.6rem;
+            display: inline-block;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+            .page-ns-img {
+              display: inline-block;
+              width: 12.6667rem;
+              height: 5.5rem;
+              overflow: hidden;
+              img {
+                width: 100%;
+              }
+            }
+            .page-ns-item-content {
+              overflow: hidden;
+              display: inline-block;
+              vertical-align: top;
+              margin-left: 1.46667rem;
+              .page-ns-item-title {
+                font-size: 0.63333rem;
+                color: rgb(51,51,51);
+                margin: 1.8rem 0 0.5rem;
+              }
+              .page-ns-item-info {
+                font-size: 0.43333rem;
+                color: rgb(119,119,119);
+                margin-bottom: 1.8rem;
+              }
+            }
+            .page-ns-detail {
+              margin: 1rem 4rem 0 6rem;
+              vertical-align: top;
+              display: inline-block;
+              color: rgb(181,150,78);
+              padding: 0;
+            }
+          }
+        }
+      }
+      //ns-store end carveMaster start
       .page-carve-master {
         .page-carve-master-top {
-          width: 52.266667rem;
-          height: 16.13333rem;
+          width: 56.2rem;
+          min-height: 15.33333rem;
+          height: 15.33333rem;
           overflow: hidden;
           display: inline-block;
           img {
@@ -504,40 +591,486 @@ aside {
             height: 100%;
           }
         }
-        .page-carve-master-content{
+        .page-carve-master-content {
+          background: url("../img/carve-master-bg.png") no-repeat;
+          background-size: 100%;
+          -moz-background-size: 100%;
+          -o-background-size: 100%;
+          overflow: hidden;
           .page-carve-master-title {
-
+            font-size: 1.0333rem;
+            color: rgb(226, 186, 96);
+            text-align: center;
+            margin: 0.7rem 0 1.46666rem;
           }
           #carousel-example-generic-carve {
+            width: 51.426666rem;
+            height: 13.53333rem;
             overflow: hidden;
-            .carousel-inner{
-              overflow: hidden;
-              a {
-                img {
-                  width: 100%;
-                  height: 100%;
+            position: relative;
+            margin: 0 auto;
+            .carousel-inner {
+              margin: 0 3.333rem;
+              .item {
+                width: 44.866666rem;
+                overflow: hidden;
+                .carve-master-carousel-bg {
+                  width: 44.866666rem;
+                  height: 13.53333rem;
+                  overflow: hidden;
+                  background: url("../img/carve-border.png") no-repeat;
+                  background-size: 100%;
+                  -moz-background-size: 100%;
+                  -o-background-size: 100%;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  z-index: 2;
+                }
+                .carve-master-user-img {
+                  background: url("../img/carve-master-user-img.png");
+                  width: 9.333rem;
+                  height: 9.333rem;
+                  position: absolute;
+                  left: 50%;
+                  top: 20%;
+                  transform: translate(-50%, -20%);
+                  -ms-transform: translate(-50%, -20%);
+                  -moz-transform: translate(-50%, -20%);
+                }
+                a {
+                  display: inline-block;
+                  width: 22.433333rem;
+                  height: 10.73333rem;
+                  min-height: 10.73333rem;
+                  overflow: hidden;
+                  float: left;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                .page-carve-master-info {
+                  width: 22.433333rem;
+                  height: 13.53333rem;
+                  padding: 3rem 1.8333rem 4.1333rem 4.1333rem;
+                  display: inline-block;
+                  overflow: hidden;
+                  .page-carve-master-name {
+                    display: inline-block;
+                    font-size: 0.7rem;
+                    color: rgb(226, 186, 96);
+                    margin-bottom: 0.3333rem;
+                  }
+                  .page-carve-master-introduce {
+                    word-break: break-all;
+                    font-size: 0.43333rem;
+                    color: rgb(34, 34, 34);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 4;
+                    line-height: 0.875rem;
+                  }
                 }
               }
-              .carousel-caption {
-
+            }
+            .carousel-control {
+              width: 3.3333rem;
+              height: 13.53333rem;
+              display: inline-block;
+              overflow: hidden;
+              position: absolute;
+              background: white;
+              z-index: 4;
+              opacity: 1;
+              .left {
+                left: 0;
+              }
+              .right {
+                right: 0;
+              }
+              span {
+                width: 0.86667rem;
+                height: 1.6rem;
+                position: absolute;
+                background: url("../img/carve-master-carousel-Icon.png") no-repeat;
+                background-size: 100%;
+                -moz-background-size: 100%;
+                -o-background-size: 100%;
+              }
+              .carve-master-carousel-left {
+                right: 30%;
+                top: 40%;
+                transform: translate(-40%, -30%);
+                -ms-transform: translate(-40%, -30%);
+                -moz-transform: translate(-40%, -30%);
+              }
+              .carve-master-carousel-right {
+                left: 30%;
+                top: 40%;
+                transform: rotateY(180deg) translate(-30%, -40%);
+                -moz-transform: rotateY(180deg) translate(-30%, -40%);
+                -ms-transform: rotateY(180deg) translate(-30%, -40%);
+                -o-transform: rotateY(180deg) translate(-30%, -40%);
+              }
+              &:hover {
+                background: white;
+                opacity: 1;
               }
             }
           }
         }
       }
 
-      //end aboutOur start
-
-      .page-about-our-top {
-        width: 52.266667rem;
-        height: 16.13333rem;
-        overflow: hidden;
-        display: inline-block;
-        img {
-          width: 100%;
-          height: 100%;
+      //carveMaster end off-forum start
+      .page-off-forum {
+        .page-forum-title {
+          font-size: 0.73333rem;
+          color: rgb(181, 150, 78);
+          border-bottom: 0.1rem solid rgb(181, 150, 78);
+          padding-bottom: 0.1rem;
+        }
+        .page-forum-head-line {
+          border-bottom: 0.06666rem solid #eeeeee;
+        }
+        .page-place {
+          margin: 0.5333rem 0 0.4rem;
+          .page-forum-head-home {
+            width: 0.53333rem;
+            height: 0.53333rem;
+            display: inline-block;
+            background: url("../img/page-consultation-head-home.png") no-repeat;
+            background-size: 100%;
+            -o-background-size: 100%;
+            -moz-background-size: 100%;
+            margin-right: 0.1666rem;
+          }
+          span {
+            font-size: 0.46666rem;
+            color: rgb(136, 136, 136);
+            vertical-align: top;
+          }
+          .page-place-home, .page-place-forum {
+            &:hover {
+              border-bottom: 0.03rem solid #000000;
+            }
+          }
+          &:hover {
+            text-decoration: none;
+            color: #000000;
+          }
+        }
+        .page-forum-list {
+          display: inline-block;
+          width: 40rem;
+          overflow: hidden;
+          float: left;
+          .page-forum-item {
+            padding-bottom: 2.5rem;
+            &:first-of-type {
+              border-bottom: 0.033rem solid #eeeeee;
+            }
+          }
+          .page-forum-item-head {
+            font-size: 0.666rem;
+            color: rgb(34,34,34);
+          }
+          .page-forum-item-info {
+            overflow: hidden;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-height: 0.875rem;
+            font-size: 0.53333rem;
+            color: rgb(68,68,68);
+          }
+          .page-forum-item-img {
+            overflow: hidden;
+            white-space: nowrap;
+            li {
+              width: 12.333rem;
+              height: 6.43333rem;
+              margin-right: 1.3rem;
+              display: inline-block;
+              &:last-of-type {
+                margin-right: 0;
+              }
+              img {
+                width: 100%;
+              }
+            }
+          }
+          .page-forum-item-fun {
+            overflow: hidden;
+            margin-top: 1.2rem;
+            .page-forum-item-laud {
+              width: 0.9333rem;
+              height: 0.9333rem;
+              overflow: hidden;
+              display: inline-block;
+              background: url("../img/page-forum-laud.png") no-repeat;
+              background-size: 100%;
+              -moz-background-size: 100%;
+              -o-background-size: 100%;
+              margin-right: 1rem;
+            }
+            .page-forum-item-news {
+              width: 0.9333rem;
+              height: 0.9333rem;
+              overflow: hidden;
+              display: inline-block;
+              background: url("../img/page-forum-news.png") no-repeat;
+              background-size: 100%;
+              -moz-background-size: 100%;
+              -o-background-size: 100%;
+            }
+          }
+        }
+        .page-forum-right {
+          width: 12.3rem;
+          overflow: hidden;
+          margin-left: 3rem;
+          clear: both;
+          display: inline-block;
+          .page-forum-right-title {
+            font-size: 0.6666rem;
+            color: #222222;
+            border-bottom: 0.033rem solid #eeeeee;
+            p {
+              padding-right: 1rem;
+              display: inline-block;
+              border-bottom: 0.1rem solid #b5964e;
+              padding-bottom: 0.2rem;
+              margin-bottom: 0;
+            }
+          }
+          .page-forum-right-list {
+            margin-top: 0.5rem;
+          }
+          .page-forum-right-item {
+            a {
+              overflow: hidden;
+              text-overflow:ellipsis;
+              white-space: nowrap;
+              width: 8.7666rem;
+              margin-bottom: 0.2rem;
+              &:hover {
+                color: #000000;
+              }
+            }
+          }
         }
       }
+      //off-forum end consultation start
+      .page-consultation-content {
+        .page-consultation-title {
+          font-size: 0.73333rem;
+          color: rgb(181, 150, 78);
+          border-bottom: 0.1rem solid rgb(181, 150, 78);
+          padding-bottom: 0.1rem;
+        }
+        .page-consultation-head-line {
+          border-bottom: 0.06666rem solid #eeeeee;
+        }
+        .page-place {
+          margin: 0.5333rem 0 0.8rem;
+          .page-consultation-head-home {
+            width: 0.53333rem;
+            height: 0.53333rem;
+            display: inline-block;
+            background: url("../img/page-consultation-head-home.png") no-repeat;
+            background-size: 100%;
+            -o-background-size: 100%;
+            -moz-background-size: 100%;
+            margin-right: 0.1666rem;
+          }
+          span {
+            font-size: 0.46666rem;
+            color: rgb(136, 136, 136);
+            vertical-align: top;
+          }
+          .page-place-home, .page-place-consultation {
+            &:hover {
+              border-bottom: 0.03rem solid #000000;
+            }
+          }
+          &:hover {
+            text-decoration: none;
+            color: #000000;
+          }
+        }
+        .page-consultation-notice {
+          .page-consultation-notice-img {
+            width: 23.2666rem;
+            height: 11.7rem;
+            display: inline-block;
+            margin-right: 1.4666rem;
+          }
+          .page-consultation-notice-info {
+            vertical-align: top;
+            display: inline-block;
+            padding: 0.8rem 0 0;
+            .page-consultation-notice-title {
+              font-size: 1rem;
+              color: rgb(34, 34, 34);
+            }
+            .page-consultation-notice-hint {
+              font-size: 0.53333rem;
+              color: #979696;
+              padding-bottom: 0.7rem;
+            }
+            .page-consultation-notice-content {
+              width: 30rem;
+              height: 5.5rem;
+              line-height: 0.8rem;
+              font-size: 0.5333rem;
+              color: #979696;
+            }
+            .page-consultation-notice-detail {
+              display: inline-block;
+              padding: 0.5rem 1rem;
+              background: #c8c7c7;
+              border-radius: 5%;
+              vertical-align: bottom;
+              &:hover {
+                color: white;
+                text-decoration: none;
+                background: rgb(181, 150, 78);
+              }
+            }
+          }
+        }
+        .page-consultation-list {
+          .page-consultation-item {
+            display: inline-block;
+            width: 13.7rem;
+            padding: 0.6rem 0.73333rem 0;
+            margin: 0.3rem 0.2rem 0 0;
+            overflow: hidden;
+            background: #f5f5f5;
+            .page-consultation-item-title {
+              font-size: 0.6666rem;
+              color: #000000;
+            }
+            .page-consultation-item-time {
+              font-size: 0.6666rem;
+              color: #999999;
+            }
+            .page-consultation-item-img {
+              width: 12.2rem;
+              height: 9rem;
+              overflow: hidden;
+              margin-right: 1.8rem;
+            }
+            .page-consultation-item-info {
+              margin-top: 0.3rem;
+              font-size: 0.5333rem;
+              color: #999999;
+            }
+            &:hover {
+              background: #b5964e;
+              .page-consultation-item-title {
+                color: white;
+              }
+              .page-consultation-item-time {
+                color: #cbb78e;
+              }
+              .page-consultation-item-info {
+                color: white;
+              }
+            }
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      //consultation end aboutOur start
+
+      .page-about-our {
+        overflow: hidden;
+        .page-about-our-top {
+          width: 56.2rem;
+          min-height: 13.33333rem;
+          height: 13.33333rem;
+          overflow: hidden;
+          display: inline-block;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .page-about-our-right {
+          position: relative;
+          display: inline-block;
+          width: 20.83333rem;
+          height: 12.3666rem;
+          min-height: 12.33333rem;
+          overflow: hidden;
+          background: url("../img/page-about-our-bottom.png") no-repeat;
+          background-size: 100%;
+          -o-background-size: 100%;
+          -moz-background-size: 100%;
+          vertical-align: top;
+        }
+        .page-about-our-wrap {
+          padding: 1.2rem 2.8rem 0 2.1333rem;
+          p {
+            margin-bottom: 0.3rem;
+          }
+        }
+        .page-about-our-info {
+          overflow: hidden;
+        }
+        .page-about-our-title-all {
+          font-size: 0.6666rem;
+          color: rgb(181, 150, 78);
+          margin-bottom: 0.36666rem;
+        }
+        .page-about-our-title {
+          width: 27.1333rem;
+          overflow: hidden;
+          display: inline-block;
+          margin-bottom: 0.66666rem;
+          p {
+            &:nth-of-type(2) {
+              font-size: 0.5rem;
+              color: rgb(45, 45, 44);
+            }
+          }
+        }
+        .page-about-our-course-list {
+          width: 27.1333rem;
+          overflow: hidden;
+          display: inline-block;
+        }
+        .page-about-our-course-item {
+          font-size: 0.5rem;
+          color: rgb(45, 45, 44);
+        }
+        .page-about-our-connection-item {
+          overflow: hidden;
+          font-size: 0.5rem;
+          color: rgb(45, 45, 44);
+          display: inline-block;
+          margin-right: 6.6rem;
+          vertical-align: top;
+          &:last-of-type {
+            margin-right: 0;
+          }
+          p {
+            &:first-of-type {
+              font-size: 0.53333rem;
+              color: #222222;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      //about end
     }
   }
 }
