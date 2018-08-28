@@ -5,6 +5,17 @@
   font-weight: normal;
   font-style: normal;
 }
+.keyframes(@name; @arguments) {
+  @-moz-keyframes @name { @arguments(); }
+  @-webkit-keyframes @name { @arguments(); }
+  @keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+  -webkit-animation: @arguments;
+  -moz-animation: @arguments;
+  animation: @arguments;
+}
 
 //common nav top start
 * {
@@ -35,6 +46,7 @@ body {
 }
 
 header {
+  display: none;
   width: 100%;
   position: fixed;
   overflow: hidden;
@@ -142,9 +154,9 @@ header {
             border-bottom-right-radius: 5%;
             overflow: hidden;
             li {
-              padding: 0.5rem 0.9rem;
               text-align: center;
               a {
+                padding: 0.5rem 0.9rem;
                 display: inline-block;
                 text-decoration: none;
                 color: #ffffff;
@@ -178,6 +190,7 @@ header {
 
 //end aside start
 aside {
+  display: none;
   width: 6rem;
   height: 100%;
   float: left;
@@ -252,6 +265,7 @@ aside {
 
 //end pageContainer start
 .container-fluid {
+  display: none;
   height: 100%;
   position: absolute;
   overflow: hidden;
@@ -270,6 +284,7 @@ aside {
         height: 100%;
         overflow: hidden;
         display: inline-block;
+        padding-left: 0.6rem;
         div {
           a {
             display: inline-block;
@@ -288,11 +303,15 @@ aside {
         }
       }
       .page-home {
-        padding-left: 0.6rem;
+        .page-home-top {
+          white-space: nowrap;
+        }
         .page-home-shorts {
           width: 14.86667rem;
           min-height: 14.33333rem;
           height: 14.33333rem;
+          float: left;
+          overflow: hidden;
           img {
             width: 100%;
             height: 100%;
@@ -309,6 +328,7 @@ aside {
           margin-left: 0.66667rem;
           .carousel-indicators {
             bottom: 0.6667rem;
+            z-index: 4;
             li {
               width: 0.66667rem;
               height: 0.66667rem;
@@ -377,6 +397,7 @@ aside {
           height: 14.9rem;
           margin-top: 0.6667rem;
           float: left;
+          overflow: hidden;
           img {
             width: 100%;
             height: 100%;
@@ -396,26 +417,29 @@ aside {
             width: 100%;
             height: 100%;
           }
-          .page-home-offForum-content, .page-home-newDy-content {
+          &:hover {
+            background: #a38642;
+          }
+        }
+        .page-home-offForum-content, .page-home-newDy-content {
+          position: relative;
+          top: 35%;
+          padding: 0 1rem;
+          li {
+            overflow: hidden;
             position: relative;
-            top: 35%;
-            padding: 0 1rem;
-            li {
+            margin-top: 0.2rem;
+            span {
+              color: #ffffff;
+              font-size: 0.4666667rem;
+              float: left;
+              max-width: 50%;
               overflow: hidden;
-              position: relative;
-              margin-top: 0.2rem;
-              span {
-                color: #ffffff;
-                font-size: 0.4666667rem;
-                float: left;
-                max-width: 50%;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                &:nth-of-type(2) {
-                  float: right;
-                  max-width: 30%;
-                }
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              &:nth-of-type(2) {
+                float: right;
+                max-width: 30%;
               }
             }
           }
@@ -425,19 +449,25 @@ aside {
       .page-shorts {
         text-align: center;
         position: relative;
+        .carousel-shorts {
+          position: relative;
+          width: 56.2rem;
+          min-height: 13.33333rem;
+          height: 13.33333rem;
+          overflow: hidden;
+        }
         .page-short-top {
           width: 56.2rem;
           min-height: 13.33333rem;
           height: 13.33333rem;
           overflow: hidden;
-          display: inline-block;
           img {
             width: 100%;
             height: 100%;
           }
         }
         .page-shorts-list {
-          display: none;
+          display: block;
           overflow: hidden;
           margin: 0 auto;
           li {
@@ -503,14 +533,15 @@ aside {
           }
         }
         .page-shorts-sub {
+          display: none;
           .page-shorts-sub-nav {
-            margin: 0 auto;
+            width: 56.2rem;
             background: #eeeeee;
             padding: 0.3rem 0 0;
             li {
               display: inline-block;
               margin-right: 5.5rem;
-              padding-bottom: 0.3rem;
+              padding: 0 0.3rem 0.3rem;
               border-bottom: 0.1rem solid transparent;
               &:last-of-type {
                 margin-right: 0;
@@ -524,7 +555,7 @@ aside {
           }
           .page-shorts-sub-list-all {
             width: 100%;
-            padding: 0.5rem 9rem;
+            padding: 0.5rem 9rem 0.5rem 8rem;
             li {
               display: inline-block;
               margin-right: 1rem;
@@ -555,7 +586,6 @@ aside {
 
       //pageShorts end ns-store start
       .page-ns-store {
-        padding-left: 1rem;
         background: url("../img/ns-bg.png");
         .page-ns-title {
           font-size: 0.73333rem;
@@ -647,7 +677,6 @@ aside {
       }
       //ns-store end carveMaster start
       .page-carve-master {
-        padding-left: 0.5rem;
         .page-carve-master-top {
           width: 56.2rem;
           min-height: 15.33333rem;
@@ -796,7 +825,6 @@ aside {
 
       //carveMaster end off-forum start
       .page-off-forum {
-        padding-left: 0.5rem;
         .page-forum-title {
           font-size: 0.73333rem;
           color: rgb(181, 150, 78);
@@ -937,7 +965,6 @@ aside {
       }
       //off-forum end consultation start
       .page-consultation-content {
-        padding-left: 0.5rem;
         .page-consultation-title {
           font-size: 0.73333rem;
           color: rgb(181, 150, 78);
@@ -975,6 +1002,7 @@ aside {
           }
         }
         .page-consultation-notice {
+          display: block;
           .page-consultation-notice-img {
             width: 23.2666rem;
             height: 11.7rem;
@@ -998,8 +1026,12 @@ aside {
               width: 30rem;
               height: 5.5rem;
               line-height: 0.8rem;
+              overflow: hidden;
               font-size: 0.5333rem;
               color: #979696;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 7;
             }
             .page-consultation-notice-detail {
               display: inline-block;
@@ -1016,6 +1048,7 @@ aside {
           }
         }
         .page-consultation-list {
+          display: block;
           .page-consultation-item {
             display: inline-block;
             width: 13.7rem;
@@ -1023,6 +1056,7 @@ aside {
             margin: 0.3rem 0.2rem 0 0;
             overflow: hidden;
             background: #f5f5f5;
+            cursor: pointer;
             .page-consultation-item-title {
               font-size: 0.6666rem;
               color: #000000;
@@ -1063,6 +1097,154 @@ aside {
             }
           }
         }
+        .page-consultation-sub-detail {
+          display: none;
+          height: 100%;
+          position: relative;
+          .page-consultation-sub-row-line {
+            height: 100%;
+            border-left: 0.0333rem solid #eeeeee;
+            position: absolute;
+            left: 66%;
+            top: -5%;
+          }
+          .page-consultation-sub {
+            overflow: hidden;
+          }
+          .page-consultation-sub-content {
+            width: 38.5rem;
+            float: left;
+            overflow: hidden;
+            padding: 0 1rem 0.46666rem;
+            .page-consultation-sub-title {
+              font-size: 0.666rem;
+              color: rgb(34,34,34);
+            }
+            .page-consultation-sub-time {
+              font-size: 0.4666rem;
+              color: #888888;
+            }
+            .page-consultation-sub-info {
+              color: #666666;
+              font-size: 0.53333rem;
+              margin: 0.666rem 0;
+            }
+            .page-consultation-sub-img {
+              display: inline-block;
+              width: 12.26666rem;
+              height: 9.6rem;
+              overflow: hidden;
+              position: relative;
+              left: 50%;
+              transform: translateX(-50%);
+              -moz-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              img {
+                width: 100%;
+              }
+            }
+            .page-consultation-sub-laud {
+              width: 3.333rem;
+              height: 3.333rem;
+              overflow: hidden;
+              background: #f1dfb4;
+              text-align: center;
+              margin: 1rem auto 0;
+              border-radius: 100%;
+              a {
+                margin: 0.8rem auto 0;
+                width: 0.933rem;
+                height: 0.933rem;
+                overflow: hidden;
+                display: inline-block;
+                img {
+                  width: 100%;
+                }
+              }
+              .page-consultation-sub-laud-num {
+                font-size: 0.5333rem;
+                color: #b5964e;
+              }
+            }
+          }
+          .page-consultation-sub-right {
+            padding: 0.2rem 2.5rem 0.2rem 0;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            top: 0;
+            .page-consultation-sub-right-head {
+              font-size: 0.6666rem;
+              color: #222222;
+              font-weight: bold;
+              border-bottom: 0.0666rem solid #eeeeee;
+              padding-bottom: 0.25rem;
+              span {
+                padding-bottom: 0.4rem;
+                border-bottom: 0.1rem solid #b5964e;
+              }
+            }
+            .page-consultation-sub-right-list {
+              margin-top: 1rem;
+              overflow: hidden;
+              .page-consultation-sub-right-item {
+                font-size: 0.5333rem;
+                color: #666666;
+                margin-bottom: 0.333rem;
+                &:last-of-type {
+                  margin-bottom: 0;
+                }
+                a {
+                  width: 11rem;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  display: inline-block;
+                  &:hover {
+                    color: #666666;
+                    text-decoration: inherit;
+                  }
+                }
+                span {
+                  display: inline-block;
+                  margin-left: 2rem;
+                  float: right;
+                }
+              }
+            }
+          }
+          .page-consultation-sub-footer {
+            width: 36.5rem;
+            border-top: 0.0333rem solid #eeeeee;
+            padding-top: 0.53333rem;
+            overflow: hidden;
+            position: relative;
+            .page-consultation-sub-page {
+              a {
+                display: block;
+                margin-top: 0.666rem;
+                font-size: 0.5333rem;
+                color: rgb(102,102,102);
+                span {
+                  font-size: 0.6rem;
+                  font-weight: bold;
+                  color: rgb(34,34,34);
+                }
+              }
+            }
+            .page-consultation-sub-nextIcon {
+              width: 1.7333rem;
+              height: 1.7333rem;
+              overflow: hidden;
+              position: absolute;
+              top: 1.5rem;
+              right: 0.7rem;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
       }
       //consultation end aboutOur start
 
@@ -1082,9 +1264,9 @@ aside {
         .page-about-our-right {
           position: relative;
           display: inline-block;
-          width: 20.83333rem;
-          height: 12.3666rem;
-          min-height: 12.33333rem;
+          width: 18.83333rem;
+          height: 10.3666rem;
+          min-height: 10.33333rem;
           overflow: hidden;
           background: url("../img/page-about-our-bottom.png") no-repeat;
           background-size: 100%;
@@ -1093,7 +1275,7 @@ aside {
           vertical-align: top;
         }
         .page-about-our-wrap {
-          padding: 1.2rem 2.8rem 0 2.1333rem;
+          padding: 0.6rem 2.8rem 0 1.1333rem;
           p {
             margin-bottom: 0.3rem;
           }
@@ -1110,7 +1292,7 @@ aside {
           width: 27.1333rem;
           overflow: hidden;
           display: inline-block;
-          margin-bottom: 0.66666rem;
+          margin-bottom: 0.36666rem;
           p {
             &:nth-of-type(2) {
               font-size: 0.5rem;
@@ -1150,24 +1332,36 @@ aside {
     }
   }
 }
+//end pageContainer footer start
+footer {
+  .footer-zhe {
+    position: absolute;
+  }
+}
 //dialog start
 .page-shorts-zhe {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background: #000000;
-  opacity: 0.7;
+  background: #4c4c4d;
+  opacity: 0.9;
   z-index: 10;
 }
 .page-shorts-sub-dialog {
+  display: none;
+  width: 27rem;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
   z-index: 11;
-  padding: 2.4666rem 0 3rem 1.5rem;
+  padding: 2.4666rem 1.5rem 3rem 1.5rem;
+  background: #313131;
   .page-shorts-sub-dialog-head {
     font-size: 0.5333rem;
     color: rgb(196,196,196);
@@ -1184,11 +1378,20 @@ aside {
 
   }
   .page-shorts-sub-dialog-img {
+    margin: 1rem auto 0;
     width: 16.6rem;
     height: 12.4rem;
-    overflow: hidden;
+    position: relative;
     img {
       width: 100%;
+    }
+    .three-d {
+      width: 1.333rem;
+      height: 1.333rem;
+      background: url("../img/three-d.png") no-repeat;
+      position: absolute;
+      right: -0.5rem;
+      top: -0.5rem;
     }
   }
   .page-shorts-sub-dialog-area,.page-shorts-sub-dialog-info {
@@ -1196,7 +1399,7 @@ aside {
     font-size: 0.5333rem;
   }
   .page-shorts-sub-dialog-area {
-    margin: 0 auto;
+    margin: 0.6rem 0 0.8rem 0;
     text-align: center;
     p {
       display: inline-block;
@@ -1205,16 +1408,183 @@ aside {
   .page-shorts-sub-dialog-info {
     line-height: 0.8rem;
   }
-}
-.page-shorts-sub-dialog-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1.6rem;
-  height: 1.6rem;
-  overflow: hidden;
-  z-index: 12;
-  img {
-    width: 100%;
+  .page-shorts-sub-dialog-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    overflow: hidden;
+    z-index: 12;
+    img {
+      width: 100%;
+    }
   }
 }
+//dialog end login&register start
+.page-login {
+  display: none;
+  width: 19.333rem;
+  padding: 2.7333rem 0 1rem 0;
+  z-index: 15;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  color: rgb(102,102,102);
+  background: url("../img/login-bg.png") no-repeat;
+  background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  .page-login-nav {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    span {
+      display: inline-block;
+      line-height: 1rem;
+    }
+    .page-quest-login {
+      color: rgb(34,34,34);
+      cursor: pointer;
+    }
+    .page-password-login {
+      color: rgb(136,136,136);
+      cursor: pointer;
+    }
+    .page-login-nav-line {
+      width: 0.063rem;
+      height: 1.1rem;
+      display: inline-block;
+      background: #d2d2d2;
+      vertical-align: middle;
+      margin: 0 0.5rem;
+    }
+  }
+  .page-login-form {
+    display: block;
+  }
+  .page-register-nav {
+    display: none;
+    text-align: center;
+    margin-bottom: 2rem;
+    .page-welcome {
+      color: rgb(34,34,34);
+      font-size: 0.6666rem;
+    }
+  }
+  .page-login-password {
+    display: none;
+  }
+  .page-register-form {
+    display: none;
+  }
+  .form-horizontal {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    input {
+      margin: 0 auto;
+      display: block;
+      width: 13.333rem;
+      height: 1.93333rem;
+      padding: 0.666rem 0;
+      background-color: transparent;
+      border: 0.0333rem solid transparent;
+      border-radius: 0.1333rem;
+      border-bottom-color: #ccc;
+      font-size: 0.6rem;
+    }
+    .page-login-getTest {
+      display: block;
+      margin-top: 0.7rem;
+    }
+    .page-login-test {
+      width: 6.333rem;
+      display: inline-block;
+    }
+    .page-login-get-test {
+      padding: 0.5rem 1rem;
+      margin: 0 0 0 2.4rem;
+      background: #bfbfbf;
+    }
+    .page-login-login {
+      margin-top: 1.5rem;
+      width: 13.333rem;
+      line-height: 1.5rem;
+      text-align: center;
+      font-size: 0.86666rem;
+      color: white;
+      background: #a0a0a0;
+    }
+    .page-login-hint {
+      margin-top: 3.8rem;
+      font-size: 0.6rem;
+      .page-login-register {
+        color: rgb(34,34,34);
+        display: inline-block;
+      }
+    }
+    .page-register-hint {
+      margin-top: 1rem;
+      margin-bottom: 3.6rem;
+    }
+  }
+  .page-login-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    overflow: hidden;
+    z-index: 12;
+    display: inline-block;
+    img {
+      width: 100%;
+    }
+  }
+  .page-return-login {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 0.6rem;
+    height: 1rem;
+    overflow: hidden;
+    z-index: 12;
+    display: none;
+    img {
+      width: 100%;
+    }
+  }
+}
+//login&register end bj animate start
+.page-in-animate {
+  .page-in-animate-bj {
+    position: relative;
+    top: 0;
+    a {
+      width: 32.86667rem;
+      height: 31.5rem;
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .page-in-animate-bj-l {
+      left: -53%;
+    }
+    .page-in-animate-bj-r {
+      width: 31.1666rem;
+      right: -53%;
+    }
+  }
+}
+//bj animate end
+

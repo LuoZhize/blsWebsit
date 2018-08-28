@@ -111,7 +111,7 @@
     <div class="page-wrap">
         <ul class="page-list">
             <li class="page-item page-home">
-                <div>
+                <div class="page-home-top">
                     <a class="page-home-shorts">
                         <img src="img/page-home-shorts.png">
                         <p>奇石鉴赏</p>
@@ -143,6 +143,8 @@
                             <span class="carouselIcon carousel-right" aria-hidden="true"></span>
                         </a>
                     </div>
+                </div>
+                <div class="page-home-content">
                     <a class="page-home-shop">
                         <img src="img/page-home-NSshop.png">
                         <p>国石商场</p>
@@ -192,7 +194,17 @@
                 </div>
             </li>
             <li class="page-item page-shorts">
-                <a class="page-short-top"><img src="img/page-short-top.png"></a>
+                <div  class="carousel carousel-shorts slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item page-short-top active">
+                            <img src="img/page-short-top.png"/>
+                        </div>
+                        <div class="item page-short-top">
+                            <img src="img/page-short-top.png" />
+                        </div>
+                    </div>
+                </div>
                 <ul class="page-shorts-list">
                     <li><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>鸡血石</span><a><img src="img/page-short-item1.png" alt=""></a></div></li>
                     <li><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>福黄石</span><a><img src="img/page-short-item2.png" alt=""></a></div></li>
@@ -225,7 +237,7 @@
             <li class="page-item page-ns-store">
                 <div class="page-ns-head">
                     <div class="page-ns-head-line"><span class="page-ns-title">国石文化</span></div>
-                    <a class="page-place"><span class="page-ns-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>><span class="page-place-ns">国石文化</span></a>
+                    <a class="page-place"><span class="page-ns-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>&nbsp;>&nbsp;<span class="page-place-ns">国石文化</span></a>
                 </div>
                 <ul class="page-ns-list">
                     <li class="page-ns-item"><a class="page-ns-img"><img src="img/ns-yin-zhang.png"></a>
@@ -297,7 +309,7 @@
             <li class="page-item page-off-forum">
                 <div class="page-forum-head">
                     <div class="page-forum-head-line"><span class="page-forum-title">官方论坛</span></div>
-                    <a class="page-place"><span class="page-forum-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>><span class="page-place-forum">官方论坛</span></a>
+                    <a class="page-place"><span class="page-forum-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>&nbsp;>&nbsp;<span class="page-place-forum">官方论坛</span></a>
                 </div>
                 <div class="page-forum-content">
                     <ul class="page-forum-list">
@@ -340,14 +352,19 @@
             <li class="page-item page-consultation-content">
                 <div class="page-consultation-head">
                     <div class="page-consultation-head-line"><span class="page-consultation-title">咨讯</span></div>
-                    <a class="page-place"><span class="page-consultation-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>><span class="page-place-consultation">资讯</span></a>
+                    <a class="page-place"><span class="page-consultation-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>&nbsp;>&nbsp;<span class="page-place-consultation">资讯</span></a>
                 </div>
+                <!--咨询介绍页-->
                 <div class="page-consultation-notice">
                     <img class="page-consultation-notice-img" src="img/page-about-our-bottom.png">
                     <div class="page-consultation-notice-info">
                         <p class="page-consultation-notice-title">公司重要公告</p>
                         <div class="page-consultation-notice-hint">日期：&nbsp;<span class="page-consultation-notice-time">2018-08-20</span>&nbsp;来源：鸦片战争博物馆</div>
-                        <p class="page-consultation-notice-content">巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、子公司巴林石质地温润</p>
+                        <p class="page-consultation-notice-content">巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
+                            子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
+                            子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
+                            子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
+                            子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、子公司巴林石质地温润</p>
                         <a class="page-consultation-notice-detail">查看详情</a>
                     </div>
                 </div>
@@ -377,6 +394,42 @@
                         <p class="page-consultation-item-info">8月18日，由中国艺术研究院主办、中国工艺美术馆承办的第四届文化和旅游部副部长李群、</p>
                     </li>
                 </ul>
+                <!--咨询子页详情页-->
+                <div class="page-consultation-sub-detail">
+                    <p class="page-consultation-sub-row-line"></p>
+                    <div class="page-consultation-sub">
+                        <div class="page-consultation-sub-content">
+                            <p class="page-consultation-sub-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
+                            <div class="page-consultation-sub-time">日期:&nbsp;<span id="page-consultation-sub-time">2018-08-18 15:00</span><span>来源：中国国家博物馆</span></div>
+                            <p class="page-consultation-sub-info">8月18日，由中国艺术研究院主办、中国工艺美术馆承办的第四届文化和旅游部副部长李群、</p>
+                            <a class="page-consultation-sub-img"><img src="img/page-consultation-item-img.png"></a>
+                            <p class="page-consultation-sub-info">     此次展览遴选全国各地国家级、省级工艺美术大师，国家级、省级非遗项目代表性传承人，优秀中青年工艺美术创作者以及院校工艺
+                                此次展览遴选全国各地国家级、省级工艺美术大师，国家级、省级非遗项目代表性传承人，优秀中青年工艺美术创作者以及院校工艺
+                                此次展览遴选全国各地国家级、省级工艺美术大师，国家级、省级非遗项目代表性传承人，优秀中青年工艺美术创作者以及院校工艺
+                                此次展览遴选全国各地国家级、省级工艺美术大师，国家级、省级非遗项目代表性传承人，优秀中青年工艺美术创作者以及院校工艺
+                            </p>
+                            <div class="page-consultation-sub-laud"><a><img src="img/page-forum-laud.png"></a>
+                                <p class="page-consultation-sub-laud-num">122</p>
+                            </div>
+                        </div>
+                        <div class="page-consultation-sub-right">
+                            <div class="page-consultation-sub-right-head"><span>资讯列表</span></div>
+                            <ul class="page-consultation-sub-right-list">
+                                <li class="page-consultation-sub-right-item"><a>热烈庆祝我司成立文化部艺术发展热烈庆祝我司成立文化部艺术发展</a><span class="page-consultation-sub-right-item-time">2018-08-10</span></li>
+                                <li class="page-consultation-sub-right-item"><a>热烈庆祝我司成立文化部艺术发展热烈庆祝我司成立文化部艺术发展</a><span class="page-consultation-sub-right-item-time">2018-08-10</span></li>
+                                <li class="page-consultation-sub-right-item"><a>热烈庆祝我司成立文化部艺术发展热烈庆祝我司成立文化部艺术发展</a><span class="page-consultation-sub-right-item-time">2018-08-10</span></li>
+                                <li class="page-consultation-sub-right-item"><a>热烈庆祝我司成立文化部艺术发展热烈庆祝我司成立文化部艺术发展</a><span class="page-consultation-sub-right-item-time">2018-08-10</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page-consultation-sub-footer">
+                        <div class="page-consultation-sub-page">
+                            <a class="page-consultation-sub-page-pro"><span>上一篇：</span>热烈庆祝新官网成立</a>
+                            <a class="page-consultation-sub-page-next"><span>下一篇：</span>热烈庆祝新官网成立</a>
+                        </div>
+                        <a class="page-consultation-sub-nextIcon"><img src="img/page-consultation-sub-nextIcon.png" alt=""></a>
+                    </div>
+                </div>
             </li>
             <li class="page-item page-about-our">
                 <div>
@@ -440,7 +493,7 @@
         时间:<span class="page-shorts-sub-dialog-time">2018-08-10</span>
         浏览次数:<span class="page-shorts-sub-dialog-num">135</span>次
     </div>
-    <div class="page-shorts-sub-dialog-img"><img src="img/page-shorts-sub-dialog-img.png"></div>
+    <div class="page-shorts-sub-dialog-img"><img src="img/page-shorts-dialog-img.png"><span class="three-d"></span></div>
     <div class="page-shorts-sub-dialog-area">
         宽:<p class="page-shorts-sub-dialog-long">xxx</p>厘米&nbsp;&nbsp;
         高:<p class="page-shorts-sub-dialog-wide">xxx</p>厘米
@@ -449,10 +502,74 @@
         巴林石隶属叶腊石，石质细润，通灵清亮，质地细洁，光彩灿烂，颜色妩媚温柔，似婴儿之肌肤
         巴林石隶属叶腊石，石质细润，通灵清亮，质地细洁，光彩灿烂，颜色妩媚温柔，似婴儿之肌肤
         巴林石隶属叶腊石，石质细润，通灵清亮，质地细洁，光彩灿烂，颜色妩媚温柔，似婴儿之肌肤</p>
+    <a class="page-shorts-sub-dialog-close"><img src="img/page-shorts-dialog-close.png"></a>
 </div>
-<a class="page-shorts-sub-dialog-close"><img src="img/page-shorts-sub-dialog-close.png"></a>
+<div class="page-login">
+    <!--登录-->
+    <div class="page-login-nav">
+        <span class="page-quest-login">快捷登录</span>
+        <span class="page-login-nav-line"></span>
+        <span class="page-password-login">密码登录</span>
+    </div>
+    <!--注册-->
+    <div class="page-register-nav">
+        <span class="page-welcome">欢迎加入巴林石矿业官网</span>
+    </div>
+    <!--登录界面-->
+    <form class="form-horizontal page-login-form">
+        <div class="col-sm-12">
+            <input type="tel" class="page-login-tel" id="inputTel" placeholder="请输入手机号">
+        </div>
+        <!--快捷登录-->
+        <div class="col-sm-12 page-login-getTest">
+            <input type="text" class="page-login-test" id="inputTest" placeholder="请输入验证码">
+            <button type="button" class="btn page-login-get-test">获取验证码</button>
+        </div>
+        <!--密码登录-->
+        <div class="col-sm-12 page-login-password">
+            <input type="password" class="page-login-tel" id="inputPass" placeholder="请输入密码">
+        </div>
+        <div class="col-sm-12">
+            <button type="submit" class="btn page-login-login">登录</button>
+        </div>
+        <div class="col-sm-12 page-login-hint">
+            <span>还没有账号？</span>
+            <a class="page-login-register">立即注册</a>
+        </div>
+    </form>
+    <!--注册界面-->
+    <form class="form-horizontal page-register-form">
+        <div class="col-sm-12">
+            <input type="tel" class="page-login-tel" id="input-tel-register" placeholder="请输入手机号">
+        </div>
+        <div class="col-sm-12 page-login-getTest">
+            <input type="text" class="page-login-test" id="inputTest-register" placeholder="请输入验证码">
+            <button type="button" class="btn page-login-get-test">获取验证码</button>
+        </div>
+        <div class="col-sm-12">
+            <button type="button" class="btn page-login-login page-register-btn">注册</button>
+        </div>
+        <div class="col-sm-12 page-register-hint">
+            <span>注册代表你已同意</span>
+            <a class="page-login-register">《巴林石矿业协议》</a>
+        </div>
+    </form>
+    <a class="page-login-close"><img src="img/page-shorts-dialog-close.png"/></a>
+    <a class="page-return-login"><img src="img/page-login-return.png"/></a>
+</div>
+<div class="page-in-animate">
+    <div class="page-in-animate-bj">
+        <a class="page-in-animate-bj-l"><img src="img/page-in-left.png"></a>
+        <a class="page-in-animate-bj-r"><img src="img/page-in-right.png"></a>
+    </div>
+
+</div>
 <!--脚部-->
-<footer class="">
+<footer>
+    <div class="footer-zhe"></div>
+    <div class="footer-content">
+        <div class=""></div>
+    </div>
 </footer>
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
