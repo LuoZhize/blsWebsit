@@ -20,14 +20,28 @@ setTimeout(function () {
         shortsClick();//shorts event
         loginClick();//login and register event
         consultationClick();//consultation event
+        bottomNavClick();//bottom nav cevent
     });
 },2000);
+
+function bottomNavClick() {
+    $('body').mouseenter(function (e) {
+        if (e) {//clict y == bottom bottom nav slide
+
+        }
+    })
+}
 
 function consultationClick() {
     $('.page-consultation-notice-detail,.page-consultation-item').click(function () {//change register
         $('.page-consultation-list').hide();
         $('.page-consultation-notice').hide();
         $('.page-consultation-sub-detail').show();
+    });
+    $('.page-place-consultation').click(function () {
+        $('.page-consultation-list').show();
+        $('.page-consultation-notice').show();
+        $('.page-consultation-sub-detail').hide();
     });
 }
 
@@ -85,6 +99,7 @@ function shortsClick() {
 }
 
 function navSlide() {
+    let navDown = 0;//if click
     //user
     $('.nav-user').mouseenter(function () {
         $(this).children('.nav-user-menu').show();
@@ -96,11 +111,14 @@ function navSlide() {
         $(this).children('.nav-user-menu').hide();
     });
     //nav
-    $('.nav-down').mouseenter(function () {
-        $('.nav-top-wrap').slideDown();
-    });
-    $('.nav-top-wrap').mouseleave(function () {
-        $(this).slideUp();
+    $('.nav-down').click(function () {
+        if (navDown === 0) {
+            $('.nav-top-wrap').slideDown();
+            navDown = 1;
+        } else {
+            $('.nav-top-wrap').slideUp();
+            navDown = 0;
+        }
     });
 }
 

@@ -1334,8 +1334,53 @@ aside {
 }
 //end pageContainer footer start
 footer {
+  display: none;
   .footer-zhe {
+    width: 100%;
+    height: 8rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #000000;
+    opacity: 0.5;
+    z-index: 12;
+  }
+  .footer-content {
+    width: 60%;
+    z-index: 13;
+    padding: 2rem;
     position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: 0.4333rem;
+    overflow: hidden;
+    .footer-content-info {
+      .footer-content-info-l {
+        float: left;
+        p{
+          margin-bottom: 0.2rem;
+        }
+      }
+      .footer-content-info-r {
+        display: inline-block;
+        float: right;
+        overflow: hidden;
+        .footer-content-info-qr-code {
+          width: 2rem;
+          height: 2rem;
+          overflow: hidden;
+          display: inline-block;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .footer-content-footer {
+      text-align: center;
+      overflow: hidden;
+    }
   }
 }
 //dialog start
