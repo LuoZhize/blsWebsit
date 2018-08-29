@@ -1,34 +1,79 @@
-$('.page-in-animate-bj-l').animate({left:'0'},1500,'swing', {
+$('.page-in-animate-bj-l').animate({left:'0'},2500,'swing', function () {//mountain left
 
 });
-$('.page-in-animate-bj-r').animate({right:'0'},1500,'swing',{
-
+$('.page-in-animate-bj-r').animate({right:'0'},2500,'swing', function () {//mountain right
+    $(".page-in-water-img").css('top', $(window).height() / 1.5 + 'px').fadeIn(2000);
+    $('.page-in-text').css('top', $(window).height() / 3 + 'px');
+    $('.page-in-gif').css('top', $(window).height() / 20 + 'px');
+    $('.page-in-end').css('top', $(window).height() / 6 + 'px');
 });
-
-
-setTimeout(function () {
-    $(document).ready(function () {
-        $('.page-in-animate').fadeOut(500);
-        $('header').show();
-        $('aside').show();
-        $('.container-fluid').show();
-        $('.container-fluid').show();
-        let carouselNum = 0;//滚动的次数
-        let carouselLength = $('.page-list').children('li').length - 1;//滚动子元素个数
-        navSlide();//nav show
-        mouseScroll(carouselNum, carouselLength);//screen scroll
-        shortsClick();//shorts event
-        loginClick();//login and register event
-        consultationClick();//consultation event
-        bottomNavClick();//bottom nav cevent
-    });
-},2000);
-
-function bottomNavClick() {
-    $('body').mouseenter(function (e) {
-        if (e) {//clict y == bottom bottom nav slide
-
+setTimeout(function () {//shorts fadein
+    $(".page-in-animate-content").css('top', $(window).height() / 3 + 'px').fadeIn(2000);
+},1500);
+setTimeout(function () {//guo video
+    $(".page-in-guo").show();
+},1500);
+setTimeout(function () {//打印字animation
+    $('.page-in-video').hide();
+    $('.page-in-guo-j').show();
+    let index = 0,indexIn = 0;
+    let str = "礼巴林",strIn = "一品巴林，千年中国印";
+    let timerTitle,timerIntroduce;
+    function type() {
+        if(index === str.length) {
+            clearInterval(timerTitle);
+            function typeIn() {
+                if(indexIn === strIn.length) {
+                    clearInterval(timerIntroduce);
+                    $('.page-in-end-img').fadeIn(1000);//last img show
+                    setTimeout(function () {
+                        $(document).ready(function () {
+                            $('.page-in-animate').fadeOut(500);
+                            $('header').show();
+                            $('aside').show();
+                            $('footer').show();
+                            $('.container-fluid').show();
+                            let carouselNum = 0;//滚动的次数
+                            let carouselLength = $('.page-list').children('li').length - 1;//滚动子元素个数
+                            let heightWin = $(window).height();
+                            let widthWin = $(window).width();
+                            navSlide();//nav show
+                            mouseScroll(carouselNum, carouselLength);//screen scroll
+                            shortsClick();//shorts event
+                            loginClick();//login and register event
+                            consultationClick();//consultation event
+                            bottomNavClick(heightWin);//bottom nav event
+                        });
+                    },20000);
+                }
+                $(".page-in-introduce").text(strIn.substring(0, indexIn++));
+            }
+            timerIntroduce = setInterval(typeIn, 100);
         }
+        $(".page-in-title").text(str.substring(0, index++));
+    }
+    timerTitle = setInterval(type, 100);
+},8000);
+// setTimeout(function () {//from small to big
+//     this.shortTimer = setInterval(function () {
+//         shortNum += 0.1;
+//         $('.page-in-content-short').css({'display':'block','transform':'scale(' + shortNum + ')'});
+//         if (shortNum >= 1) {
+//             clearInterval(this.shortTimer);
+//         }
+//     },300);
+// },500);
+
+function bottomNavClick(heightWin) {
+    $('body').mousemove(function (e) {
+        if (e.clientY >= heightWin/1.02) {//clict y == bottom bottom nav show
+            $('.footer-zhe').slideDown(600);
+            $('.footer-content').slideDown(600);
+        } else if(e.clientY < heightWin/1.35) {
+            $('.footer-zhe').slideUp(400);
+            $('.footer-content').slideUp(400);
+        }
+
     })
 }
 
@@ -123,25 +168,37 @@ function navSlide() {
 }
 
 function mouseScroll(Num, Length) {
-    let ifClick = true;
-    let navNum = 0;
+    let navNum = 0;//记录navTop点击
     let isScroll = true;//记录滚屏回调
-    // let Num = 0;
-    $('.nav-top-menu>li').click(function () {
+    $('.nav-top-menu>li').click(function () {//navTop click
+        $('.page-list').stop();
         navNum = $(this).index();
-        ifPageNav(navNum);
-        $('.page-list').animate({'left': -100 * navNum + "%"}, 1200, 'linear', function () {
-        });
-        return ifClick = false;
+        ifPageNav(navNum);// page scroll and slide chang text
+        screenCilck(navNum);//page scroll
+    });
+    $('.page-place-home,.nav-slide-logo-img').click(function () {//return home
+        ifPageNav(0);
+        screenCilck(0);
+    });
+    $('.page-home-shorts').click(function () {//return shorts
+        ifPageNav(1);
+        screenCilck(1);
+    });
+    $('.page-home-carveMaster').click(function () {//return carveMaster
+        ifPageNav(3);
+        screenCilck(3);
+    });
+    $('.page-home-offForum').click(function () {//return offForum
+        // ifPageNav(navNum);
+        // screenCilck(1);
+    });
+    $('.page-home-newDy').click(function () {//return consultation
+        ifPageNav(4);
+        screenCilck(4);
     });
     $('.page-list').bind('mousewheel', function (e, delta) {
-        // if (ifClick) {
-        //     Num = num;
-        // } else {
-        //     Num = navNum;
-        // }
-
         if (isScroll) {//判断是否滚屏完成
+            Num = Math.round(($('.page-list').offset().left)/(-$('.page-item').width()));//获取当前是第几个页面
             if (delta === -1) {//-1滚轮向下滚动1滚轮向上滚动
                 if (Num < Length) {//判断是否最后一个
                     Num++;
@@ -161,21 +218,12 @@ function mouseScroll(Num, Length) {
                 } else {
                 }
             }
-            $('.nav-top-menu>li').mouseenter(function () {//nav move chang color
-                $(this).children('a').children('.col-line').css('background','#e2ba60');
-            });
-            $('.nav-top-menu>li').mouseleave(function () {
-                if ($(this).index() === Num) {
-                } else {
-                    $(this).children('a').children('.col-line').css('background','transparent');
-                }
-            });
-            ifPageNav(Num);
+            ifPageNav(Num);//change slide text
         }
-    })
+    });
 }
 
-function ifPageNav(Num) {//change slide text
+function ifPageNav(Num) {
     switch (Num) {
         case 0 :
             navTopAnavSlide(Num, "首", "页");
@@ -189,21 +237,42 @@ function ifPageNav(Num) {//change slide text
         case 3 :
             navTopAnavSlide(Num, "雕刻", "大师");
             break;
+        // case 4 :
+        //     navTopAnavSlide(Num, "官方", "论坛");
+        //     break;
         case 4 :
-            navTopAnavSlide(Num, "官方", "论坛");
-            break;
-        case 5 :
             navTopAnavSlide(Num, "咨询", "中心");
             break;
-        case 6 :
+        case 5 :
             navTopAnavSlide(Num, "关于", "我们");
             break;
     }
 }
 
 function navTopAnavSlide(num, text1, text2) {//chang slide text & navTop background
-    $('.nav-top-menu>li').eq(num).children('a').children('.col-line').css('background','#e2ba60');
-    $('.nav-top-menu>li').eq(num).siblings().children('a').children('.col-line').css('background','transparent');
+    let navTopMenuLi = $('.nav-top-menu>li');
+    navTopMenuLi.mouseenter(function () {//nav move chang color
+        if ($(this).index() === num) {
+        } else {
+            $(this).children('a').children('.col-line').css('background','#e2ba60');
+        }
+    });
+    navTopMenuLi.mouseleave(function () {
+        if ($(this).index() === num) {
+            $(this).children('a').children('.col-line').css('background','#e2ba60');
+        } else {
+            $(this).children('a').children('.col-line').css('background','transparent');
+        }
+    });
+    navTopMenuLi.eq(num).children('a').children('.col-line').css('background','#e2ba60');
+    navTopMenuLi.eq(num).siblings().children('a').children('.col-line').css('background','transparent');
     $('.nav-slide-title div p:nth-of-type(1)').text(text1);
     $('.nav-slide-title div p:nth-of-type(2)').text(text2);
+}
+
+function screenCilck(num) {
+    isScroll = false;//滚动时为false
+    $('.page-list').animate({'left': -100 * num + "%"}, 1200, 'linear', function () {
+        return isScroll = true;
+    });
 }
