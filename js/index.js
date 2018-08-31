@@ -1,5 +1,15 @@
-startAnimation();
-
+startAnimation();//首页动画
+let carouselNum = 0;//滚动的次数
+let carouselLength = $('.page-list').children('li').length - 1;//滚动子元素个数
+let heightWin = $(window).height();
+navSlide();//nav show
+mouseScroll(carouselNum, carouselLength);//screen scroll
+shortsClick();//shorts event
+loginClick();//login and register event
+consultationClick();//consultation event
+bottomNavClick(heightWin);//bottom nav event
+nsShortsClick();//ns shorts event click
+lrClick();//lr click event
 function startAnimation() {
     $('.page-in-animate-bj-l').animate({left: '0'}, 2500, 'swing', function () {//mountain left
 
@@ -35,24 +45,15 @@ function startAnimation() {
                                 $(this).hide();
                                 $('.page-in-animate').hide();
                                 $(document).ready(function () {
-                                    $('header').show();
+                                    $('.page-in-animate').hide();
                                     $('aside').show();
                                     $('footer').show();
+                                    $('.nav-down').show();
                                     $('.container-fluid').show();
-                                    let carouselNum = 0;//滚动的次数
-                                    let carouselLength = $('.page-list').children('li').length - 1;//滚动子元素个数
-                                    let heightWin = $(window).height();
-                                    navSlide();//nav show
-                                    mouseScroll(carouselNum, carouselLength);//screen scroll
-                                    shortsClick();//shorts event
-                                    loginClick();//login and register event
-                                    consultationClick();//consultation event
-                                    bottomNavClick(heightWin);//bottom nav event
                                 });
                             });
                         });
                         endAnimate = setTimeout(function () {
-                            console.log("执行");
                             $('.page-in-over-circular').animate({
                                 width: '120%',
                                 height: 41.5 + 'rem'
@@ -64,15 +65,6 @@ function startAnimation() {
                                     $('aside').show();
                                     $('footer').show();
                                     $('.container-fluid').show();
-                                    let carouselNum = 0;//滚动的次数
-                                    let carouselLength = $('.page-list').children('li').length - 1;//滚动子元素个数
-                                    let heightWin = $(window).height();
-                                    navSlide();//nav show
-                                    mouseScroll(carouselNum, carouselLength);//screen scroll
-                                    shortsClick();//shorts event
-                                    loginClick();//login and register event
-                                    consultationClick();//consultation event
-                                    bottomNavClick(heightWin);//bottom nav event
                                 });
                             });
                         }, 10000);
@@ -87,15 +79,28 @@ function startAnimation() {
 
         timerTitle = setInterval(type, 300);
     }, 5000);
-// setTimeout(function () {//from small to big
-//     this.shortTimer = setInterval(function () {
-//         shortNum += 0.1;
-//         $('.page-in-content-short').css({'display':'block','transform':'scale(' + shortNum + ')'});
-//         if (shortNum >= 1) {
-//             clearInterval(this.shortTimer);
-//         }
-//     },300);
-// },500);
+}
+
+function nsShortsClick() {
+    let $pagePlace = $('.page-place');
+    let $pagePlaceNsSub = $('.page-place-ns-sub');
+    let $pageNsList = $('.page-ns-list');
+    let $pageNsSub = $('.page-ns-sub');
+    let $pageNsSubTitle = $('.page-ns-title');
+    $('.page-ns-detail').click(function () {
+        $pageNsSubTitle.text("国石历史");
+        $pagePlace.hide();
+        $pagePlaceNsSub.css('display','inline-block');
+        $pageNsList.hide();
+        $pageNsSub.show();
+    });
+    $('.page-place-ns').click(function () {
+        $pageNsSubTitle.text("国石文化");
+        $pagePlace.show();
+        $pagePlaceNsSub.hide();
+        $pageNsList.show();
+        $pageNsSub.hide();
+    });
 }
 
 function bottomNavClick(heightWin) {
@@ -263,15 +268,14 @@ function mouseScroll(Num, Length) {
     let $pageList = $('.page-list');
     let navNum = 0;//记录navTop点击
     let isScroll = true;//记录滚屏回调
-    $('.nav-top-menu>li').click(function () {//navTop click
+    $('.nav-top-menu>li a').click(function () {//navTop click
         $pageList.stop();
-        navNum = $(this).index();
+        navNum = $(this).parentNode().index();
         ifPageNav(navNum);// page scroll and slide chang text
         screenClick(navNum, $pageList);//page scroll
     });
-    $('.page-place-home,.nav-slide-logo-img').click(function () {//return home
-        ifPageNav(0);
-        screenClick(0, $pageList);
+    $('.page-place-home, .nav-slide-logo-img').click(function () {//return home
+        window.location.href = "../index.html";
     });
     $('.page-home-shorts').click(function () {//return shorts
         ifPageNav(1);
@@ -289,31 +293,6 @@ function mouseScroll(Num, Length) {
         ifPageNav(4);
         screenClick(4, $pageList);
     });
-    $pageList.bind('mousewheel', function (e, delta) {
-        if (isScroll) {//判断是否滚屏完成
-            Num = Math.round(($pageList.offset().left) / (-$('.page-item').width()));//获取当前是第几个页面
-            if (delta === -1) {//-1滚轮向下滚动1滚轮向上滚动
-                if (Num < Length) {//判断是否最后一个
-                    Num++;
-                    isScroll = false;//滚动时为false
-                    $pageList.animate({'left': -100 * Num + "%"}, 1200, 'linear', function () {
-                        return isScroll = true;//滚动完成返回true
-                    });
-                } else {
-                }
-            } else {
-                if (Num > 0) {
-                    Num--;
-                    isScroll = false;
-                    $pageList.animate({'left': -100 * Num + "%"}, 1200, 'linear', function () {
-                        return isScroll = true;
-                    });
-                } else {
-                }
-            }
-            ifPageNav(Num);//change slide text
-        }
-    });
 }
 
 function ifPageNav(Num) {
@@ -330,9 +309,6 @@ function ifPageNav(Num) {
         case 3 :
             navTopANavSlide(Num, "雕刻", "大师");
             break;
-        // case 4 :
-        //     navTopANavSlide(Num, "官方", "论坛");
-        //     break;
         case 4 :
             navTopANavSlide(Num, "咨询", "中心");
             break;
@@ -363,9 +339,19 @@ function navTopANavSlide(num, text1, text2) {//chang slide text & navTop backgro
     $('.nav-slide-title div p:nth-of-type(2)').text(text2);
 }
 
-function screenClick(num, $pageList) {
-    isScroll = false;//滚动时为false
-    $pageList.animate({'left': -100 * num + "%"}, 1200, 'linear', function () {
-        return isScroll = true;
+function lrClick() {
+    $('.page-lr-item, .page-lr-bottom-item').click(function () {
+        $('.page-place').hide();
+        $('.page-place-lr-sub').css('display','inline-block');
+        $('.page-lr-list').hide();
+        $('.page-lr-list-col-bottom').hide();
+        $('.page-lr-sub').show();
+    });
+    $('.page-place-lr-title').click(function () {
+        $('.page-place').show();
+        $('.page-place-lr-sub').css('display','none');
+        $('.page-lr-list').show();
+        $('.page-lr-list-col-bottom').show();
+        $('.page-lr-sub').hide();
     });
 }

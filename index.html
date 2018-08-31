@@ -24,7 +24,7 @@
 <header>
     <!--导航-->
     <nav>
-        <div class="nav-top-wrap">
+        <div class="nav-top-wrap" style="display: none">
             <!--login && search-->
             <div class="nav-top-fun pull-right">
                 <form class="nav-search" role="search">
@@ -50,49 +50,44 @@
             </div>
             <!--nav-top-->
             <ul class="nav-top-menu text-center pull-right">
-                <li><a>
+                <li><a href="index.html">
                     <span>首页</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
                 </a></li>
-                <li><a>
+                <li><a href="page/page-shorts.html">
                     <span>奇石鉴赏</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
                 </a></li>
-                <li><a>
+                <li><a href="page/page-ns-store.html">
                     <span>国石文化</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
                 </a></li>
-                <li><a>
+                <li><a href="page/page-carve-master.html">
                     <span>雕刻大师</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
                 </a></li>
-                <!--<li><a>-->
-                    <!--<span>官方论坛</span>-->
-                    <!--<span class="col-line"></span>-->
-                    <!--<span class="row-line"></span>-->
-                <!--</a></li>-->
-                <li><a>
+                <li><a href="page/page-consultation-content.html">
                     <span>咨询中心</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
                 </a></li>
-                <li><a>
+                <li><a href="page/page-about-our.html">
                     <span>关于我们</span>
                     <span class="col-line"></span>
                 </a></li>
             </ul>
         </div>
-        <a class="nav-down">
+        <a class="nav-down" style="display: none">
             <img src="img/carouselIcon.png" />
         </a>
     </nav>
 </header>
 <!--侧边栏-->
-<aside>
+<aside style="display: none">
     <div class="nav-slide pull-left">
         <div class="nav-slide-logo">
             <a class="nav-slide-logo-img"><img src="img/logo.png"></a>
@@ -110,12 +105,12 @@
     </div>
 </aside>
 <!--分页及内容-->
-<div class="container-fluid">
+<div class="container-fluid" style="display: none">
     <div class="page-wrap">
         <ul class="page-list">
             <li class="page-item page-home">
                 <div class="page-home-top">
-                    <a class="page-home-shorts">
+                    <a class="page-home-shorts" href="page/page-shorts.html">
                         <img src="img/page-home-shorts.png">
                         <p>奇石鉴赏</p>
                     </a>
@@ -148,19 +143,19 @@
                     </div>
                 </div>
                 <div class="page-home-content">
-                    <a class="page-home-shop">
-                        <img src="img/page-home-NSshop.png">
+                    <a class="page-home-shop" href="#">
+                        <img src="img/page-home-NSshop.png" />
                         <p>国石商场</p>
                     </a>
-                    <a class="page-home-LR">
-                        <img src="img/page-home-LR.png">
+                    <a class="page-home-LR" href="page/page-LR.html">
+                        <img src="img/page-home-LR.png" />
                         <p>领导班子</p>
                     </a>
-                    <a class="page-home-carveMaster">
-                        <img src="img/page-home-carveMaster.png">
+                    <a class="page-home-carveMaster" href="page/page-carve-master.html">
+                        <img src="img/page-home-carve-master2.png" />
                         <p>雕刻大师</p>
                     </a>
-                    <a class="page-home-offForum">
+                    <a class="page-home-offForum" href="#">
                         <p>官方论坛</p>
                         <ul class="page-home-offForum-content">
                             <li>
@@ -177,7 +172,7 @@
                             </li>
                         </ul>
                     </a>
-                    <a class="page-home-newDy">
+                    <a class="page-home-newDy" href="page/page-consultation-content.html">
                         <p>新闻动态</p>
                         <ul class="page-home-newDy-content">
                             <li>
@@ -194,253 +189,6 @@
                             </li>
                         </ul>
                     </a>
-                </div>
-            </li>
-            <li class="page-item page-shorts">
-                <div  class="carousel carousel-shorts slide" data-ride="carousel">
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item page-short-top active">
-                            <img src="img/page-short-top.png"/>
-                        </div>
-                        <div class="item page-short-top">
-                            <img src="img/page-short-top.png" />
-                        </div>
-                    </div>
-                </div>
-                <ul class="page-shorts-list">
-                    <li><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>鸡血石</span><a><img src="img/page-short-item1.png" alt=""></a></div></li>
-                    <li><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>福黄石</span><a><img src="img/page-short-item2.png" alt=""></a></div></li>
-                    <li><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>冻石</span><a><img src="img/page-short-item3.png" alt=""></a></div></li>
-                    <li><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>彩石</span><a><img src="img/page-short-item4.png" alt=""></a></div></li>
-                    <li><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>图案石</span><a><img src="img/page-short-item5.png" alt=""></a></div></li>
-                </ul>
-                <div class="page-shorts-sub">
-                    <ul class="page-shorts-sub-nav">
-                        <li>福黄石</li>
-                        <li>鸡血石</li>
-                        <li>冻石</li>
-                        <li>彩石</li>
-                        <li>图案石</li>
-                    </ul>
-                    <ul class="page-shorts-sub-list-all">
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                        <li><a class="page-shorts-sub-list-item"><img src="img/印章.png"></a><p>印章</p></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="page-item page-ns-store">
-                <div class="page-ns-head">
-                    <div class="page-ns-head-line"><span class="page-ns-title">国石文化</span></div>
-                    <a class="page-place"><span class="page-ns-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>&nbsp;>&nbsp;<span class="page-place-ns">国石文化</span></a>
-                </div>
-                <ul class="page-ns-list">
-                    <li class="page-ns-item"><a class="page-ns-img"><img src="img/ns-yin-zhang.png"></a>
-                        <div class="page-ns-item-content">
-                            <p class="page-ns-item-title">巴林石历史</p>
-                            <p class="page-ns-item-info">赤峰彩石，自然首推巴林石。巴林石是以高领石、地开石为主，同时含叶腊石的彩石。巴林石就文化而言，历史悠久，底蕴丰厚。</p>
-                        </div>
-                        <a class="page-ns-detail">阅读详情</a>
-                    </li>
-                    <li class="page-ns-item"><a class="page-ns-img"><img src="img/ns-yin-zhang.png"></a>
-                        <div class="page-ns-item-content">
-                            <p class="page-ns-item-title">巴林石历史</p>
-                            <p class="page-ns-item-info">赤峰彩石，自然首推巴林石。巴林石是以高领石、地开石为主，同时含叶腊石的彩石。巴林石就文化而言，历史悠久，底蕴丰厚。</p>
-                        </div>
-                        <a class="page-ns-detail">阅读详情</a>
-                    </li>
-                    <li class="page-ns-item"><a class="page-ns-img"><img src="img/ns-yin-zhang.png"></a>
-                        <div class="page-ns-item-content">
-                            <p class="page-ns-item-title">巴林石历史</p>
-                            <p class="page-ns-item-info">赤峰彩石，自然首推巴林石。巴林石是以高领石、地开石为主，同时含叶腊石的彩石。巴林石就文化而言，历史悠久，底蕴丰厚。</p>
-                        </div>
-                        <a class="page-ns-detail">阅读详情</a>
-                    </li>
-                    <li class="page-ns-item"><a class="page-ns-img"><img src="img/ns-yin-zhang.png"></a>
-                        <div class="page-ns-item-content">
-                            <p class="page-ns-item-title">巴林石历史</p>
-                            <p class="page-ns-item-info">赤峰彩石，自然首推巴林石。巴林石是以高领石、地开石为主，同时含叶腊石的彩石。巴林石就文化而言，历史悠久，底蕴丰厚。</p>
-                        </div>
-                        <a class="page-ns-detail">阅读详情</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="page-item page-carve-master">
-                <a class="page-carve-master-top"><img src="img/page-carve-master-top.png"></a>
-                <div class="page-carve-master-content">
-                    <p class="page-carve-master-title">雕刻大师</p>
-                    <div id="carousel-example-generic-carve" class="carousel slide" data-ride="carousel">
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <p class="carve-master-carousel-bg"></p>
-                                <a><img src="img/carve-master-carousel.png" alt=""></a>
-                                <div class="carve-master-user-img"><img src="img/carve-master-user-img.png"></div>
-                                <div class="page-carve-master-info">
-                                    <p class="page-carve-master-name">雕刻师名字</p>
-                                    <p class="page-carve-master-introduce">俗话说：“文人有七宝，琴棋书画诗酒茶。”三燈，就是这样的一位文人他爱好文玩，曾从事玉雕工作数十年，他也是一位优秀的古董鉴定师；就是这样的一位文人他爱好文玩，曾从事玉雕工作数十年，他也是一位优秀的古董鉴定师就是这样的一位文人他爱好文玩，曾从事玉雕工作数十年，他也是一位优秀的古董鉴定师就是这样的一位文人他爱好文玩，曾从事玉雕工作数十年，他也是一位优秀的古董鉴定师</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <p class="carve-master-carousel-bg"></p>
-                                <a><img src="img/carve-master-carousel.png" alt=""></a>
-                                <div class="carve-master-user-img"><img src="img/carve-master-user-img.png"></div>
-                                <div class="page-carve-master-info">
-                                    <p class="page-carve-master-name">雕刻师名字</p>
-                                    <p class="page-carve-master-introduce">俗话说：“文人有七宝，琴棋书画诗酒茶。”三燈，就是这样的一位文人他爱好文玩，曾从事玉雕工作数十年，他也是一位优秀的古董鉴定师；</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example-generic-carve" role="button" data-slide="prev">
-                            <span class="carve-master-carousel-left" aria-hidden="true"></span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic-carve" role="button" data-slide="next">
-                            <span class="carve-master-carousel-right" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="page-item page-consultation-content">
-                <div class="page-consultation-head">
-                    <div class="page-consultation-head-line"><span class="page-consultation-title">咨讯</span></div>
-                    <a class="page-place"><span class="page-consultation-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>&nbsp;>&nbsp;<span class="page-place-consultation">资讯</span></a>
-                </div>
-                <!--咨询介绍页-->
-                <div class="page-consultation-notice">
-                    <img class="page-consultation-notice-img" src="img/page-about-our-bottom.png">
-                    <div class="page-consultation-notice-info">
-                        <p class="page-consultation-notice-title">公司重要公告</p>
-                        <div class="page-consultation-notice-hint">日期：&nbsp;<span class="page-consultation-notice-time">2018-08-20</span>&nbsp;来源：鸦片战争博物馆</div>
-                        <p class="page-consultation-notice-content">巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
-                            子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
-                            子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
-                            子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
-                            子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、子公司巴林石质地温润</p>
-                        <a class="page-consultation-notice-detail">查看详情</a>
-                    </div>
-                </div>
-                <ul class="page-consultation-list">
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-08-18</p>
-                        <a class="page-consultation-item-img"><img src="img/page-consultation-item-img.png"></a>
-                        <p class="page-consultation-item-info">8月18日，由中国艺术研究院主办、中国工艺美术馆承办的第四届文化和旅游部副部长李群、</p>
-                    </li>
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-08-18</p>
-                        <a class="page-consultation-item-img"><img src="img/page-consultation-item-img.png"></a>
-                        <p class="page-consultation-item-info">8月18日，由中国艺术研究院主办、中国工艺美术馆承办的第四届文化和旅游部副部长李群、</p>
-                    </li>
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-08-18</p>
-                        <a class="page-consultation-item-img"><img src="img/page-consultation-item-img.png"></a>
-                        <p class="page-consultation-item-info">8月18日，由中国艺术研究院主办、中国工艺美术馆承办的第四届文化和旅游部副部长李群、</p>
-                    </li>
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-08-18</p>
-                        <a class="page-consultation-item-img"><img src="img/page-consultation-item-img.png"></a>
-                        <p class="page-consultation-item-info">8月18日，由中国艺术研究院主办、中国工艺美术馆承办的第四届文化和旅游部副部长李群、</p>
-                    </li>
-                </ul>
-                <!--咨询子页详情页-->
-                <div class="page-consultation-sub-detail">
-                    <p class="page-consultation-sub-row-line"></p>
-                    <div class="page-consultation-sub">
-                        <div class="page-consultation-sub-content">
-                            <p class="page-consultation-sub-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                            <div class="page-consultation-sub-time">日期:&nbsp;<span id="page-consultation-sub-time">2018-08-18 15:00</span><span>来源：中国国家博物馆</span></div>
-                            <p class="page-consultation-sub-info">8月18日，由中国艺术研究院主办、中国工艺美术馆承办的第四届文化和旅游部副部长李群、</p>
-                            <a class="page-consultation-sub-img"><img src="img/page-consultation-item-img.png"></a>
-                            <p class="page-consultation-sub-info">     此次展览遴选全国各地国家级、省级工艺美术大师，国家级、省级非遗项目代表性传承人，优秀中青年工艺美术创作者以及院校工艺
-                                此次展览遴选全国各地国家级、省级工艺美术大师，国家级、省级非遗项目代表性传承人，优秀中青年工艺美术创作者以及院校工艺
-                                此次展览遴选全国各地国家级、省级工艺美术大师，国家级、省级非遗项目代表性传承人，优秀中青年工艺美术创作者以及院校工艺
-                                此次展览遴选全国各地国家级、省级工艺美术大师，国家级、省级非遗项目代表性传承人，优秀中青年工艺美术创作者以及院校工艺
-                            </p>
-                            <div class="page-consultation-sub-laud"><a><img src="img/page-forum-laud.png"></a>
-                                <p class="page-consultation-sub-laud-num">122</p>
-                            </div>
-                        </div>
-                        <div class="page-consultation-sub-right">
-                            <div class="page-consultation-sub-right-head"><span>资讯列表</span></div>
-                            <ul class="page-consultation-sub-right-list">
-                                <li class="page-consultation-sub-right-item"><a>热烈庆祝我司成立文化部艺术发展热烈庆祝我司成立文化部艺术发展</a><span class="page-consultation-sub-right-item-time">2018-08-10</span></li>
-                                <li class="page-consultation-sub-right-item"><a>热烈庆祝我司成立文化部艺术发展热烈庆祝我司成立文化部艺术发展</a><span class="page-consultation-sub-right-item-time">2018-08-10</span></li>
-                                <li class="page-consultation-sub-right-item"><a>热烈庆祝我司成立文化部艺术发展热烈庆祝我司成立文化部艺术发展</a><span class="page-consultation-sub-right-item-time">2018-08-10</span></li>
-                                <li class="page-consultation-sub-right-item"><a>热烈庆祝我司成立文化部艺术发展热烈庆祝我司成立文化部艺术发展</a><span class="page-consultation-sub-right-item-time">2018-08-10</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="page-consultation-sub-footer">
-                        <div class="page-consultation-sub-page">
-                            <a class="page-consultation-sub-page-pro"><span>上一篇：</span>热烈庆祝新官网成立</a>
-                            <a class="page-consultation-sub-page-next"><span>下一篇：</span>热烈庆祝新官网成立</a>
-                        </div>
-                        <a class="page-consultation-sub-nextIcon"><img src="img/page-consultation-sub-nextIcon.png" alt=""></a>
-                    </div>
-                </div>
-            </li>
-            <li class="page-item page-about-our">
-                <div>
-                    <a class="page-about-our-top"><img src="img/page-about-our-top.png"></a>
-                </div>
-                <div class="page-about-our-wrap">
-                    <div class="page-about-our-info">
-                        <span class="page-about-our-right pull-right"></span>
-                        <div class="page-about-our-title">
-                            <p class="page-about-our-title-all">公司介绍</p>
-                            <p>中国安华·巴林石矿业有限公司位于内蒙古赤峰市巴林右旗大板镇查干沐沦街中段，交通便利。公司始建于1973年，是以非金属资源开发为</p>
-                        </div>
-                        <ul class="page-about-our-course-list">
-                            <li class="page-about-our-course-text">
-                                <p class="page-about-our-title-all">发展历程</p></li>
-                            <li class="page-about-our-course-item">
-                                <p>1986年，巴林石矿业与美雕一厂、美雕二厂合并，成立了巴林石工艺美术公司。</p></li>
-                            <li class="page-about-our-course-item">
-                                <p>1995年，其所属巴林奇石馆也落成典礼。</p></li>
-                            <li class="page-about-our-course-item">
-                                <p>1997年，巴林石矿业与美雕一厂、美雕二厂合并，成立了巴林石工艺美术公司。</p></li>
-                            <li class="page-about-our-course-item">
-                                <p>1998年，其所属巴林奇石馆也落成典礼。</p></li>
-                            <li class="page-about-our-course-item">
-                                <p>43年来，巴林石矿业有限公司经历了计划经济时代向市场经济时代的转型过度，见证了巴林石从草原无名之石到国石之石、四大名石的华丽蜕变。</p></li>
-                            <li class="page-about-our-course-item">
-                                <p>2017年，随着安华集团的强势入股，巴林石矿业有限公司迎来了新的春天，在经历了一系列重组整改措施之后巴林石矿业有限公司将重新出发，发挥更大的文化能量，承担更多的社会责任。</p></li>
-                        </ul>
-                    </div>
-                    <div class="page-about-our-connection">
-                        <p class="page-about-our-title-all">联系我们</p>
-                        <div class="page-about-our-connection-list">
-                            <div class="page-about-our-connection-item">
-                                <p>联系地址</p>
-                                <p>内蒙古赤峰市巴林右旗巴林石</p>
-                                <p>xxxx</p>
-                            </div>
-                            <div class="page-about-our-connection-item">
-                                <p>客服电话</p>
-                                <p>0571-1026350</p>
-                            </div>
-                            <div class="page-about-our-connection-item">
-                                <p>加入我们</p>
-                                <p>hr@balinshi.com</p>
-                            </div>
-                            <div class="page-about-our-connection-item">
-                                <p>投诉邮箱</p>
-                                <p>report@balinshi.com</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </li>
         </ul>
@@ -545,7 +293,7 @@
     <div class="page-in-over-circular"></div>
 </div>
 <!--脚部-->
-<footer>
+<footer style="display: none">
     <div class="footer-zhe"></div>
     <div class="footer-content">
         <div class="footer-content-info">

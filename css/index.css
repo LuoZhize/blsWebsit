@@ -40,7 +40,6 @@ body {
   overflow: hidden;
 }
 header {
-  display: none;
   width: 100%;
   position: fixed;
   overflow: hidden;
@@ -200,7 +199,6 @@ header nav .nav-down img {
   background: #e2ba60;
 }
 aside {
-  display: none;
   width: 6rem;
   height: 100%;
   float: left;
@@ -276,7 +274,7 @@ aside .nav-slide .nav-slide-title div p {
   -ms-transform: translateY(-30%);
 }
 .container-fluid {
-  display: none;
+  width: 100%;
   height: 100%;
   position: absolute;
   overflow: hidden;
@@ -288,13 +286,13 @@ aside .nav-slide .nav-slide-title div p {
   overflow: hidden;
 }
 .container-fluid .page-wrap .page-list {
-  width: 1000%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
 }
 .container-fluid .page-wrap .page-list .page-item {
-  width: 9.99%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   display: inline-block;
@@ -422,25 +420,27 @@ aside .nav-slide .nav-slide-title div p {
   margin: 0.6667rem 0 0 0.6667rem;
   background: #d6b977;
   overflow: hidden;
+  display: inline-block;
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-LR p,
 .container-fluid .page-wrap .page-list .page-home .page-home-carveMaster p,
 .container-fluid .page-wrap .page-list .page-home .page-home-offForum p,
 .container-fluid .page-wrap .page-list .page-home .page-home-newDy p {
-  padding-bottom: 0;
-}
-.container-fluid .page-wrap .page-list .page-home .page-home-LR img,
-.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster img,
-.container-fluid .page-wrap .page-list .page-home .page-home-offForum img,
-.container-fluid .page-wrap .page-list .page-home .page-home-newDy img {
-  width: 100%;
-  height: 100%;
+  padding: 1rem 0.8333rem 0.5rem;
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-LR:hover,
 .container-fluid .page-wrap .page-list .page-home .page-home-carveMaster:hover,
 .container-fluid .page-wrap .page-list .page-home .page-home-offForum:hover,
 .container-fluid .page-wrap .page-list .page-home .page-home-newDy:hover {
   background: #a38642;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-LR img,
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster img {
+  width: 5.73333rem;
+  height: 6rem;
+  position: absolute;
+  right: 5%;
+  bottom: 0;
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-offForum-content,
 .container-fluid .page-wrap .page-list .page-home .page-home-newDy-content {
@@ -621,10 +621,12 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-head-line {
   border-bottom: 0.06666rem solid #eeeeee;
 }
-.container-fluid .page-wrap .page-list .page-ns-store .page-place {
+.container-fluid .page-wrap .page-list .page-ns-store .page-place,
+.container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub {
   margin: 0.5333rem 0 0.4rem;
 }
-.container-fluid .page-wrap .page-list .page-ns-store .page-place .page-ns-head-home {
+.container-fluid .page-wrap .page-list .page-ns-store .page-place .page-ns-head-home,
+.container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub .page-ns-head-home {
   width: 0.53333rem;
   height: 0.53333rem;
   display: inline-block;
@@ -634,18 +636,27 @@ aside .nav-slide .nav-slide-title div p {
   -moz-background-size: 100%;
   margin-right: 0.1666rem;
 }
-.container-fluid .page-wrap .page-list .page-ns-store .page-place span {
+.container-fluid .page-wrap .page-list .page-ns-store .page-place span,
+.container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub span {
   font-size: 0.46666rem;
   color: #888888;
   vertical-align: top;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-place .page-place-home:hover,
-.container-fluid .page-wrap .page-list .page-ns-store .page-place .page-place-ns:hover {
+.container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub .page-place-home:hover,
+.container-fluid .page-wrap .page-list .page-ns-store .page-place .page-place-ns:hover,
+.container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub .page-place-ns:hover,
+.container-fluid .page-wrap .page-list .page-ns-store .page-place .page-place-ns-sub-title:hover,
+.container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub .page-place-ns-sub-title:hover {
   border-bottom: 0.03rem solid #000000;
 }
-.container-fluid .page-wrap .page-list .page-ns-store .page-place:hover {
+.container-fluid .page-wrap .page-list .page-ns-store .page-place:hover,
+.container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub:hover {
   text-decoration: none;
   color: #000000;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub {
+  display: none;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-item {
   padding-right: 4rem;
@@ -695,6 +706,98 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-item .page-ns-detail:hover {
   color: #b5964e;
   text-decoration: inherit;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub {
+  display: none;
+  position: relative;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-left {
+  width: 38.5rem;
+  float: left;
+  text-align: center;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-title {
+  font-size: 0.766rem;
+  color: #222222;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-info {
+  font-size: 0.4666rem;
+  color: #888888;
+  cursor: default;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-info div {
+  margin-left: 1rem;
+  display: inline-block;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-img {
+  display: inline-block;
+  width: 21.6rem;
+  height: 10.3rem;
+  overflow: hidden;
+  margin: 1rem auto;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-img img {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-text {
+  text-align: left;
+  color: #666666;
+  font-size: 0.53333rem;
+  margin: 0 1rem;
+  overflow: hidden;
+  text-indent: 1rem;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-text-author {
+  margin-top: 2rem;
+  text-align: right;
+  padding-right: 1.5rem;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-text-author span {
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub-right {
+  padding: 0.2rem 1rem 0.2rem 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub-right .page-ns-sub-right-head {
+  font-size: 0.6666rem;
+  color: #222222;
+  font-weight: bold;
+  border-bottom: 0.0666rem solid #eeeeee;
+  padding-bottom: 0.25rem;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub-right .page-ns-sub-right-head span {
+  padding-bottom: 0.4rem;
+  border-bottom: 0.1rem solid #b5964e;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub-right .page-ns-sub-right-list {
+  padding-right: 4rem;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub-right .page-ns-sub-right-list .page-ns-sub-right-item {
+  font-size: 0.5333rem;
+  color: #666666;
+  margin-bottom: 0.333rem;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub-right .page-ns-sub-right-list .page-ns-sub-right-item:last-of-type {
+  margin-bottom: 0;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub-right .page-ns-sub-right-list .page-ns-sub-right-item a {
+  width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub-right .page-ns-sub-right-list .page-ns-sub-right-item a:hover {
+  color: #666666;
+  text-decoration: underline;
 }
 .container-fluid .page-wrap .page-list .page-carve-master {
   background: url("../img/page-shorts-bg.png") no-repeat;
@@ -886,7 +989,7 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-notice .page-consultation-notice-img {
   width: 23.2666rem;
-  height: 11.7rem;
+  height: 11rem;
   display: inline-block;
   margin-right: 1.4666rem;
 }
@@ -906,7 +1009,7 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-notice .page-consultation-notice-info .page-consultation-notice-content {
   width: 30rem;
-  height: 5.5rem;
+  height: 5.2rem;
   line-height: 0.8rem;
   overflow: hidden;
   font-size: 0.5333rem;
@@ -914,6 +1017,7 @@ aside .nav-slide .nav-slide-title div p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 7;
+  margin-bottom: 0;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-notice .page-consultation-notice-info .page-consultation-notice-detail {
   display: inline-block;
@@ -928,13 +1032,14 @@ aside .nav-slide .nav-slide-title div p {
   background: #b5964e;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list {
+  margin-top: 0.3rem;
   display: block;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item {
   display: inline-block;
-  width: 13.7rem;
+  width: 13rem;
   padding: 0.6rem 0.73333rem 0;
-  margin: 0.3rem 0.2rem 0 0;
+  margin: 0.3rem 0.5rem 0.2rem 0;
   overflow: hidden;
   background: #f5f5f5;
   cursor: pointer;
@@ -944,13 +1049,13 @@ aside .nav-slide .nav-slide-title div p {
   color: #000000;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item .page-consultation-item-time {
-  font-size: 0.6666rem;
+  font-size: 0.5666rem;
   color: #999999;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item .page-consultation-item-img {
-  width: 12.2rem;
-  height: 9rem;
-  min-height: 8rem;
+  width: 11.4rem;
+  height: 6rem;
+  min-height: 6rem;
   overflow: hidden;
   margin-right: 1.8rem;
 }
@@ -958,7 +1063,7 @@ aside .nav-slide .nav-slide-title div p {
   width: 100%;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item .page-consultation-item-info {
-  margin-top: 0.3rem;
+  margin-top: 0.7rem;
   font-size: 0.5333rem;
   color: #999999;
 }
@@ -1199,8 +1304,229 @@ aside .nav-slide .nav-slide-title div p {
   color: #222222;
   font-weight: bold;
 }
-footer {
+.container-fluid .page-wrap .page-list .page-lr {
+  background: url("../img/ns-bg.png") no-repeat;
+  background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-title {
+  font-size: 0.73333rem;
+  color: #b5964e;
+  border-bottom: 0.1rem solid #b5964e;
+  padding-bottom: 0.1rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-head-line {
+  border-bottom: 0.06666rem solid #eeeeee;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-place,
+.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub {
+  margin: 0.5333rem 0 0.4rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-place .page-lr-head-home,
+.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub .page-lr-head-home {
+  width: 0.53333rem;
+  height: 0.53333rem;
+  display: inline-block;
+  background: url("../img/page-consultation-head-home.png") no-repeat;
+  background-size: 100%;
+  -o-background-size: 100%;
+  -moz-background-size: 100%;
+  margin-right: 0.1666rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-place span,
+.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub span {
+  font-size: 0.46666rem;
+  color: #888888;
+  vertical-align: top;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-place .page-place-home:hover,
+.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub .page-place-home:hover,
+.container-fluid .page-wrap .page-list .page-lr .page-place .page-place-lr:hover,
+.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub .page-place-lr:hover,
+.container-fluid .page-wrap .page-list .page-lr .page-place .page-place-lr-sub-title:hover,
+.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub .page-place-lr-sub-title:hover,
+.container-fluid .page-wrap .page-list .page-lr .page-place .page-place-lr-title:hover,
+.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub .page-place-lr-title:hover {
+  border-bottom: 0.03rem solid #000000;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-place:hover,
+.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub:hover {
+  text-decoration: none;
+  color: #000000;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub {
   display: none;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list .page-lr-item {
+  cursor: pointer;
+  width: 13.333rem;
+  height: 14.666rem;
+  background: url("../img/lr-per-border.png") no-repeat;
+  background-size: 100%;
+  -moz-background-size: 100%;
+  margin: 0 0 0.6rem 3.2333rem;
+  display: inline-block;
+  text-align: center;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list .page-lr-item .page-lr-img {
+  display: inline-block;
+  width: 11.5rem;
+  height: 8.2666rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list .page-lr-item .page-lr-img img {
+  width: 100%;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list .page-lr-item .page-lr-item-content {
+  width: 12rem;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list .page-lr-item .page-lr-item-content .page-lr-item-title {
+  font-size: 0.63333rem;
+  color: #333333;
+  margin: 0.3rem 0;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list .page-lr-item .page-lr-item-content .page-lr-item-info {
+  padding: 0 0.2rem;
+  text-align: left;
+  font-size: 0.43333rem;
+  color: #777777;
+  margin-bottom: 0.4rem;
+  line-height: 0.7rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom {
+  overflow: hidden;
+  margin: 0 3.2333rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom .page-lr-bottom-item {
+  cursor: pointer;
+  overflow: hidden;
+  padding-bottom: 0.3rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom .page-lr-bottom-item:last-of-type {
+  border-top: 0.1rem dotted #eeeeee;
+  padding: 0.3rem 0 0;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom .page-lr-bottom-img {
+  display: inline-block;
+  float: left;
+  width: 8.6rem;
+  height: 5.933rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom .page-lr-bottom-img img {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom .page-lr-bottom-item-content {
+  padding: 1.5rem 0.5rem 0.5rem 1rem;
+  display: inline-block;
+  color: #222222;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom .page-lr-bottom-item-title {
+  font-size: 0.666rem;
+  margin-bottom: 0.5rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom .page-lr-bottom-item-info {
+  padding: 0 0.2rem;
+  text-align: left;
+  font-size: 0.6rem;
+  margin-bottom: 0.4rem;
+  line-height: 0.7rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub {
+  display: none;
+  position: relative;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub .page-lr-sub-left {
+  width: 38.5rem;
+  float: left;
+  text-align: center;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub .page-lr-sub-title {
+  font-size: 0.766rem;
+  color: #222222;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub .page-lr-sub-info {
+  font-size: 0.4666rem;
+  color: #888888;
+  cursor: default;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub .page-lr-sub-info div {
+  margin-left: 1rem;
+  display: inline-block;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub .page-lr-sub-img {
+  display: inline-block;
+  width: 21.6rem;
+  height: 10.3rem;
+  overflow: hidden;
+  margin: 1rem auto;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub .page-lr-sub-img img {
+  width: 100%;
+  height: 100%;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub .page-lr-sub-text {
+  text-align: left;
+  color: #666666;
+  font-size: 0.53333rem;
+  margin: 0 1rem;
+  overflow: hidden;
+  text-indent: 1rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub-right {
+  padding: 0.2rem 1rem 0.2rem 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub-right .page-lr-sub-right-head {
+  font-size: 0.6666rem;
+  color: #222222;
+  font-weight: bold;
+  border-bottom: 0.0666rem solid #eeeeee;
+  padding-bottom: 0.25rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub-right .page-lr-sub-right-head span {
+  padding-bottom: 0.4rem;
+  border-bottom: 0.1rem solid #b5964e;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub-right .page-lr-sub-right-list {
+  padding-right: 4rem;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub-right .page-lr-sub-right-list .page-lr-sub-right-item {
+  font-size: 0.5333rem;
+  color: #666666;
+  margin-bottom: 0.333rem;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub-right .page-lr-sub-right-list .page-lr-sub-right-item:last-of-type {
+  margin-bottom: 0;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub-right .page-lr-sub-right-list .page-lr-sub-right-item a {
+  width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+.container-fluid .page-wrap .page-list .page-lr .page-lr-sub-right .page-lr-sub-right-list .page-lr-sub-right-item a:hover {
+  color: #666666;
+  text-decoration: underline;
 }
 footer .footer-zhe {
   display: none;
