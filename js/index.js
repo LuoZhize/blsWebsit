@@ -354,12 +354,11 @@ function textPageBG() {
     }
     $('.pageIndex').click(function () {
         let thisIndex = $(this).index();
-        console.log($('#page-box').children().length);
-        if($('#page-box').children().length - thisIndex >= 5) {
-            $(".pageIndex:lt(" + (thisIndex - 2) + ")").hide();
-            $(".pageIndex").eq(thisIndex - 1).show();
-        } else {
+        preOrNext(thisIndex);//判断index让其余的隐藏/显示
+        if (thisIndex >= $('#page-box').children().length - 5) {
             $(".textPageDot").remove();
+        } else {
+            $(".pageIndex:gt(1)").hide().eq(-2).show().before("<span class='textPageDot'> . . . </span>");
         }
         $(this).addClass('clickTextPage').siblings().removeClass('clickTextPage');
         textPagePre = 0;
@@ -369,22 +368,39 @@ function textPageBG() {
         if (clickIndex + textPagePre <= $('#page-box').children().length - 2) {//判断是否是第一张
             showPage('#article_' + (clickIndex + textPagePre) + '', '.contentPageClass');
             $('.pageIndex').eq(clickIndex + textPagePre - 1).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            let thisIndex = clickIndex + textPagePre;
+            preOrNext(thisIndex);
             textPagePre++;
             return textPagePre;
         }
         else {}
     });
     $('.text-page-pre').click(function () {//上一张
+        let thisIndex = $(this).index();
         textPagePre--;
         if ((clickIndex + textPagePre) - 2 >= 0) {//判断是否最后一张
             showPage('#article_' + (clickIndex + textPagePre - 1) + '', '.contentPageClass');
             $('.pageIndex').eq(clickIndex + textPagePre - 2).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            let thisIndex = clickIndex + textPagePre - 1;
+            if($('#page-box').children().length - thisIndex >= 1) {
+                console.log($('#page-box').children().length,thisIndex);
+                $(".pageIndex").eq(thisIndex-1).show();
+                $(".pageIndex").eq(thisIndex+1).hide();
+            } else {}
+            if (thisIndex >= $('#page-box').children().length - 5) {
+                $(".textPageDot").remove();
+            } else {
+                $(".pageIndex:gt(1)").hide().eq(-2).show().before("<span class='textPageDot'> . . . </span>");
+            }
             return textPagePre;
         } else {}
     });
 }
+function preOrNext(num) {
+    $(".pageIndex:lt(" + (num - 2) + ")").hide();
+    $(".pageIndex").eq(num - 1).show();
+}
 var showPage = function(id, findClass){
-    console.log(id,findClass);
     $(findClass).each(function(){
         $(this).css('display', 'none');
     });

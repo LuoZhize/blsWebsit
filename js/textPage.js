@@ -3,7 +3,7 @@
  */
 (function(a){
     var defaultOptions = {
-        'maxCharSize' : 400,//单页最大字数
+        'maxCharSize' : 300,//单页最大字数
         'safeCutCharSize' : 50,//冗余字数，用于相减
         'maxPr' : 1500,//单页最大段落数1500
         'pageContent' : '#page-box',//分页容器
