@@ -556,9 +556,6 @@ aside .nav-slide .nav-slide-title div p {
   -moz-transform: translateY(-0.5rem);
   -ms-transform: translateY(-0.5rem);
 }
-.container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub {
-  display: none;
-}
 .container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-nav {
   width: 56.2rem;
   background: #eeeeee;
@@ -655,9 +652,6 @@ aside .nav-slide .nav-slide-title div p {
   text-decoration: none;
   color: #000000;
 }
-.container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub {
-  display: none;
-}
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-item {
   padding-right: 4rem;
   background: #f1f1f1;
@@ -708,7 +702,6 @@ aside .nav-slide .nav-slide-title div p {
   text-decoration: inherit;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub {
-  display: none;
   position: relative;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-left {
@@ -946,7 +939,7 @@ aside .nav-slide .nav-slide-title div p {
   -o-transform: rotateY(180deg) translate(-30%, -40%);
 }
 .container-fluid .page-wrap .page-list .page-carve-master .page-carve-master-content #carousel-example-generic-carve .carousel-control:hover {
-  background: white;
+  background: transparent;
   opacity: 1;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-title {
@@ -1083,16 +1076,8 @@ aside .nav-slide .nav-slide-title div p {
   margin-right: 0;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail {
-  display: none;
   height: 100%;
   position: relative;
-}
-.container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-row-line {
-  height: 100%;
-  border-left: 0.0333rem solid #eeeeee;
-  position: absolute;
-  left: 66%;
-  top: -5%;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub {
   overflow: hidden;
@@ -1115,6 +1100,9 @@ aside .nav-slide .nav-slide-title div p {
   color: #666666;
   font-size: 0.53333rem;
   margin: 0.666rem 0;
+}
+.container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-content .page-consultation-sub-info-text {
+  text-indent: 1rem;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-content .page-consultation-sub-img {
   display: inline-block;
@@ -1154,11 +1142,14 @@ aside .nav-slide .nav-slide-title div p {
   color: #b5964e;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-right {
-  padding: 0.2rem 2.5rem 0.2rem 0;
   overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
+  border-left: 0.0333rem solid #eeeeee;
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+  height: 100%;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-right .page-consultation-sub-right-head {
   font-size: 0.6666rem;
@@ -1191,8 +1182,7 @@ aside .nav-slide .nav-slide-title div p {
   display: inline-block;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-right .page-consultation-sub-right-list .page-consultation-sub-right-item a:hover {
-  color: #666666;
-  text-decoration: inherit;
+  color: #000000;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-right .page-consultation-sub-right-list .page-consultation-sub-right-item span {
   display: inline-block;
@@ -1355,9 +1345,6 @@ aside .nav-slide .nav-slide-title div p {
   text-decoration: none;
   color: #000000;
 }
-.container-fluid .page-wrap .page-list .page-lr .page-place-lr-sub {
-  display: none;
-}
 .container-fluid .page-wrap .page-list .page-lr .page-lr-list .page-lr-item {
   cursor: pointer;
   width: 13.333rem;
@@ -1446,7 +1433,6 @@ aside .nav-slide .nav-slide-title div p {
   -webkit-line-clamp: 2;
 }
 .container-fluid .page-wrap .page-list .page-lr .page-lr-sub {
-  display: none;
   position: relative;
 }
 .container-fluid .page-wrap .page-list .page-lr .page-lr-sub .page-lr-sub-left {
@@ -1527,6 +1513,36 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-lr .page-lr-sub-right .page-lr-sub-right-list .page-lr-sub-right-item a:hover {
   color: #666666;
   text-decoration: underline;
+}
+#page-box {
+  margin-left: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  margin-top: 1rem;
+}
+#page-box .text-page-pre {
+  display: none;
+}
+#page-box a {
+  text-align: center;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.4666rem;
+  border: 0.0333rem solid #ddd;
+  border-radius: 10%;
+}
+#page-box a:first-of-type {
+  border-right: 0;
+}
+#page-box a:hover {
+  color: #000000;
+}
+#page-box a:focus {
+  color: #ffffff;
+}
+.clickTextPage {
+  background: #337ab7;
+  color: #ffffff;
 }
 footer .footer-zhe {
   display: none;
@@ -1740,7 +1756,7 @@ footer .footer-content .footer-content-footer {
   display: block;
   width: 13.333rem;
   height: 1.93333rem;
-  padding: 0.666rem 0;
+  padding: 0.666rem 0.5rem;
   background-color: transparent;
   border: 0.0333rem solid transparent;
   border-radius: 0.1333rem;
@@ -1769,11 +1785,13 @@ footer .footer-content .footer-content-footer {
   color: white;
   background: #a0a0a0;
 }
-.page-login .form-horizontal .page-login-hint {
+.page-login .form-horizontal .page-login-hint,
+.page-login .form-horizontal .page-register-hint {
   margin-top: 3.8rem;
   font-size: 0.6rem;
 }
-.page-login .form-horizontal .page-login-hint .page-login-register {
+.page-login .form-horizontal .page-login-hint .page-login-register,
+.page-login .form-horizontal .page-register-hint .page-login-register {
   color: #222222;
   display: inline-block;
 }

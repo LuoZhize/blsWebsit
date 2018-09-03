@@ -10,6 +10,8 @@ consultationClick();//consultation event
 bottomNavClick(heightWin);//bottom nav event
 nsShortsClick();//ns shorts event click
 lrClick();//lr click event
+textPageBG();
+
 function startAnimation() {
     $('.page-in-animate-bj-l').animate({left: '0'}, 2500, 'swing', function () {//mountain left
 
@@ -61,7 +63,7 @@ function startAnimation() {
                                 $(this).hide();
                                 $('.page-in-animate').hide();
                                 $(document).ready(function () {
-                                    $('header').show();
+                                    $('.nav-down').show();
                                     $('aside').show();
                                     $('footer').show();
                                     $('.container-fluid').show();
@@ -82,24 +84,11 @@ function startAnimation() {
 }
 
 function nsShortsClick() {
-    let $pagePlace = $('.page-place');
-    let $pagePlaceNsSub = $('.page-place-ns-sub');
-    let $pageNsList = $('.page-ns-list');
-    let $pageNsSub = $('.page-ns-sub');
-    let $pageNsSubTitle = $('.page-ns-title');
     $('.page-ns-detail').click(function () {
-        $pageNsSubTitle.text("国石历史");
-        $pagePlace.hide();
-        $pagePlaceNsSub.css('display','inline-block');
-        $pageNsList.hide();
-        $pageNsSub.show();
+        window.location.href = "../page/page-ns-sub.html";
     });
     $('.page-place-ns').click(function () {
-        $pageNsSubTitle.text("国石文化");
-        $pagePlace.show();
-        $pagePlaceNsSub.hide();
-        $pageNsList.show();
-        $pageNsSub.hide();
+        window.location.href = "../page/page-ns-store.html";
     });
 }
 
@@ -119,9 +108,7 @@ function bottomNavClick(heightWin) {
 
 function consultationClick() {
     let $pageConsultationContent = $('.page-consultation-content');
-    let $pageConsultationList = $('.page-consultation-list');
-    let $pageConsultationNotice = $('.page-consultation-notice');
-    let $pageConsultationSubDetail = $('.page-consultation-sub-detail');
+    let textScon = "";
     $('.page-consultation-notice-detail,.page-consultation-item').click(function () {//change register
         $pageConsultationContent.css({
             'background': 'url("../blsWebsit/img/page-consultation-sub-bg.png") no-repeat',
@@ -129,16 +116,13 @@ function consultationClick() {
             '-moz-background-size': '100%',
             '-o-background-size': '100%'
         });
-        $pageConsultationList.hide();
-        $pageConsultationNotice.hide();
-        $pageConsultationSubDetail.show();
+        window.location.href = "../page/page-consultation-sub.html";
     });
     $('.page-place-consultation').click(function () {
         $pageConsultationContent.css('background', 'transparent');
-        $pageConsultationList.show();
-        $pageConsultationNotice.show();
-        $pageConsultationSubDetail.hide();
+        window.location.href = "../page/page-consultation-content.html";
     });
+    $('#page-consultation-content').pagenation();
 }
 
 function loginClick() {
@@ -149,6 +133,8 @@ function loginClick() {
     let $pageRegisterForm = $('.page-register-form');
     let $pageLoginClose = $('.page-login-close');
     let $pageReturnLogin = $('.page-return-login');
+    let $pageLoginGetText = $('.page-login-getTest');
+    let ifQUestOrPass = false;
     $('.nav-login').click(function () {//show login dialog
         $('.page-shorts-zhe').show();
         $pageLogin.show();
@@ -160,6 +146,7 @@ function loginClick() {
         $pageRegisterForm.show();
         $pageLoginClose.hide();
         $pageReturnLogin.show();
+        $pageLoginGetText.show();
     });
     $('.page-return-login,.page-register-btn').click(function () {//change login
         $pageLoginNav.show();
@@ -168,14 +155,25 @@ function loginClick() {
         $pageRegisterForm.hide();
         $pageLoginClose.show();
         $pageReturnLogin.hide();
+        if (ifQUestOrPass === false) {
+            $pageLoginGetText.show();
+        } else {
+            $pageLoginGetText.hide();
+        }
     });
     $('.page-password-login').click(function () {//change password
-        $('.page-login-getTest').hide();
+        $pageLoginGetText.hide();
         $('.page-login-password').show();
+        $('.page-password-login').css('color','rgb(34, 34, 34)');
+        $('.page-quest-login').css('color','rgb(136, 136, 136)');
+        return ifQUestOrPass = true;
     });
     $('.page-quest-login').click(function () {//change quest
-        $('.page-login-getTest').show();
+        $pageLoginGetText.show();
         $('.page-login-password').hide();
+        $('.page-quest-login').css('color','rgb(34, 34, 34)');
+        $('.page-password-login').css('color','rgb(136, 136, 136)');
+        return ifQUestOrPass = false;
     });
     $pageLoginClose.click(function () {//close login dislog
         $('.page-shorts-zhe').hide();
@@ -185,8 +183,6 @@ function loginClick() {
 
 function shortsClick() {
     let $pageShorts = $('.page-shorts');
-    let $pageShortsList = $('.page-shorts-list');
-    let $pageShortsSub = $('.page-shorts-sub');
     let $pageShortsZhe = $('.page-shorts-zhe');
     let $pageShortsSubDialog = $('.page-shorts-sub-dialog');
     $('.nav-top-menu>li').eq(1).click(function () {//点击导航栏返回主页
@@ -196,8 +192,7 @@ function shortsClick() {
             '-moz-background-size': '100%',
             '-o-background-size': '100%'
         });
-        $pageShortsList.show();
-        $pageShortsSub.hide();
+        window.location.href = "../page/page-shorts.html";
     });
     $('.page-shorts-list>li').click(function () {//奇石鉴赏点击出现对应的子页面
         $pageShorts.css({
@@ -206,8 +201,7 @@ function shortsClick() {
             '-moz-background-size': '100%',
             '-o-background-size': '100%'
         });
-        $pageShortsList.hide();
-        $pageShortsSub.show();
+        window.location.href = "../page/page-shorts-sub.html";
     });
     $('.page-shorts-sub-list-item').click(function () {//奇石鉴赏子页面点击出现弹窗
         $pageShortsZhe.show();
@@ -341,17 +335,59 @@ function navTopANavSlide(num, text1, text2) {//chang slide text & navTop backgro
 
 function lrClick() {
     $('.page-lr-item, .page-lr-bottom-item').click(function () {
-        $('.page-place').hide();
-        $('.page-place-lr-sub').css('display','inline-block');
-        $('.page-lr-list').hide();
-        $('.page-lr-list-col-bottom').hide();
-        $('.page-lr-sub').show();
+        window.location.href = "../page/page-lr-sub.html";
     });
     $('.page-place-lr-title').click(function () {
-        $('.page-place').show();
-        $('.page-place-lr-sub').css('display','none');
-        $('.page-lr-list').show();
-        $('.page-lr-list-col-bottom').show();
-        $('.page-lr-sub').hide();
+        window.location.href = "../page/page-LR.html";
     });
 }
+
+function textPageBG() {
+    let clickIndex = 1;//记录点击的页面下标 默认第一张
+    let textPagePre = 0;//点击左右记录次数
+    if ($('#page-box').children().length > 1) {
+        $('.text-page-pre').show();
+    }
+    if ($('#page-box').children().length > 6) {
+        $(".pageIndex:gt(1)").hide().eq(-2).show().before("<span class='textPageDot'> . . . </span>");
+        $(".pageIndex:last-of-type").show();
+    }
+    $('.pageIndex').click(function () {
+        let thisIndex = $(this).index();
+        console.log($('#page-box').children().length);
+        if($('#page-box').children().length - thisIndex >= 5) {
+            $(".pageIndex:lt(" + (thisIndex - 2) + ")").hide();
+            $(".pageIndex").eq(thisIndex - 1).show();
+        } else {
+            $(".textPageDot").remove();
+        }
+        $(this).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+        textPagePre = 0;
+        return clickIndex = thisIndex;
+    });
+    $('.text-page-next').click(function () {//下一张
+        if (clickIndex + textPagePre <= $('#page-box').children().length - 2) {//判断是否是第一张
+            showPage('#article_' + (clickIndex + textPagePre) + '', '.contentPageClass');
+            $('.pageIndex').eq(clickIndex + textPagePre - 1).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            textPagePre++;
+            return textPagePre;
+        }
+        else {}
+    });
+    $('.text-page-pre').click(function () {//上一张
+        textPagePre--;
+        if ((clickIndex + textPagePre) - 2 >= 0) {//判断是否最后一张
+            showPage('#article_' + (clickIndex + textPagePre - 1) + '', '.contentPageClass');
+            $('.pageIndex').eq(clickIndex + textPagePre - 2).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            return textPagePre;
+        } else {}
+    });
+}
+var showPage = function(id, findClass){
+    console.log(id,findClass);
+    $(findClass).each(function(){
+        $(this).css('display', 'none');
+    });
+    //显示当前项
+    $(id).css('display', 'block');
+};
