@@ -5,7 +5,7 @@
     var defaultOptions = {
         'maxCharSize' : 300,//单页最大字数
         'safeCutCharSize' : 50,//冗余字数，用于相减
-        'maxPr' : 1500,//单页最大段落数1500
+        'maxPr' : 150,//单页最大段落数1500
         'pageContent' : '#page-box',//分页容器
         'pTag' : 'p',//分段标志
         'pagedPix' : 'article_',//分页后容器id前缀

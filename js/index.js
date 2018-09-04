@@ -3,14 +3,14 @@ let carouselNum = 0;//滚动的次数
 let carouselLength = $('.page-list').children('li').length - 1;//滚动子元素个数
 let heightWin = $(window).height();
 navSlide();//nav show
-mouseScroll(carouselNum, carouselLength);//screen scroll
+mouseScroll();//screen scroll
 shortsClick();//shorts event
 loginClick();//login and register event
 consultationClick();//consultation event
 bottomNavClick(heightWin);//bottom nav event
 nsShortsClick();//ns shorts event click
 lrClick();//lr click event
-textPageBG();
+textPageEvent();//文字分页
 
 function startAnimation() {
     $('.page-in-animate-bj-l').animate({left: '0'}, 2500, 'swing', function () {//mountain left
@@ -220,6 +220,12 @@ function navSlide() {
     let navDown = 0;//if click
     let $navUser = $('.nav-user');
     let $navTopWrap = $('.nav-top-wrap');
+    navSearh(5, 0.5, 0);
+    $('.nav-down img').css({
+        transform: 'rotateZ(-270deg)',
+        '-ms-transform': 'rotateZ(-270deg)',
+        '-moz-transform': 'rotateZ(-270deg)'
+    });
     //user
     $navUser.mouseenter(function () {
         $(this).children('.nav-user-menu').show();
@@ -258,79 +264,10 @@ function navSlide() {
     }
 }
 
-function mouseScroll(Num, Length) {
-    let $pageList = $('.page-list');
-    let navNum = 0;//记录navTop点击
-    let isScroll = true;//记录滚屏回调
-    $('.nav-top-menu>li a').click(function () {//navTop click
-        $pageList.stop();
-        navNum = $(this).parentNode().index();
-        ifPageNav(navNum);// page scroll and slide chang text
-        screenClick(navNum, $pageList);//page scroll
-    });
+function mouseScroll() {
     $('.page-place-home, .nav-slide-logo-img').click(function () {//return home
         window.location.href = "../index.html";
     });
-    $('.page-home-shorts').click(function () {//return shorts
-        ifPageNav(1);
-        screenClick(1, $pageList);
-    });
-    $('.page-home-carveMaster').click(function () {//return carveMaster
-        ifPageNav(3);
-        screenClick(3, $pageList);
-    });
-    $('.page-home-offForum').click(function () {//return offForum
-        // ifPageNav(navNum);
-        // screenClick(1,$pageList);
-    });
-    $('.page-home-newDy').click(function () {//return consultation
-        ifPageNav(4);
-        screenClick(4, $pageList);
-    });
-}
-
-function ifPageNav(Num) {
-    switch (Num) {
-        case 0 :
-            navTopANavSlide(Num, "首", "页");
-            break;
-        case 1 :
-            navTopANavSlide(Num, "奇石", "鉴赏");
-            break;
-        case 2 :
-            navTopANavSlide(Num, "国石", "文化");
-            break;
-        case 3 :
-            navTopANavSlide(Num, "雕刻", "大师");
-            break;
-        case 4 :
-            navTopANavSlide(Num, "咨询", "中心");
-            break;
-        case 5 :
-            navTopANavSlide(Num, "关于", "我们");
-            break;
-    }
-}
-
-function navTopANavSlide(num, text1, text2) {//chang slide text & navTop background
-    let navTopMenuLi = $('.nav-top-menu>li');
-    navTopMenuLi.mouseenter(function () {//nav move chang color
-        if ($(this).index() === num) {
-        } else {
-            $(this).children('a').children('.col-line').css('background', '#e2ba60');
-        }
-    });
-    navTopMenuLi.mouseleave(function () {
-        if ($(this).index() === num) {
-            $(this).children('a').children('.col-line').css('background', '#e2ba60');
-        } else {
-            $(this).children('a').children('.col-line').css('background', 'transparent');
-        }
-    });
-    navTopMenuLi.eq(num).children('a').children('.col-line').css('background', '#e2ba60');
-    navTopMenuLi.eq(num).siblings().children('a').children('.col-line').css('background', 'transparent');
-    $('.nav-slide-title div p:nth-of-type(1)').text(text1);
-    $('.nav-slide-title div p:nth-of-type(2)').text(text2);
 }
 
 function lrClick() {
@@ -342,63 +279,120 @@ function lrClick() {
     });
 }
 
-function textPageBG() {
+function textPageEvent() {
     let clickIndex = 1;//记录点击的页面下标 默认第一张
     let textPagePre = 0;//点击左右记录次数
-    if ($('#page-box').children().length > 1) {
+    let pageIndexLength = $('#page-box').children().length;//分页的长度
+    if (pageIndexLength > 1) {
         $('.text-page-pre').show();
+        $('.pageIndex').eq(0).addClass('clickTextPage');
     }
-    if ($('#page-box').children().length > 6) {
-        $(".pageIndex:gt(1)").hide().eq(-2).show().before("<span class='textPageDot'> . . . </span>");
-        $(".pageIndex:last-of-type").show();
+    if (pageIndexLength > 3) {
+        $(".pageIndex:gt(3)").hide();
     }
-    $('.pageIndex').click(function () {
+    $('.pageIndex').click(function () {//a点击
         let thisIndex = $(this).index();
-        preOrNext(thisIndex);//判断index让其余的隐藏/显示
-        if (thisIndex >= $('#page-box').children().length - 5) {
-            $(".textPageDot").remove();
-        } else {
-            $(".pageIndex:gt(1)").hide().eq(-2).show().before("<span class='textPageDot'> . . . </span>");
+        if ($('.clickTextPage').index() >= 2) {//点击的要大于2
+            if (thisIndex > $('.clickTextPage').index()) {//判断点击与当前元素的位置
+                if (thisIndex <= pageIndexLength - 2) {//点击范围
+                    nextPage(thisIndex);//判断index让其余的隐藏/显示
+                } else {}
+            } else {
+                if (pageIndexLength - thisIndex <= 13) {//点击范围
+                    prePage(thisIndex);//判断index让其余的隐藏/显示
+                } else {}
+            }
         }
         $(this).addClass('clickTextPage').siblings().removeClass('clickTextPage');
         textPagePre = 0;
         return clickIndex = thisIndex;
     });
     $('.text-page-next').click(function () {//下一张
-        if (clickIndex + textPagePre <= $('#page-box').children().length - 2) {//判断是否是第一张
-            showPage('#article_' + (clickIndex + textPagePre) + '', '.contentPageClass');
-            $('.pageIndex').eq(clickIndex + textPagePre - 1).addClass('clickTextPage').siblings().removeClass('clickTextPage');
-            let thisIndex = clickIndex + textPagePre;
-            preOrNext(thisIndex);
+        let clickTextIndex = $('.clickTextPage').index();//记录当前页面的下标
+        if (clickTextIndex <= pageIndexLength - 2) {//判断是否是最后一张
+            showPage('#article_' + (clickTextIndex) + '', '.contentPageClass');
+            let thisIndex = clickTextIndex - 1;
+            $('.pageIndex').eq(thisIndex).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            if (clickTextIndex > 3 && clickTextIndex < pageIndexLength - 1) {//点击的要大于2
+                nextPage(thisIndex);
+            } else {}
             textPagePre++;
             return textPagePre;
         }
         else {}
     });
-    $('.text-page-pre').click(function () {//上一张
-        let thisIndex = $(this).index();
-        textPagePre--;
-        if ((clickIndex + textPagePre) - 2 >= 0) {//判断是否最后一张
-            showPage('#article_' + (clickIndex + textPagePre - 1) + '', '.contentPageClass');
-            $('.pageIndex').eq(clickIndex + textPagePre - 2).addClass('clickTextPage').siblings().removeClass('clickTextPage');
-            let thisIndex = clickIndex + textPagePre - 1;
-            if($('#page-box').children().length - thisIndex >= 1) {
-                console.log($('#page-box').children().length,thisIndex);
-                $(".pageIndex").eq(thisIndex-1).show();
-                $(".pageIndex").eq(thisIndex+1).hide();
+    $('.text-page-pre').click(function () {//上一页
+        let clickTextIndex = $('.clickTextPage').index() - 1;//记录当前页面的下标
+        if (clickTextIndex >= 2) {//判断是否第一张
+            showPage('#article_' + (clickTextIndex - 1) + '', '.contentPageClass');
+            $('.pageIndex').eq(clickTextIndex - 2).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            let thisIndex = clickTextIndex - 1;
+            if (clickTextIndex > 2) {//点击的要大于2
+                prePage(thisIndex + 1);
             } else {}
-            if (thisIndex >= $('#page-box').children().length - 5) {
-                $(".textPageDot").remove();
-            } else {
-                $(".pageIndex:gt(1)").hide().eq(-2).show().before("<span class='textPageDot'> . . . </span>");
-            }
+            textPagePre--;
             return textPagePre;
         } else {}
     });
+    $('#text-page-input').keydown(function (e) {//键盘
+        let clickTextIndex = $('.clickTextPage').index();//记录当前页面的下标
+        let downCode = e.keyCode;
+        if (downCode === 13) {//回车
+            let value = $(this).val();
+            inputClick(value,pageIndexLength,clickTextIndex);
+        }
+    });
+    $('#text-page-btn').click(function () {//点击确定
+        let clickTextIndex = $('.clickTextPage').index();//记录当前页面的下标
+        let value = $("#text-page-input").val();
+        inputClick(value,pageIndexLength,clickTextIndex);
+    });
 }
-function preOrNext(num) {
-    $(".pageIndex:lt(" + (num - 2) + ")").hide();
-    $(".pageIndex").eq(num - 1).show();
+
+function nextPage(num) {
+    let $PageIndex =  $(".pageIndex");
+    $(".pageIndex:lt(" + (num - 3) + ")").hide();
+    $PageIndex.eq(num - 2).show();
+    $PageIndex.eq(num - 1).show();
+    $PageIndex.eq(num).show();
+}
+function prePage(num) {
+    let $PageIndex =  $(".pageIndex");
+    $(".pageIndex:gt(" + (num) + ")").hide();
+    $PageIndex.eq(num - 3).show();
+    $PageIndex.eq(num - 2).show();
+    $PageIndex.eq(num - 1).show();
+}
+/**
+* value 输入框里的直
+* pageIndexLength 总长度
+*/
+function inputClick(value,pageIndexLength,clickTextIndex) {
+    if (value <= pageIndexLength - 2) {//点击的要大于2
+        if (value == 1) {
+            $(".pageIndex:gt(" + (value + 1) + ")").hide();
+            showPage('#article_' + (1) + '', '.contentPageClass');
+            $('.pageIndex').eq(0).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+        } else {
+            showPage('#article_' + (clickTextIndex - 1) + '', '.contentPageClass');
+            $('.pageIndex').eq(value - 1).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            let $PageIndex =  $(".pageIndex");
+            $(".pageIndex:lt(" + (value - 3) + ")").hide();
+            $(".pageIndex:gt(" + (value) + ")").hide();
+            $PageIndex.eq(value - 2).show();
+            $PageIndex.eq(value - 1).show();
+            $PageIndex.eq(value).show();
+        }
+    } else {
+        let $PageIndex =  $(".pageIndex");
+        showPage('#article_' + (pageIndexLength - 2) + '', '.contentPageClass');
+        $(".pageIndex:lt(" + (pageIndexLength - 7) + ")").hide();
+        $PageIndex.eq(pageIndexLength- 6).show();
+        $PageIndex.eq(pageIndexLength - 5).show();
+        $PageIndex.eq(pageIndexLength - 4).show();
+        $PageIndex.eq(pageIndexLength- 3).show();
+        $('.pageIndex').eq(pageIndexLength - 3).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+    }
 }
 var showPage = function(id, findClass){
     $(findClass).each(function(){

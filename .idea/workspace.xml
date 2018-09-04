@@ -3,8 +3,93 @@
   <component name="ChangeListManager">
     <list default="true" id="0f5f0c49-f836-4590-91b2-56a1029ff8ac" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/asideNavBoreder.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/asideNavBoreder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/carouse-img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/carouse-img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/carouselIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/carouselIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/carve-border.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/carve-border.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/carve-master-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/carve-master-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/carve-master-carousel-Icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/carve-master-carousel-Icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/carve-master-carousel.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/carve-master-carousel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/carve-master-user-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/carve-master-user-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/end-page-in-animate-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/end-page-in-animate-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/forum-img-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/forum-img-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/forum-img-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/forum-img-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/forum-img-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/forum-img-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/login-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/login-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/lr-bottom-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/lr-bottom-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/lr-detail-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/lr-detail-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/lr-per-border.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/lr-per-border.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/lr-per-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/lr-per-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/ns-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/ns-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/ns-yin-zhang.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/ns-yin-zhang.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-about-our-bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-about-our-bottom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-about-our-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-carve-master-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-consultation-head-home.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-consultation-head-home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-consultation-item-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-consultation-item-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-consultation-sub-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-consultation-sub-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-consultation-sub-nextIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-consultation-sub-nextIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-forum-laud.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-forum-laud.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-forum-news.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-forum-news.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-guo-gif.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-guo-gif.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-home-LR.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-home-LR.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-home-LR2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-home-LR2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-home-NSshop.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-home-NSshop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-home-carve-master2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-home-carve-master2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-home-carveMaster.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-home-carveMaster.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-home-shorts.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-home-shorts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-in-content-short.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-in-content-short.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-in-content-yun.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-in-content-yun.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-in-guo-j.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-in-guo-j.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-in-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-in-left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-in-left2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-in-left2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-in-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-in-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-in-text-bj.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-in-text-bj.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-in-water.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-in-water.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-login-return.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-login-return.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-ns-store-sub.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-ns-store-sub.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-short-item-off.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-short-item-off.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-short-item-on.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-short-item-on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-short-item1.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-short-item1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-short-item2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-short-item2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-short-item3.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-short-item3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-short-item4.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-short-item4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-short-item5.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-short-item5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-short-top.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-short-top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-shorts-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-shorts-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-shorts-dialog-close.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-shorts-dialog-close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-shorts-dialog-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-shorts-dialog-img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/page-shorts-sub-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/page-shorts-sub-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/qr-code.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/qr-code.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/searchIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/searchIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/three-d-img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/three-d-img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/three-d.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/three-d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/userIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/userIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/印章.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/印章.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/和和美美.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/和和美美.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/和谐家园.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/和谐家园.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/哈沙克少女.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/哈沙克少女.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/套马.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/套马.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/对章.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/对章.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/思乡.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/思乡.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/春游.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/春游.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/桃花源.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/桃花源.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/花斑豹.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/花斑豹.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/textPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/textPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-LR.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-LR.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-about-our.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-about-our.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-carve-master.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-carve-master.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-consultation-content.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-consultation-content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-consultation-sub.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-consultation-sub.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-lr-sub.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-lr-sub.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-ns-store.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-ns-store.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-ns-sub.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-ns-sub.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-shorts-sub.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-shorts-sub.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/page-shorts.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/page-shorts.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,17 +106,17 @@
         <counts>
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.4" value="5" />
+          <entry key="project.open.time.4" value="6" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="7" />
           <entry key="gif" value="2" />
-          <entry key="html" value="75" />
-          <entry key="js" value="17" />
+          <entry key="html" value="100" />
+          <entry key="js" value="20" />
           <entry key="less" value="10" />
           <entry key="mp4" value="5" />
           <entry key="png" value="13" />
@@ -40,25 +125,25 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
-          <entry key="HTML" value="75" />
+          <entry key="HTML" value="100" />
           <entry key="Image" value="15" />
-          <entry key="JavaScript" value="17" />
+          <entry key="JavaScript" value="20" />
           <entry key="Less" value="10" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="6468" />
-          <entry key="js" value="8921" />
-          <entry key="less" value="13581" />
+          <entry key="html" value="6626" />
+          <entry key="js" value="12490" />
+          <entry key="less" value="13872" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="6468" />
-          <entry key="JavaScript" value="8921" />
-          <entry key="Less" value="13581" />
+          <entry key="HTML" value="6626" />
+          <entry key="JavaScript" value="12490" />
+          <entry key="Less" value="13872" />
         </counts>
       </usages-collector>
     </session>
@@ -115,10 +200,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="196" column="35" lean-forward="true" selection-start-line="196" selection-start-column="35" selection-end-line="196" selection-end-column="35" />
+            <state relative-caret-position="-683">
+              <caret line="40" column="46" lean-forward="true" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
               <folding>
-                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -133,8 +218,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45800">
-              <caret line="1832" column="5" selection-start-line="1832" selection-start-column="5" selection-end-line="1832" selection-end-column="5" />
+            <state relative-caret-position="627">
+              <caret line="1579" column="1" lean-forward="true" selection-start-line="1579" selection-start-column="1" selection-end-line="1579" selection-end-column="1" />
+              <folding>
+                <element signature="e#837#4985#0" />
+                <element signature="e#5052#6813#0" />
+                <element signature="e#6858#44309#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,19 +232,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="391" column="20" lean-forward="true" selection-start-line="391" selection-start-column="20" selection-end-line="391" selection-end-column="20" />
+            <state relative-caret-position="277">
+              <caret line="259" column="7" lean-forward="true" selection-start-line="259" selection-start-column="7" selection-end-line="259" selection-end-column="7" />
               <folding>
+                <element signature="n#!!block;n#startAnimation#0" />
                 <element signature="n#!!block;n#nsShortsClick#0" />
                 <element signature="n#!!block;n#bottomNavClick#0" />
                 <element signature="n#!!block;n#consultationClick#0" />
                 <element signature="n#!!block;n#loginClick#0" />
                 <element signature="n#!!block;n#shortsClick#0" />
-                <element signature="n#!!block;n#navSlide#0" />
                 <element signature="n#!!block;n#mouseScroll#0" />
-                <element signature="n#!!block;n#ifPageNav#0" />
-                <element signature="n#!!block;n#navTopANavSlide#0" />
                 <element signature="n#!!block;n#lrClick#0" />
+                <element signature="n#!!block;n#textPageEvent#0" />
+                <element signature="n#!!block;n#nextPage#0" />
+                <element signature="n#!!block;n#prePage#0" />
+                <element signature="n#!!block;n#inputClick#0" />
+                <element signature="e#15879#16011#0" />
               </folding>
             </state>
           </provider>
@@ -163,11 +256,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/page-consultation-sub.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
+            <state relative-caret-position="585">
+              <caret line="107" column="67" lean-forward="true" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
               <folding>
-                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#span#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#a#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
@@ -192,11 +283,27 @@
       <find>page-place-home</find>
       <find>var</find>
       <find>safeCutCharSize</find>
+      <find>preOrNext</find>
+      <find>contentPageClass</find>
+      <find>pTag</find>
+      <find>$pageIndex</find>
+      <find>clickIndex</find>
+      <find>.click</find>
+      <find>page-box</find>
+      <find>showPage('#article_' + (pageIndexLength - 3) + '', '.contentPageClass');</find>
+      <find>clickTextIndex</find>
+      <find>page-carve-master-top.png</find>
+      <find>page-about-our-top.png</find>
+      <find>#e2ba60</find>
     </findStrings>
     <replaceStrings>
       <replace>navTopMenuLi</replace>
       <replace>let</replace>
+      <replace>nextPage</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>F:\bls\blsWebsit</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -216,20 +323,21 @@
         <option value="$PROJECT_DIR$/page/page-consultation.html" />
         <option value="$PROJECT_DIR$/page/page-login.html" />
         <option value="$PROJECT_DIR$/page/page-register.html" />
-        <option value="$PROJECT_DIR$/page/page-about-our.html" />
-        <option value="$PROJECT_DIR$/page/page-carve-master.html" />
-        <option value="$PROJECT_DIR$/page/page-consultation-content.html" />
-        <option value="$PROJECT_DIR$/page/page-LR.html" />
-        <option value="$PROJECT_DIR$/page/page-lr-sub.html" />
-        <option value="$PROJECT_DIR$/page/page-ns-store.html" />
-        <option value="$PROJECT_DIR$/page/page-ns-sub.html" />
-        <option value="$PROJECT_DIR$/page/page-shorts.html" />
-        <option value="$PROJECT_DIR$/page/page-shorts-sub.html" />
-        <option value="$PROJECT_DIR$/css/index.less" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/page/page-consultation-sub.html" />
+        <option value="$PROJECT_DIR$/js/paginate.js" />
         <option value="$PROJECT_DIR$/js/textPage.js" />
+        <option value="$PROJECT_DIR$/page/page-ns-store.html" />
+        <option value="$PROJECT_DIR$/page/page-shorts-sub.html" />
+        <option value="$PROJECT_DIR$/page/page-shorts.html" />
+        <option value="$PROJECT_DIR$/page/page-ns-sub.html" />
+        <option value="$PROJECT_DIR$/page/page-lr-sub.html" />
+        <option value="$PROJECT_DIR$/page/page-LR.html" />
+        <option value="$PROJECT_DIR$/page/page-consultation-content.html" />
+        <option value="$PROJECT_DIR$/page/page-carve-master.html" />
+        <option value="$PROJECT_DIR$/page/page-about-our.html" />
+        <option value="$PROJECT_DIR$/css/index.less" />
+        <option value="$PROJECT_DIR$/page/page-consultation-sub.html" />
         <option value="$PROJECT_DIR$/js/index.js" />
       </list>
     </option>
@@ -251,17 +359,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope '项目文件'; set:项目文件; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="blsWebsit" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,6 +375,17 @@
               <item name="blsWebsit" type="b2602c69:ProjectViewProjectNode" />
               <item name="blsWebsit" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope '项目文件'; set:项目文件; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="blsWebsit" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -344,17 +452,18 @@
       <workItem from="1535702169773" duration="9967000" />
       <workItem from="1535936612172" duration="28998000" />
       <workItem from="1535979546481" duration="6376000" />
+      <workItem from="1536023531734" duration="31072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258709000" />
+    <option name="totallyTimeSpent" value="289781000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16220239" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16174921" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -475,98 +584,112 @@
     <entry file="file://$PROJECT_DIR$/img/page-shorts-dialog-close.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/page-about-our.html">
+    <entry file="file://$PROJECT_DIR$/test.js" />
+    <entry file="file://$PROJECT_DIR$/js/textPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
-          <caret line="209" column="11" lean-forward="true" selection-start-line="209" selection-start-column="11" selection-end-line="209" selection-end-column="11" />
+          <caret line="25" column="60" lean-forward="true" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/page-shorts.html">
+    <entry file="file://$PROJECT_DIR$/js/paginate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="177" column="11" lean-forward="true" selection-start-line="177" selection-start-column="11" selection-end-line="177" selection-end-column="11" />
+        <state relative-caret-position="2332">
+          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#35#42#1" expanded="true" />
+            <element signature="e#37#44#1" expanded="true" />
+            <element signature="e#35#42#1" expanded="true" />
+            <element signature="e#37#44#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/page-shorts-sub.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="210" column="6" lean-forward="true" selection-start-line="210" selection-start-column="6" selection-end-line="210" selection-end-column="6" />
+        <state relative-caret-position="528">
+          <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#a#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/page-carve-master.html">
+    <entry file="file://$PROJECT_DIR$/page/page-shorts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="194" column="45" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/page-LR.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="199" column="11" lean-forward="true" selection-start-line="199" selection-start-column="11" selection-end-line="199" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/page-lr-sub.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="196" column="11" lean-forward="true" selection-start-line="196" selection-start-column="11" selection-end-line="196" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/page-ns-store.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="195" column="11" lean-forward="true" selection-start-line="195" selection-start-column="11" selection-end-line="195" selection-end-column="11" />
+        <state relative-caret-position="387">
+          <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/page-ns-sub.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="183" column="12" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="12" />
+        <state relative-caret-position="631">
+          <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/page-ns-store.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="48" column="50" lean-forward="true" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/page-lr-sub.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/page-LR.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/page-consultation-content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="232" column="31" lean-forward="true" selection-start-line="232" selection-start-column="31" selection-end-line="232" selection-end-column="31" />
+        <state relative-caret-position="269">
+          <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.js" />
+    <entry file="file://$PROJECT_DIR$/page/page-carve-master.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/page-about-our.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45800">
-          <caret line="1832" column="5" selection-start-line="1832" selection-start-column="5" selection-end-line="1832" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/page-consultation-sub.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
+        <state relative-caret-position="627">
+          <caret line="1579" column="1" lean-forward="true" selection-start-line="1579" selection-start-column="1" selection-end-line="1579" selection-end-column="1" />
           <folding>
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#span#1;n#a#0;n#li#0;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#a#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#837#4985#0" />
+            <element signature="e#5052#6813#0" />
+            <element signature="e#6858#44309#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="196" column="35" lean-forward="true" selection-start-line="196" selection-start-column="35" selection-end-line="196" selection-end-column="35" />
+        <state relative-caret-position="-683">
+          <caret line="40" column="46" lean-forward="true" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
           <folding>
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -577,31 +700,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/textPage.js">
+    <entry file="file://$PROJECT_DIR$/page/page-consultation-sub.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="56" lean-forward="true" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+        <state relative-caret-position="585">
+          <caret line="107" column="67" lean-forward="true" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#a#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="391" column="20" lean-forward="true" selection-start-line="391" selection-start-column="20" selection-end-line="391" selection-end-column="20" />
+        <state relative-caret-position="277">
+          <caret line="259" column="7" lean-forward="true" selection-start-line="259" selection-start-column="7" selection-end-line="259" selection-end-column="7" />
           <folding>
+            <element signature="n#!!block;n#startAnimation#0" />
             <element signature="n#!!block;n#nsShortsClick#0" />
             <element signature="n#!!block;n#bottomNavClick#0" />
             <element signature="n#!!block;n#consultationClick#0" />
             <element signature="n#!!block;n#loginClick#0" />
             <element signature="n#!!block;n#shortsClick#0" />
-            <element signature="n#!!block;n#navSlide#0" />
             <element signature="n#!!block;n#mouseScroll#0" />
-            <element signature="n#!!block;n#ifPageNav#0" />
-            <element signature="n#!!block;n#navTopANavSlide#0" />
             <element signature="n#!!block;n#lrClick#0" />
+            <element signature="n#!!block;n#textPageEvent#0" />
+            <element signature="n#!!block;n#nextPage#0" />
+            <element signature="n#!!block;n#prePage#0" />
+            <element signature="n#!!block;n#inputClick#0" />
+            <element signature="e#15879#16011#0" />
           </folding>
         </state>
       </provider>

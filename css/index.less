@@ -55,7 +55,6 @@ header {
   nav {
     width: 100%;
     .nav-top-wrap {
-      display: none;
       background: #000000;
       opacity: 0.85;
       padding: 1.166667rem 0 0.3333rem;
@@ -102,7 +101,7 @@ header {
           }
           &:first-of-type {
             .col-line {
-              background: #e2ba60;
+              background: transparent;
             }
           }
           &:hover {
@@ -1578,6 +1577,33 @@ aside {
 .clickTextPage {
   background: #337ab7;
   color: #ffffff;
+}
+#text-page-search {
+  overflow: hidden;
+  vertical-align: center;
+  margin-bottom: 0.2rem;
+  margin-left: 1rem;
+  display: inline-block;
+  input {
+    margin: 0 0.5rem;
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+    border-radius: 5%;
+    border: 0.0333rem solid #eeeeee;
+    color: #222222;
+    font-size: 0.04666rem;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    background: #ffffff;
+  }
+  #text-page-btn {
+    &:active {
+      border: 0.0444rem solid white;
+      background: #337ab7;
+    }
+  }
 }
 
 //end pageContainer footer start
