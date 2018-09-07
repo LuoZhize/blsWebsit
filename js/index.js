@@ -1,7 +1,20 @@
-startAnimation();//首页动画
-let carouselNum = 0;//滚动的次数
-let carouselLength = $('.page-list').children('li').length - 1;//滚动子元素个数
+$('.page-in-over-circular').animate({//圆的扩散
+    width: '120%',
+    height: 41.5 + 'rem'
+}, 500, 'linear', function () {//回调显示首页
+    $(this).hide();
+    $('.page-in-animate').hide();
+    $(document).ready(function () {
+        $('.page-in-animate').hide();
+        $('header').show();
+        $('aside').show();
+        $('footer').show();
+        $('.nav-down').show();
+        $('.container-fluid').show();
+    });
+});
 let heightWin = $(window).height();
+// startAnimation();//首页动画
 navSlide();//nav show
 mouseScroll();//screen scroll
 shortsClick();//shorts event
@@ -30,8 +43,8 @@ function startAnimation() {
         let timerTitle, timerIntroduce, endAnimate;
 
         function type() {//title 打印
-            if (index === str.length) {
-                clearInterval(timerTitle);
+            if (index === str.length) {//判断字数
+                clearInterval(timerTitle);//清空定时器
 
                 function typeIn() {//introduce 打印
                     // let endAnimate;
@@ -40,6 +53,23 @@ function startAnimation() {
                         $('.page-in-end-img').fadeIn(1000);//墨水 img show
                         $('.end-page-in-animate-img').css('display', 'inline-block').click(function () {//click end animation
                             clearTimeout(endAnimate);
+                            $('.page-in-over-circular').animate({//圆的扩散
+                                width: '120%',
+                                height: 41.5 + 'rem'
+                            }, 500, 'linear', function () {//回调显示首页
+                                $(this).hide();
+                                $('.page-in-animate').hide();
+                                $(document).ready(function () {
+                                    $('.page-in-animate').hide();
+                                    $('header').show();
+                                    $('aside').show();
+                                    $('footer').show();
+                                    $('.nav-down').show();
+                                    $('.container-fluid').show();
+                                });
+                            });
+                        });
+                        endAnimate = setTimeout(function () {//等待十秒
                             $('.page-in-over-circular').animate({
                                 width: '120%',
                                 height: 41.5 + 'rem'
@@ -48,30 +78,16 @@ function startAnimation() {
                                 $('.page-in-animate').hide();
                                 $(document).ready(function () {
                                     $('.page-in-animate').hide();
+                                    $('header').show();
                                     $('aside').show();
                                     $('footer').show();
                                     $('.nav-down').show();
-                                    $('.container-fluid').show();
-                                });
-                            });
-                        });
-                        endAnimate = setTimeout(function () {
-                            $('.page-in-over-circular').animate({
-                                width: '120%',
-                                height: 41.5 + 'rem'
-                            }, 500, 'linear', function () {//圆的扩散
-                                $(this).hide();
-                                $('.page-in-animate').hide();
-                                $(document).ready(function () {
-                                    $('.nav-down').show();
-                                    $('aside').show();
-                                    $('footer').show();
                                     $('.container-fluid').show();
                                 });
                             });
                         }, 10000);
                     }
-                    $(".page-in-introduce").text(strIn.substring(0, indexIn++));
+                    $(".page-in-introduce").text(strIn.substring(0, indexIn++));//显示字
                 }
 
                 timerIntroduce = setInterval(typeIn, 100);
@@ -84,7 +100,7 @@ function startAnimation() {
 }
 
 function nsShortsClick() {
-    $('.page-ns-detail').click(function () {
+    $('.page-ns-item').click(function () {
         window.location.href = "../page/page-ns-sub.html";
     });
     $('.page-place-ns').click(function () {
@@ -96,7 +112,7 @@ function bottomNavClick(heightWin) {
     let $footerZhe = $('.footer-zhe');
     let $footerContent = $('.footer-content');
     $('body').mousemove(function (e) {
-        if (e.clientY >= heightWin / 1.02) {//clict y == bottom bottom nav show
+        if (e.clientY >= heightWin / 1.02) {//move （y == bottom） bottom nav show
             $footerZhe.slideDown(600);
             $footerContent.slideDown(600);
         } else if (e.clientY < heightWin / 1.35) {
@@ -108,13 +124,12 @@ function bottomNavClick(heightWin) {
 
 function consultationClick() {
     let $pageConsultationContent = $('.page-consultation-content');
-    let textScon = "";
-    $('.page-consultation-notice-detail,.page-consultation-item').click(function () {//change register
+    $('.page-consultation-notice-detail,.page-consultation-item').click(function () {//change bg
         $pageConsultationContent.css({
             'background': 'url("../blsWebsit/img/page-consultation-sub-bg.png") no-repeat',
-            'background-size': '100%',
             '-moz-background-size': '100%',
-            '-o-background-size': '100%'
+            '-o-background-size': '100%',
+            'background-size': '100%'
         });
         window.location.href = "../page/page-consultation-sub.html";
     });
@@ -122,7 +137,7 @@ function consultationClick() {
         $pageConsultationContent.css('background', 'transparent');
         window.location.href = "../page/page-consultation-content.html";
     });
-    $('#page-consultation-content').pagenation();
+    $('#page-consultation-content').pagenation();//分页
 }
 
 function loginClick() {
@@ -164,15 +179,15 @@ function loginClick() {
     $('.page-password-login').click(function () {//change password
         $pageLoginGetText.hide();
         $('.page-login-password').show();
-        $('.page-password-login').css('color','rgb(34, 34, 34)');
-        $('.page-quest-login').css('color','rgb(136, 136, 136)');
+        $('.page-password-login').css('color', '#b5964e');
+        $('.page-quest-login').css('color', '#bcc2c9');
         return ifQUestOrPass = true;
     });
     $('.page-quest-login').click(function () {//change quest
         $pageLoginGetText.show();
         $('.page-login-password').hide();
-        $('.page-quest-login').css('color','rgb(34, 34, 34)');
-        $('.page-password-login').css('color','rgb(136, 136, 136)');
+        $('.page-quest-login').css('color', '#b5964e');
+        $('.page-password-login').css('color', '#bcc2c9');
         return ifQUestOrPass = false;
     });
     $pageLoginClose.click(function () {//close login dislog
@@ -185,21 +200,21 @@ function shortsClick() {
     let $pageShorts = $('.page-shorts');
     let $pageShortsZhe = $('.page-shorts-zhe');
     let $pageShortsSubDialog = $('.page-shorts-sub-dialog');
-    $('.nav-top-menu>li').eq(1).click(function () {//点击导航栏返回主页
+    $('.nav-top-menu>li').eq(1).click(function () {//点击导航栏奇石鉴赏返回主页
         $pageShorts.css({
             'background': 'url("../blsWebsit/img/page-shorts-bg.png") no-repeat',
-            'background-size': '100%',
             '-moz-background-size': '100%',
-            '-o-background-size': '100%'
+            '-o-background-size': '100%',
+            'background-size': '100%'
         });
         window.location.href = "../page/page-shorts.html";
     });
     $('.page-shorts-list>li').click(function () {//奇石鉴赏点击出现对应的子页面
         $pageShorts.css({
             'background': 'url("../blsWebsit/img/page-shorts-sub-bg.png") no-repeat',
-            'background-size': '100%',
             '-moz-background-size': '100%',
-            '-o-background-size': '100%'
+            '-o-background-size': '100%',
+            'background-size': '100%'
         });
         window.location.href = "../page/page-shorts-sub.html";
     });
@@ -211,23 +226,18 @@ function shortsClick() {
         $pageShortsZhe.hide();
         $pageShortsSubDialog.hide();
     });
-    $('.three-d').click(function () {
+    $('.three-d').click(function () {//3d效果
 
     })
 }
 
 function navSlide() {
-    let navDown = 0;//if click
+    let navDown = 0;//navTop slideDown(1)/slideUp(0)
     let $navUser = $('.nav-user');
     let $navTopWrap = $('.nav-top-wrap');
     navSearh(5, 0.5, 0);
-    $('.nav-down img').css({
-        transform: 'rotateZ(-270deg)',
-        '-ms-transform': 'rotateZ(-270deg)',
-        '-moz-transform': 'rotateZ(-270deg)'
-    });
     //user
-    $navUser.mouseenter(function () {
+    $navUser.mouseenter(function () {//login/logOff
         $(this).children('.nav-user-menu').show();
     });
     $('.nav-user-menu').mouseenter(function () {
@@ -239,22 +249,23 @@ function navSlide() {
     //nav
     $('.nav-down').click(function () {
         if (navDown === 0) {
+            //旋转下拉图标
             $('.nav-down img').css({
-                transform: 'rotateZ(-270deg)',
-                '-ms-transform': 'rotateZ(-270deg)',
-                '-moz-transform': 'rotateZ(-270deg)'
-            });
-            $navTopWrap.slideDown();
-            navSearh(5, 0.5, 1000);//nav search width add
-            navDown = 1;
-        } else {
-            $('.nav-down img').css({
-                transform: 'rotateZ(-90deg)',
-                '-ms-transform': 'rotateZ(-270deg)',
-                '-moz-transform': 'rotateZ(-270deg)'
+                '-ms-transform': 'rotateZ(0deg)',
+                '-moz-transform': 'rotateZ(0deg)',
+                'transform': 'rotateZ(0deg)'
             });
             $navTopWrap.slideUp();
             navSearh(0, 0, 500);//nav search width reduce
+            navDown = 1;
+        } else {
+            $('.nav-down img').css({
+                '-ms-transform': 'rotateZ(-180deg)',
+                '-moz-transform': 'rotateZ(-180deg)',
+                'transform': 'rotateZ(-180deg)'
+            });
+            $navTopWrap.slideDown();
+            navSearh(5, 0.5, 1000);//nav search width add
             navDown = 0;
         }
     });
@@ -280,46 +291,32 @@ function lrClick() {
 }
 
 function textPageEvent() {
-    let clickIndex = 1;//记录点击的页面下标 默认第一张
-    let textPagePre = 0;//点击左右记录次数
     let pageIndexLength = $('#page-box').children().length;//分页的长度
-    if (pageIndexLength > 1) {
+    if (pageIndexLength > 1) {//大于一个页的时候显示左右箭头
         $('.text-page-pre').show();
-        $('.pageIndex').eq(0).addClass('clickTextPage');
+        $('.pageIndex').eq(0).addClass('clickTextPage');//分页数字的背景
     }
-    if (pageIndexLength > 3) {
+    if (pageIndexLength > 3) {//大于三页的时候隐藏超出的
         $(".pageIndex:gt(3)").hide();
     }
-    $('.pageIndex').click(function () {//a点击
-        let thisIndex = $(this).index();
+    $('.pageIndex').click(function () {//分页数字点击
+        let thisIndex = $(this).index();//获取当前下标
         if ($('.clickTextPage').index() >= 2) {//点击的要大于2
             if (thisIndex > $('.clickTextPage').index()) {//判断点击与当前元素的位置
                 if (thisIndex <= pageIndexLength - 2) {//点击范围
                     nextPage(thisIndex);//判断index让其余的隐藏/显示
-                } else {}
+                } else {
+                }
             } else {
                 if (pageIndexLength - thisIndex <= 13) {//点击范围
                     prePage(thisIndex);//判断index让其余的隐藏/显示
-                } else {}
+                } else {
+                }
             }
+        } else {
         }
         $(this).addClass('clickTextPage').siblings().removeClass('clickTextPage');
-        textPagePre = 0;
-        return clickIndex = thisIndex;
-    });
-    $('.text-page-next').click(function () {//下一张
-        let clickTextIndex = $('.clickTextPage').index();//记录当前页面的下标
-        if (clickTextIndex <= pageIndexLength - 2) {//判断是否是最后一张
-            showPage('#article_' + (clickTextIndex) + '', '.contentPageClass');
-            let thisIndex = clickTextIndex - 1;
-            $('.pageIndex').eq(thisIndex).addClass('clickTextPage').siblings().removeClass('clickTextPage');
-            if (clickTextIndex > 3 && clickTextIndex < pageIndexLength - 1) {//点击的要大于2
-                nextPage(thisIndex);
-            } else {}
-            textPagePre++;
-            return textPagePre;
-        }
-        else {}
+        return
     });
     $('.text-page-pre').click(function () {//上一页
         let clickTextIndex = $('.clickTextPage').index() - 1;//记录当前页面的下标
@@ -328,74 +325,91 @@ function textPageEvent() {
             $('.pageIndex').eq(clickTextIndex - 2).addClass('clickTextPage').siblings().removeClass('clickTextPage');
             let thisIndex = clickTextIndex - 1;
             if (clickTextIndex > 2) {//点击的要大于2
-                prePage(thisIndex + 1);
-            } else {}
-            textPagePre--;
-            return textPagePre;
-        } else {}
+                prePage(thisIndex + 1);//上一页对应的数字显示隐藏
+            } else {
+            }
+            return
+        } else {
+        }
     });
-    $('#text-page-input').keydown(function (e) {//键盘
+    $('.text-page-next').click(function () {//下一张
         let clickTextIndex = $('.clickTextPage').index();//记录当前页面的下标
+        if (clickTextIndex <= pageIndexLength - 2) {//判断是否是最后一张
+            showPage('#article_' + (clickTextIndex) + '', '.contentPageClass');
+            let thisIndex = clickTextIndex - 1;
+            $('.pageIndex').eq(thisIndex).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            if (clickTextIndex > 3 && clickTextIndex < pageIndexLength - 1) {//点击的要大于2
+                nextPage(thisIndex);//下一页对应的数字显示隐藏
+            } else {
+            }
+            return
+        }
+        else {
+        }
+    });
+    $('#text-page-input').keydown(function (e) {//键盘事件
         let downCode = e.keyCode;
         if (downCode === 13) {//回车
-            let value = $(this).val();
-            inputClick(value,pageIndexLength,clickTextIndex);
+            let value = Number($(this).val());//获取输入框里的值
+            inputClick(value, pageIndexLength);
         }
     });
     $('#text-page-btn').click(function () {//点击确定
-        let clickTextIndex = $('.clickTextPage').index();//记录当前页面的下标
-        let value = $("#text-page-input").val();
-        inputClick(value,pageIndexLength,clickTextIndex);
+        let value = Number($('#text-page-input').val());//获取输入框里的值
+        inputClick(value, pageIndexLength);
     });
 }
 
 function nextPage(num) {
-    let $PageIndex =  $(".pageIndex");
+    let $PageIndex = $(".pageIndex");
     $(".pageIndex:lt(" + (num - 3) + ")").hide();
     $PageIndex.eq(num - 2).show();
     $PageIndex.eq(num - 1).show();
     $PageIndex.eq(num).show();
 }
+
 function prePage(num) {
-    let $PageIndex =  $(".pageIndex");
+    let $PageIndex = $(".pageIndex");
     $(".pageIndex:gt(" + (num) + ")").hide();
     $PageIndex.eq(num - 3).show();
     $PageIndex.eq(num - 2).show();
     $PageIndex.eq(num - 1).show();
 }
+
 /**
-* value 输入框里的直
-* pageIndexLength 总长度
-*/
-function inputClick(value,pageIndexLength,clickTextIndex) {
-    if (value <= pageIndexLength - 2) {//点击的要大于2
-        if (value == 1) {
-            $(".pageIndex:gt(" + (value + 1) + ")").hide();
-            showPage('#article_' + (1) + '', '.contentPageClass');
-            $('.pageIndex').eq(0).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+ * value 输入框里的直
+ * pageIndexLength 总长度
+ */
+function inputClick(value, pageIndexLength) {
+    if (value <= pageIndexLength - 2) {//判断是否超出规定页数
+        if (value <= 1) {//等于第一页
+            let $PageIndex = $(".pageIndex");
+            showPage('#article_' + (1) + '', '.contentPageClass');//显示对应的页面
+            $PageIndex.eq(0).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            $PageIndex.eq(0).show();
+            $(".pageIndex:gt(" + (value + 3) + ")").hide();
+            $(".pageIndex:lt(" + (value + 3) + ")").show();
         } else {
-            showPage('#article_' + (clickTextIndex - 1) + '', '.contentPageClass');
-            $('.pageIndex').eq(value - 1).addClass('clickTextPage').siblings().removeClass('clickTextPage');
-            let $PageIndex =  $(".pageIndex");
-            $(".pageIndex:lt(" + (value - 3) + ")").hide();
-            $(".pageIndex:gt(" + (value) + ")").hide();
+            let $PageIndex = $(".pageIndex");
+            showPage('#article_' + (value + 1) + '', '.contentPageClass');
+            $PageIndex.eq(value - 1).addClass('clickTextPage').siblings().removeClass('clickTextPage');
+            $(".pageIndex:lt(" + (value - 2) + ")").hide();
+            $(".pageIndex:gt(" + (value + 1) + ")").hide();
             $PageIndex.eq(value - 2).show();
             $PageIndex.eq(value - 1).show();
             $PageIndex.eq(value).show();
+            $PageIndex.eq(value + 1).show();
         }
     } else {
-        let $PageIndex =  $(".pageIndex");
         showPage('#article_' + (pageIndexLength - 2) + '', '.contentPageClass');
         $(".pageIndex:lt(" + (pageIndexLength - 7) + ")").hide();
-        $PageIndex.eq(pageIndexLength- 6).show();
-        $PageIndex.eq(pageIndexLength - 5).show();
-        $PageIndex.eq(pageIndexLength - 4).show();
-        $PageIndex.eq(pageIndexLength- 3).show();
+        $(".pageIndex:gt(" + (pageIndexLength - 7) + ")").show();
         $('.pageIndex').eq(pageIndexLength - 3).addClass('clickTextPage').siblings().removeClass('clickTextPage');
     }
 }
-var showPage = function(id, findClass){
-    $(findClass).each(function(){
+
+var showPage = function (id, findClass) {
+    $(findClass).each(function () {
         $(this).css('display', 'none');
     });
     //显示当前项

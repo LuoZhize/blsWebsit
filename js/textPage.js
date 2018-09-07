@@ -125,7 +125,6 @@
  * @param options
  */
 var showPage = function(id, findClass){
-    console.log(id,findClass);
     $(findClass).each(function(){
         $(this).css('display', 'none');
     });

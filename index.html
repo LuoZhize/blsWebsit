@@ -4,31 +4,20 @@
     <meta charset="UTF-8">
     <title>巴林石</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <script>
-        let pixelRatio = 1 / window.devicePixelRatio;
-        document.write('<meta name="viewport" content="width=device-width,initial-scale=' + pixelRatio + ',minimum-scale=' + pixelRatio + ',maximum-scale=' + pixelRatio + ',user-scalable=no" />');
-        let html = document.getElementsByTagName('html')[0];
-        getRem();
-        window.addEventListener('resize', getRem, false);
-
-        function getRem() {
-            let pageWidth = html.getBoundingClientRect().width;
-            html.style.fontSize = pageWidth / 64 + 'px';
-        }
-    </script>
+    <script type="text/javascript" src="js/rem.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <!--首页头部-->
-<header>
+<header style="display: none">
     <!--导航-->
     <nav>
-        <div class="nav-top-wrap" style="display: none">
+        <div class="nav-top-wrap">
             <!--login && search-->
             <div class="nav-top-fun pull-right">
                 <form class="nav-search" role="search">
-                    <input type="text" class="nav-top-input-search" placeholder="Search">
+                    <input type="text" class="nav-top-input-search" placeholder="搜索关键词">
                     <a class="nav-top-search">
                         <img src="img/searchIcon.png" alt="">
                     </a>
@@ -51,11 +40,11 @@
             <!--nav-top-->
             <ul class="nav-top-menu text-center pull-right">
                 <li><a href="index.html">
-                    <span>首页</span>
+                    <span style="color: #e2ba60">首页</span>
                     <span class="col-line"></span>
-                    <span class="row-line"></span>
+                    <span class="row-line" style="background: #e2ba60"></span>
                 </a></li>
-                <li><a href="page/page-shorts.html">
+                <li><a  href="page/page-shorts.html">
                     <span>奇石鉴赏</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
@@ -66,7 +55,7 @@
                     <span class="row-line"></span>
                 </a></li>
                 <li><a href="page/page-carve-master.html">
-                    <span>雕刻大师</span>
+                    <span>名家传记</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
                 </a></li>
@@ -82,7 +71,7 @@
             </ul>
         </div>
         <a class="nav-down" style="display: none">
-            <img src="img/carouselIcon.png" />
+            <img src="img/nav-down.png" />
         </a>
     </nav>
 </header>
@@ -92,8 +81,8 @@
         <div class="nav-slide-logo">
             <a class="nav-slide-logo-img"><img src="img/logo.png"></a>
             <div class="nav-slide-name">
-                <p>BALINSHIKUANGYE</p>
-                <p>巴林石矿业</p>
+                <p>Balinshi miningCompany</p>
+                <p>巴林石矿业有限公司</p>
             </div>
         </div>
         <div class="nav-slide-title">
@@ -145,15 +134,15 @@
                 <div class="page-home-content">
                     <a class="page-home-shop" href="#">
                         <img src="img/page-home-NSshop.png" />
-                        <p>国石商场</p>
+                        <p>国石文化</p>
                     </a>
                     <a class="page-home-LR" href="page/page-LR.html">
-                        <img src="img/page-home-LR.png" />
+                        <img src="img/home-lr-flower.png" />
                         <p>领导班子</p>
                     </a>
                     <a class="page-home-carveMaster" href="page/page-carve-master.html">
-                        <img src="img/page-home-carve-master2.png" />
-                        <p>雕刻大师</p>
+                        <img src="img/home-carve-flower.png" />
+                        <p>名家传记</p>
                     </a>
                     <a class="page-home-offForum" href="#">
                         <p>官方论坛</p>
@@ -173,6 +162,7 @@
                         </ul>
                     </a>
                     <a class="page-home-newDy" href="page/page-consultation-content.html">
+                        <img src="img/home-lr-flower.png" />
                         <p>新闻动态</p>
                         <ul class="page-home-newDy-content">
                             <li>
@@ -191,6 +181,7 @@
                     </a>
                 </div>
             </li>
+            <li id="page-shorts" class="page-item page-shorts"></li>
         </ul>
     </div>
 </div>
@@ -294,7 +285,6 @@
 </footer>
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script>
