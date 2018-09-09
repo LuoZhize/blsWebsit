@@ -1,20 +1,20 @@
-$('.page-in-over-circular').animate({//圆的扩散
-    width: '120%',
-    height: 41.5 + 'rem'
-}, 500, 'linear', function () {//回调显示首页
-    $(this).hide();
-    $('.page-in-animate').hide();
-    $(document).ready(function () {
-        $('.page-in-animate').hide();
-        $('header').show();
-        $('aside').show();
-        $('footer').show();
-        $('.nav-down').show();
-        $('.container-fluid').show();
-    });
-});
+// $('.page-in-over-circular').animate({//圆的扩散
+//     width: '120%',
+//     height: 41.5 + 'rem'
+// }, 500, 'linear', function () {//回调显示首页
+//     $(this).hide();
+//     $('.page-in-animate').hide();
+//     $(document).ready(function () {
+//         $('.page-in-animate').hide();
+//         $('header').show();
+//         $('aside').show();
+//         $('footer').show();
+//         $('.nav-down').show();
+//         $('.container-fluid').show();
+//     });
+// });
 let heightWin = $(window).height();
-// startAnimation();//首页动画
+startAnimation();//首页动画
 navSlide();//nav show
 mouseScroll();//screen scroll
 shortsClick();//shorts event
@@ -39,7 +39,7 @@ function startAnimation() {
     }, 1500);
     setTimeout(function () {//打印字animation
         let index = 0, indexIn = 0;
-        let str = "礼巴林", strIn = "一品巴林，千年中国印";
+        let str = "国石国礼", strIn = "一品巴林，千年中国印";
         let timerTitle, timerIntroduce, endAnimate;
 
         function type() {//title 打印

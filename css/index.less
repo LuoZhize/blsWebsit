@@ -242,7 +242,9 @@ aside {
   top: 0;
   left: 0;
   z-index: 9999;
-  background: #122536;
+  background: url('../img/aside-bj.png') no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
   .nav-slide {
     padding: 0 0.2rem;
     overflow: hidden;
@@ -284,16 +286,18 @@ aside {
     }
     .nav-slide-title {
       width: 4.6rem;
-      height: 4.46666rem;
+      height: 5.46666rem;
       margin-top: 2.7333rem;
       text-align: center;
       position: relative;
       padding-left: 0.4rem;
       font-family: 'hyXuJingXingKaiw';
       div {
-        width: 3.866667rem;
-        height: 4.466666rem;
-        background: url("../img/asideNavBoreder.png") no-repeat;
+        width: 3rem;
+        height: 5.466666rem;
+        padding: 0.5rem 0;
+        background: url("../img/aside-text-bj.png") no-repeat;
+        -moz-background-size: 100%;
         background-size: 100%;
         font-size: 0.875rem;
         p {
@@ -398,8 +402,8 @@ aside {
               height: 14.33333rem;
               overflow: hidden;
               img {
-                max-width: 130%;
-                min-width: 130%;
+                width: 100%;
+                height: 100%;
                 position: absolute;
                 left: 100%;
                 top: 100%;
@@ -447,15 +451,35 @@ aside {
           }
         }
         .page-home-shop {
+          background: url("../img/page-home-ns-bj.png") no-repeat;
           width: 31.43333rem;
           min-height: 14.9rem;
           height: 14.9rem;
           margin-top: 0.6667rem;
           float: left;
           overflow: hidden;
-          img {
-            width: 100%;
-            height: 100%;
+          position: relative;
+          p {
+            padding-top: 1rem;
+            font-size: 1.3rem;
+          }
+          .page-home-ns-img {
+            z-index: 2;
+            width: 25.03rem;
+            height: 13.3rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+          }
+          .page-home-ns-flower {
+            width: 12.7rem;
+            height: 12.7rem;
+            position: absolute;
+            top: 50%;
+            right: -6%;
+            z-index: 0;
+            transform: translateY(-50%);
           }
         }
         .page-home-LR, .page-home-carveMaster, .page-home-offForum, .page-home-newDy {
@@ -486,12 +510,17 @@ aside {
             right: 1.9rem;
             left: auto;
             z-index: 2;
+            line-height: 1rem;
+            padding-top: 0.8rem;
           }
           img {
             left: -0.4rem;
           }
         }
         .page-home-LR {
+          background: url("../img/page-ns-list-leg.png") no-repeat;
+          -moz-background-size: 100%;
+          background-size: 100%;
           img {
             top: 50%;
             -ms-transform: translateY(-50%);
@@ -505,7 +534,27 @@ aside {
             }
           }
         }
+        .page-home-carveMaster {
+          background: url("../img/page-ns-list-seal.png") no-repeat;
+          -moz-background-size: 100%;
+          background-size: 100%;
+        }
+        .page-home-offForum {
+          background: url("../img/home-off-bj.png") no-repeat;
+          -moz-background-size: 100%;
+          background-size: 100%;
+          img {
+            right: -0.1rem;
+            top: -0.1rem;
+            -ms-transform: rotateX(180deg)rotateY(180deg);
+            -moz-transform: rotateX(180deg)rotateY(180deg);
+            transform: rotateX(180deg)rotateY(180deg);
+          }
+        }
         .page-home-newDy {
+          background: url("../img/home-new-bj.png") no-repeat;
+          -moz-background-size: 100%;
+          background-size: 100%;
           img {
             right: -0.5rem;
             top: 50%;
@@ -522,7 +571,8 @@ aside {
         }
         .page-home-carveMaster {
           img {
-            bottom: -0.2rem;
+            left: -0.1rem;
+            bottom: -0.1rem;
           }
         }
 
@@ -654,6 +704,7 @@ aside {
               margin-right: 5.5rem;
               padding: 0 0.3rem 0.3rem;
               border-bottom: 0.1rem solid transparent;
+              color: #000000;
               &:last-of-type {
                 margin-right: 0;
               }
@@ -730,12 +781,11 @@ aside {
           }
           .page-place-home, .page-place-ns, .page-place-ns-sub-title {
             &:hover {
-              border-bottom: 0.03rem solid #000000;
+              border-bottom: 0.03rem solid #FFFFFF;
             }
           }
           &:hover {
             text-decoration: none;
-            color: #000000;
           }
         }
         //ns首页
@@ -771,25 +821,68 @@ aside {
             width: 22.2666rem;
             height: 26.6rem;
             margin-right: 0.8rem;
-            background-color: #564042;
+            background: url("../img/page-ns-history.png") no-repeat;
+            -moz-background-size: 100%;
+            background-size: 100%;
+            position: relative;
           }
           .page-ns-legend,.page-ns-seal,.page-ns-love {
+            position: relative;
             width: 10rem;
             height: 14.2rem;
           }
+          .page-ns-flower {
+            width: 10.66rem;
+            height: 10.66rem;
+            position: absolute;
+            bottom: 0;
+            right: -40%;
+            img {
+              width: 100%;
+            }
+          }
+          .page-ns-diamond-flower {
+            width: 22rem;
+            height: 15rem;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            img {
+              width: 100%;
+            }
+          }
           .page-ns-legend {
-            background-color: #7a2221;
+            background: url("../img/page-ns-list-leg.png") no-repeat;
+            -moz-background-size: 100%;
+            background-size: 100%;
           }
           .page-ns-seal {
-            background-color: #701817;
+            background: url("../img/page-ns-list-seal.png") no-repeat;
+            -moz-background-size: 100%;
+            background-size: 100%;
           }
           .page-ns-love {
-            background-color: #564042;
+            background: url("../img/page-ns-list-bj.png") no-repeat;
+            -moz-background-size: 100%;
+            background-size: 100%;
           }
           .page-ns-art-work {
             width: 30rem;
             height: 11.8rem;
-            background-color: #4f393b;
+            background: url("../img/page-ns-work.png") no-repeat;
+            -moz-background-size: 100%;
+            background-size: 100%;
+            position: relative;
+            .page-ns-diamond-flower {
+              width: 16rem;
+              height: 10rem;
+            }
+            .page-ns-item-content {
+              .page-ns-item-title {
+                margin-top: 0.5rem;
+              }
+            }
           }
         }
         //ns子页
@@ -838,6 +931,8 @@ aside {
             margin-top: 2rem;
             text-align: right;
             padding-right: 1.5rem;
+            color: #ffffff;
+            opacity: 0.6;
             span {
               margin-bottom: 0.3rem;
               display: block;
@@ -891,6 +986,7 @@ aside {
 
       //ns-store end carveMaster start
       .page-carve-master {
+        background: url("../img/page-carve-bj.png") no-repeat;
         -moz-background-size: 100%;
         -o-background-size: 100%;
         background-size: 100%;
@@ -924,12 +1020,12 @@ aside {
           }
           .page-place-home, .page-place-carve {
             &:hover {
-              border-bottom: 0.03rem solid #000000;
+              border-bottom: 0.03rem solid #FFFFFF;
             }
           }
           &:hover {
             text-decoration: none;
-            color: #000000;
+            color: #FFFFFF;
           }
         }
         .page-carve-top {
@@ -1003,7 +1099,7 @@ aside {
           .page-carve-top-down {
             float: right;
             width: 0.8rem;
-            height: 0.666rem;
+            height: 0.8rem;
             display: inline-block;
             overflow: hidden;
             margin-top: 0.5rem;
@@ -1097,6 +1193,8 @@ aside {
         }
         .page-place {
           margin: 0.5333rem 0 0.8rem;
+          color: #ffffff;
+          opacity: 0.6;
           .page-consultation-head-home {
             width: 0.53333rem;
             height: 0.53333rem;
@@ -1109,17 +1207,15 @@ aside {
           }
           span {
             font-size: 0.46666rem;
-            color: rgb(136, 136, 136);
             vertical-align: top;
           }
           .page-place-home, .page-place-consultation {
             &:hover {
-              border-bottom: 0.03rem solid #000000;
+              border-bottom: 0.03rem solid #ffffff;
             }
           }
           &:hover {
             text-decoration: none;
-            color: #000000;
           }
         }
         .page-consultation-notice {
@@ -1149,7 +1245,7 @@ aside {
               line-height: 0.8rem;
               overflow: hidden;
               font-size: 0.5333rem;
-              color: #979696;
+              color: #ffffff;
               display: -webkit-box;
               -webkit-box-orient: vertical;
               -webkit-line-clamp: 7;
@@ -1178,7 +1274,7 @@ aside {
             padding: 0.6rem 0.73333rem 0;
             margin: 0.3rem 0.5rem 0.2rem 0;
             overflow: hidden;
-            background: #f5f5f5;
+            background: #ffffff;
             cursor: pointer;
             .page-consultation-item-title {
               font-size: 0.6666rem;
@@ -1204,12 +1300,11 @@ aside {
               color: #999999;
             }
             &:hover {
-              background: #b5964e;
+              background: url("../img/page-consultation-list-bj.png") no-repeat;
+              -moz-background-size: 100%;
+              background-size: 100%;
               .page-consultation-item-title {
                 color: white;
-              }
-              .page-consultation-item-time {
-                color: #cbb78e;
               }
               .page-consultation-item-info {
                 color: white;
@@ -1221,6 +1316,9 @@ aside {
           }
         }
         .page-consultation-sub-detail {
+          background: url("../img/page-consultation-sub-bj.png") no-repeat;
+          -moz-background-size: 100%;
+          background-size: 100%;
           height: 100%;
           position: relative;
           .page-consultation-sub {
@@ -1237,15 +1335,16 @@ aside {
             }
             .page-consultation-sub-time {
               font-size: 0.4666rem;
-              color: #888888;
+              color: #ffffff;
             }
             .page-consultation-sub-info {
-              color: #666666;
+              color: #ffffff;
               font-size: 0.53333rem;
               margin: 0.666rem 0;
             }
             .page-consultation-sub-info-text {
               text-indent: 1rem;
+              color: #ffffff;
             }
             .page-consultation-sub-img {
               display: inline-block;
@@ -1310,7 +1409,7 @@ aside {
               overflow: hidden;
               .page-consultation-sub-right-item {
                 font-size: 0.5333rem;
-                color: #666666;
+                color: #ffffff;
                 margin-bottom: 0.333rem;
                 &:last-of-type {
                   margin-bottom: 0;
@@ -1321,8 +1420,9 @@ aside {
                   text-overflow: ellipsis;
                   white-space: nowrap;
                   display: inline-block;
+                  color: #ffffff;
                   &:hover {
-                    color: #000000;
+                    color: #eeeeee;
                   }
                 }
                 span {
@@ -1344,7 +1444,7 @@ aside {
                 display: block;
                 margin-top: 0.666rem;
                 font-size: 0.5333rem;
-                color: rgb(102, 102, 102);
+                color: #ffffff;
                 span {
                   font-size: 0.6rem;
                   font-weight: bold;
@@ -1369,9 +1469,10 @@ aside {
 
       //consultation end aboutOur start
       .page-about-our {
+        padding: 0;
         overflow: hidden;
         .page-about-our-top {
-          width: 56.2rem;
+          width: 57.2rem;
           min-height: 13.33333rem;
           height: 13.33333rem;
           overflow: hidden;
@@ -1385,7 +1486,7 @@ aside {
           position: relative;
           display: inline-block;
           width: 18.83333rem;
-          height: 10.3666rem;
+          height: 13.3666rem;
           min-height: 10.33333rem;
           overflow: hidden;
           background: url("../img/page-about-our-bottom.png") no-repeat;
@@ -1395,7 +1496,7 @@ aside {
           vertical-align: top;
         }
         .page-about-our-wrap {
-          padding: 0.6rem 2.8rem 0 1.1333rem;
+          padding: 0.6rem 2.8rem 0 1.6333rem;
           p {
             margin-bottom: 0.3rem;
           }
@@ -1416,7 +1517,7 @@ aside {
           p {
             &:nth-of-type(2) {
               font-size: 0.5rem;
-              color: rgb(45, 45, 44);
+              color: #ffffff;
             }
           }
         }
@@ -1427,12 +1528,12 @@ aside {
         }
         .page-about-our-course-item {
           font-size: 0.5rem;
-          color: rgb(45, 45, 44);
+          color: #ffffff;
         }
         .page-about-our-connection-item {
           overflow: hidden;
           font-size: 0.5rem;
-          color: rgb(45, 45, 44);
+          color: #ffffff;
           display: inline-block;
           margin-right: 6.6rem;
           vertical-align: top;
@@ -1551,7 +1652,7 @@ aside {
             overflow: hidden;
             padding-bottom: 0.3rem;
             &:last-of-type {
-              border-top: 0.1rem dotted #eeeeee;
+              border-top: 0.1rem dotted #737c85;
               padding: 0.3rem 0 0;
             }
           }
@@ -1713,6 +1814,7 @@ aside {
   margin-bottom: 0.2rem;
   margin-left: 1rem;
   display: inline-block;
+  color: #ffffff;
   input {
     margin: 0 0.5rem;
     display: inline-block;
@@ -2049,170 +2151,23 @@ footer {
   width: 100%;
   height: 31.5rem;
   overflow: hidden;
-  //background: transparent;
-  .page-in-animate-bj {
-    position: relative;
-    top: 0;
-    a {
-      width: 32.86667rem;
-      height: 31.5rem;
-      position: absolute;
-      display: inline-block;
-      overflow: hidden;
-      cursor: default;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .page-in-animate-bj-l {
-      left: -53%;
-    }
-    .page-in-animate-bj-r {
-      width: 31.1666rem;
-      right: -53%;
-    }
-  }
-  .page-in-water {
-    .page-in-water-img {
-      display: none;
-      z-index: 2;
-      position: absolute;
-      width: 23.7rem;
-      height: 12.6rem;
-      overflow: hidden;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: pageWater 40s linear;
-      cursor: default;
-      img {
-        width: 100%;
-      }
-    }
-  }
-  .page-in-animate-content {
-    display: none;
-    width: 28rem;
-    height: 15rem;
+  background: url("../img/page-in-bj.png") no-repeat;
+  background-size: 100%;
+  -moz-background-size: 100%;
+  .page-in-station-horse {
     position: absolute;
-    left: 50%;
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    //overflow: hidden;
-    a {
-      position: absolute;
-      cursor: default;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .page-in-content-yun {
-      width: 25rem;
-      height: 10rem;
-      z-index: 4;
-      opacity: 1;
-      top: 5rem;
-      right: 0;
-      animation: pageInY 40s ease-in-out;
-    }
-    .page-in-content-short {
-      width: 19.1666rem;
-      height: 11.4rem;
-      z-index: 2;
-      right: 2rem;
-      opacity: 1;
-      animation: pageShort 20s ease-in-out infinite;
-    }
+    bottom: 0;
+    left: 0;
   }
   .page-in-text {
-    display: none;
     position: absolute;
-    left: 20%;
-    p {
-      writing-mode: vertical-lr;
-      writing-mode: tb-rl;
-      display: inline-block;
-      margin-bottom: 0;
-      vertical-align: top;
-      text-align: center;
-    }
+    font-size: 1rem;
+    font-family: 'hyShangWeiShouShuW';
+    color: #FFFFFF;
+    top: 0;
+    right: 10%;
     .page-in-title {
-      width: 5rem;
-      font-family: hyChengXingJ;
-      font-size: 3.666rem;
-      color: #a52604;
-    }
-    .page-in-introduce {
-      width: 2rem;
-      font-family: hyShangWeiShouShuW;
-      font-size: 1.233rem;
-      color: #000000;
-      letter-spacing: 0.1rem;
-    }
-  }
-  .page-in-guo {
-    position: absolute;
-    left: 10%;
-    width: 12rem;
-    height: 12rem;
-    overflow: hidden;
-    .page-in-guo-j {
-      position: relative;
-      display: block;
-      top: -25%;
-      left: -30%;
-      width: 18.666rem;
-      height: 18.666rem;
-    }
-    img {
-      width: 100%;
-    }
-  }
-  .page-in-end {
-    position: absolute;
-    left: 12.5%;
-    z-index: 2;
-    a {
-      cursor: default;
-      display: none;
-      width: 17.4666rem;
-      height: 11.9333rem;
-      img {
-        width: 100%;
-      }
-    }
-  }
-  .page-in-over-circular {
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background: #cccccc;
-    border-radius: 100%;
-    z-index: 10000;
-    -ms-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-  }
-  .end-page-in-animate {
-    position: absolute;
-    top: 50%;
-    right: 1%;
-    -ms-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-    a {
-      width: 4rem;
-      height: 4rem;
-      display: none;
-      overflow: hidden;
-      img {
-        width: 120%;
-        height: 120%;
-      }
+      font-size: 2rem;
     }
   }
 }

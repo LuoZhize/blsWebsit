@@ -230,7 +230,9 @@ aside {
   top: 0;
   left: 0;
   z-index: 9999;
-  background: #122536;
+  background: url('../img/aside-bj.png') no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
 }
 aside .nav-slide {
   padding: 0 0.2rem;
@@ -274,7 +276,7 @@ aside .nav-slide .nav-slide-logo .nav-slide-name p:nth-of-type(2) {
 }
 aside .nav-slide .nav-slide-title {
   width: 4.6rem;
-  height: 4.46666rem;
+  height: 5.46666rem;
   margin-top: 2.7333rem;
   text-align: center;
   position: relative;
@@ -282,9 +284,11 @@ aside .nav-slide .nav-slide-title {
   font-family: 'hyXuJingXingKaiw';
 }
 aside .nav-slide .nav-slide-title div {
-  width: 3.866667rem;
-  height: 4.466666rem;
-  background: url("../img/asideNavBoreder.png") no-repeat;
+  width: 3rem;
+  height: 5.466666rem;
+  padding: 0.5rem 0;
+  background: url("../img/aside-text-bj.png") no-repeat;
+  -moz-background-size: 100%;
   background-size: 100%;
   font-size: 0.875rem;
 }
@@ -386,8 +390,8 @@ aside .nav-slide .nav-slide-title div p {
   overflow: hidden;
 }
 .container-fluid .page-wrap .page-list .page-home .carousel .carousel-inner .item img {
-  max-width: 130%;
-  min-width: 130%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 100%;
   top: 100%;
@@ -432,16 +436,36 @@ aside .nav-slide .nav-slide-title div p {
   right: 10%;
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-shop {
+  background: url("../img/page-home-ns-bj.png") no-repeat;
   width: 31.43333rem;
   min-height: 14.9rem;
   height: 14.9rem;
   margin-top: 0.6667rem;
   float: left;
   overflow: hidden;
+  position: relative;
 }
-.container-fluid .page-wrap .page-list .page-home .page-home-shop img {
-  width: 100%;
-  height: 100%;
+.container-fluid .page-wrap .page-list .page-home .page-home-shop p {
+  padding-top: 1rem;
+  font-size: 1.3rem;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-shop .page-home-ns-img {
+  z-index: 2;
+  width: 25.03rem;
+  height: 13.3rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-shop .page-home-ns-flower {
+  width: 12.7rem;
+  height: 12.7rem;
+  position: absolute;
+  top: 50%;
+  right: -6%;
+  z-index: 0;
+  transform: translateY(-50%);
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-LR,
 .container-fluid .page-wrap .page-list .page-home .page-home-carveMaster,
@@ -480,10 +504,17 @@ aside .nav-slide .nav-slide-title div p {
   right: 1.9rem;
   left: auto;
   z-index: 2;
+  line-height: 1rem;
+  padding-top: 0.8rem;
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-LR img,
 .container-fluid .page-wrap .page-list .page-home .page-home-carveMaster img {
   left: -0.4rem;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-LR {
+  background: url("../img/page-ns-list-leg.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-LR img {
   top: 50%;
@@ -494,6 +525,28 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-home .page-home-LR:hover img {
   top: 10%;
   animation: flowerRotate 6s linear infinite;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-carveMaster {
+  background: url("../img/page-ns-list-seal.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum {
+  background: url("../img/home-off-bj.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-offForum img {
+  right: -0.1rem;
+  top: -0.1rem;
+  -ms-transform: rotateX(180deg) rotateY(180deg);
+  -moz-transform: rotateX(180deg) rotateY(180deg);
+  transform: rotateX(180deg) rotateY(180deg);
+}
+.container-fluid .page-wrap .page-list .page-home .page-home-newDy {
+  background: url("../img/home-new-bj.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-newDy img {
   right: -0.5rem;
@@ -507,7 +560,8 @@ aside .nav-slide .nav-slide-title div p {
   animation: flowerRotate 6s linear infinite;
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-carveMaster img {
-  bottom: -0.2rem;
+  left: -0.1rem;
+  bottom: -0.1rem;
 }
 .container-fluid .page-wrap .page-list .page-home .page-home-offForum-content,
 .container-fluid .page-wrap .page-list .page-home .page-home-newDy-content {
@@ -633,6 +687,7 @@ aside .nav-slide .nav-slide-title div p {
   margin-right: 5.5rem;
   padding: 0 0.3rem 0.3rem;
   border-bottom: 0.1rem solid transparent;
+  color: #000000;
 }
 .container-fluid .page-wrap .page-list .page-shorts .page-shorts-sub .page-shorts-sub-nav li:last-of-type {
   margin-right: 0;
@@ -713,12 +768,11 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub .page-place-ns:hover,
 .container-fluid .page-wrap .page-list .page-ns-store .page-place .page-place-ns-sub-title:hover,
 .container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub .page-place-ns-sub-title:hover {
-  border-bottom: 0.03rem solid #000000;
+  border-bottom: 0.03rem solid #FFFFFF;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-place:hover,
 .container-fluid .page-wrap .page-list .page-ns-store .page-place-ns-sub:hover {
   text-decoration: none;
-  color: #000000;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-item {
   background: #f1f1f1;
@@ -751,27 +805,68 @@ aside .nav-slide .nav-slide-title div p {
   width: 22.2666rem;
   height: 26.6rem;
   margin-right: 0.8rem;
-  background-color: #564042;
+  background: url("../img/page-ns-history.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  position: relative;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-legend,
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-seal,
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-love {
+  position: relative;
   width: 10rem;
   height: 14.2rem;
 }
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-flower {
+  width: 10.66rem;
+  height: 10.66rem;
+  position: absolute;
+  bottom: 0;
+  right: -40%;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-flower img {
+  width: 100%;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-diamond-flower {
+  width: 22rem;
+  height: 15rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-diamond-flower img {
+  width: 100%;
+}
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-legend {
-  background-color: #7a2221;
+  background: url("../img/page-ns-list-leg.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-seal {
-  background-color: #701817;
+  background: url("../img/page-ns-list-seal.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-love {
-  background-color: #564042;
+  background: url("../img/page-ns-list-bj.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-art-work {
   width: 30rem;
   height: 11.8rem;
-  background-color: #4f393b;
+  background: url("../img/page-ns-work.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  position: relative;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-art-work .page-ns-diamond-flower {
+  width: 16rem;
+  height: 10rem;
+}
+.container-fluid .page-wrap .page-list .page-ns-store .page-ns-list .page-ns-art-work .page-ns-item-content .page-ns-item-title {
+  margin-top: 0.5rem;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub {
   position: relative;
@@ -819,6 +914,8 @@ aside .nav-slide .nav-slide-title div p {
   margin-top: 2rem;
   text-align: right;
   padding-right: 1.5rem;
+  color: #ffffff;
+  opacity: 0.6;
 }
 .container-fluid .page-wrap .page-list .page-ns-store .page-ns-sub .page-ns-sub-text-author span {
   margin-bottom: 0.3rem;
@@ -868,6 +965,7 @@ aside .nav-slide .nav-slide-title div p {
   text-decoration: underline;
 }
 .container-fluid .page-wrap .page-list .page-carve-master {
+  background: url("../img/page-carve-bj.png") no-repeat;
   -moz-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
@@ -903,11 +1001,11 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-carve-master .page-place .page-place-home:hover,
 .container-fluid .page-wrap .page-list .page-carve-master .page-place .page-place-carve:hover {
-  border-bottom: 0.03rem solid #000000;
+  border-bottom: 0.03rem solid #FFFFFF;
 }
 .container-fluid .page-wrap .page-list .page-carve-master .page-place:hover {
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
 }
 .container-fluid .page-wrap .page-list .page-carve-master .page-carve-top {
   overflow: hidden;
@@ -981,7 +1079,7 @@ aside .nav-slide .nav-slide-title div p {
 .container-fluid .page-wrap .page-list .page-carve-master .page-carve-top .page-carve-top-down {
   float: right;
   width: 0.8rem;
-  height: 0.666rem;
+  height: 0.8rem;
   display: inline-block;
   overflow: hidden;
   margin-top: 0.5rem;
@@ -1070,6 +1168,8 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-place {
   margin: 0.5333rem 0 0.8rem;
+  color: #ffffff;
+  opacity: 0.6;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-place .page-consultation-head-home {
   width: 0.53333rem;
@@ -1083,16 +1183,14 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-place span {
   font-size: 0.46666rem;
-  color: #888888;
   vertical-align: top;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-place .page-place-home:hover,
 .container-fluid .page-wrap .page-list .page-consultation-content .page-place .page-place-consultation:hover {
-  border-bottom: 0.03rem solid #000000;
+  border-bottom: 0.03rem solid #ffffff;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-place:hover {
   text-decoration: none;
-  color: #000000;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-notice {
   display: block;
@@ -1123,7 +1221,7 @@ aside .nav-slide .nav-slide-title div p {
   line-height: 0.8rem;
   overflow: hidden;
   font-size: 0.5333rem;
-  color: #979696;
+  color: #ffffff;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 7;
@@ -1151,7 +1249,7 @@ aside .nav-slide .nav-slide-title div p {
   padding: 0.6rem 0.73333rem 0;
   margin: 0.3rem 0.5rem 0.2rem 0;
   overflow: hidden;
-  background: #f5f5f5;
+  background: #ffffff;
   cursor: pointer;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item .page-consultation-item-title {
@@ -1178,13 +1276,12 @@ aside .nav-slide .nav-slide-title div p {
   color: #999999;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item:hover {
-  background: #b5964e;
+  background: url("../img/page-consultation-list-bj.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item:hover .page-consultation-item-title {
   color: white;
-}
-.container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item:hover .page-consultation-item-time {
-  color: #cbb78e;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-list .page-consultation-item:hover .page-consultation-item-info {
   color: white;
@@ -1193,6 +1290,9 @@ aside .nav-slide .nav-slide-title div p {
   margin-right: 0;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail {
+  background: url("../img/page-consultation-sub-bj.png") no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
   height: 100%;
   position: relative;
 }
@@ -1211,15 +1311,16 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-content .page-consultation-sub-time {
   font-size: 0.4666rem;
-  color: #888888;
+  color: #ffffff;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-content .page-consultation-sub-info {
-  color: #666666;
+  color: #ffffff;
   font-size: 0.53333rem;
   margin: 0.666rem 0;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-content .page-consultation-sub-info-text {
   text-indent: 1rem;
+  color: #ffffff;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-content .page-consultation-sub-img {
   display: inline-block;
@@ -1285,7 +1386,7 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-right .page-consultation-sub-right-list .page-consultation-sub-right-item {
   font-size: 0.5333rem;
-  color: #666666;
+  color: #ffffff;
   margin-bottom: 0.333rem;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-right .page-consultation-sub-right-list .page-consultation-sub-right-item:last-of-type {
@@ -1297,9 +1398,10 @@ aside .nav-slide .nav-slide-title div p {
   text-overflow: ellipsis;
   white-space: nowrap;
   display: inline-block;
+  color: #ffffff;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-right .page-consultation-sub-right-list .page-consultation-sub-right-item a:hover {
-  color: #000000;
+  color: #eeeeee;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-right .page-consultation-sub-right-list .page-consultation-sub-right-item span {
   display: inline-block;
@@ -1317,7 +1419,7 @@ aside .nav-slide .nav-slide-title div p {
   display: block;
   margin-top: 0.666rem;
   font-size: 0.5333rem;
-  color: #666666;
+  color: #ffffff;
 }
 .container-fluid .page-wrap .page-list .page-consultation-content .page-consultation-sub-detail .page-consultation-sub-footer .page-consultation-sub-page a span {
   font-size: 0.6rem;
@@ -1336,10 +1438,11 @@ aside .nav-slide .nav-slide-title div p {
   width: 100%;
 }
 .container-fluid .page-wrap .page-list .page-about-our {
+  padding: 0;
   overflow: hidden;
 }
 .container-fluid .page-wrap .page-list .page-about-our .page-about-our-top {
-  width: 56.2rem;
+  width: 57.2rem;
   min-height: 13.33333rem;
   height: 13.33333rem;
   overflow: hidden;
@@ -1353,7 +1456,7 @@ aside .nav-slide .nav-slide-title div p {
   position: relative;
   display: inline-block;
   width: 18.83333rem;
-  height: 10.3666rem;
+  height: 13.3666rem;
   min-height: 10.33333rem;
   overflow: hidden;
   background: url("../img/page-about-our-bottom.png") no-repeat;
@@ -1363,7 +1466,7 @@ aside .nav-slide .nav-slide-title div p {
   vertical-align: top;
 }
 .container-fluid .page-wrap .page-list .page-about-our .page-about-our-wrap {
-  padding: 0.6rem 2.8rem 0 1.1333rem;
+  padding: 0.6rem 2.8rem 0 1.6333rem;
 }
 .container-fluid .page-wrap .page-list .page-about-our .page-about-our-wrap p {
   margin-bottom: 0.3rem;
@@ -1384,7 +1487,7 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-about-our .page-about-our-title p:nth-of-type(2) {
   font-size: 0.5rem;
-  color: #2d2d2c;
+  color: #ffffff;
 }
 .container-fluid .page-wrap .page-list .page-about-our .page-about-our-course-list {
   width: 27.1333rem;
@@ -1393,12 +1496,12 @@ aside .nav-slide .nav-slide-title div p {
 }
 .container-fluid .page-wrap .page-list .page-about-our .page-about-our-course-item {
   font-size: 0.5rem;
-  color: #2d2d2c;
+  color: #ffffff;
 }
 .container-fluid .page-wrap .page-list .page-about-our .page-about-our-connection-item {
   overflow: hidden;
   font-size: 0.5rem;
-  color: #2d2d2c;
+  color: #ffffff;
   display: inline-block;
   margin-right: 6.6rem;
   vertical-align: top;
@@ -1519,7 +1622,7 @@ aside .nav-slide .nav-slide-title div p {
   padding-bottom: 0.3rem;
 }
 .container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom .page-lr-bottom-item:last-of-type {
-  border-top: 0.1rem dotted #eeeeee;
+  border-top: 0.1rem dotted #737c85;
   padding: 0.3rem 0 0;
 }
 .container-fluid .page-wrap .page-list .page-lr .page-lr-list-col-bottom .page-lr-bottom-img {
@@ -1670,6 +1773,7 @@ aside .nav-slide .nav-slide-title div p {
   margin-bottom: 0.2rem;
   margin-left: 1rem;
   display: inline-block;
+  color: #ffffff;
 }
 #text-page-search input {
   margin: 0 0.5rem;
@@ -1992,168 +2096,25 @@ footer .footer-content .footer-content-footer {
   width: 100%;
   height: 31.5rem;
   overflow: hidden;
+  background: url("../img/page-in-bj.png") no-repeat;
+  background-size: 100%;
+  -moz-background-size: 100%;
 }
-.page-in-animate .page-in-animate-bj {
-  position: relative;
-  top: 0;
-}
-.page-in-animate .page-in-animate-bj a {
-  width: 32.86667rem;
-  height: 31.5rem;
+.page-in-animate .page-in-station-horse {
   position: absolute;
-  display: inline-block;
-  overflow: hidden;
-  cursor: default;
-}
-.page-in-animate .page-in-animate-bj a img {
-  width: 100%;
-  height: 100%;
-}
-.page-in-animate .page-in-animate-bj .page-in-animate-bj-l {
-  left: -53%;
-}
-.page-in-animate .page-in-animate-bj .page-in-animate-bj-r {
-  width: 31.1666rem;
-  right: -53%;
-}
-.page-in-animate .page-in-water .page-in-water-img {
-  display: none;
-  z-index: 2;
-  position: absolute;
-  width: 23.7rem;
-  height: 12.6rem;
-  overflow: hidden;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: pageWater 40s linear;
-  cursor: default;
-}
-.page-in-animate .page-in-water .page-in-water-img img {
-  width: 100%;
-}
-.page-in-animate .page-in-animate-content {
-  display: none;
-  width: 28rem;
-  height: 15rem;
-  position: absolute;
-  left: 50%;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.page-in-animate .page-in-animate-content a {
-  position: absolute;
-  cursor: default;
-}
-.page-in-animate .page-in-animate-content a img {
-  width: 100%;
-  height: 100%;
-}
-.page-in-animate .page-in-animate-content .page-in-content-yun {
-  width: 25rem;
-  height: 10rem;
-  z-index: 4;
-  opacity: 1;
-  top: 5rem;
-  right: 0;
-  animation: pageInY 40s ease-in-out;
-}
-.page-in-animate .page-in-animate-content .page-in-content-short {
-  width: 19.1666rem;
-  height: 11.4rem;
-  z-index: 2;
-  right: 2rem;
-  opacity: 1;
-  animation: pageShort 20s ease-in-out infinite;
+  bottom: 0;
+  left: 0;
 }
 .page-in-animate .page-in-text {
-  display: none;
   position: absolute;
-  left: 20%;
-}
-.page-in-animate .page-in-text p {
-  writing-mode: vertical-lr;
-  writing-mode: tb-rl;
-  display: inline-block;
-  margin-bottom: 0;
-  vertical-align: top;
-  text-align: center;
+  font-size: 1rem;
+  font-family: 'hyShangWeiShouShuW';
+  color: #FFFFFF;
+  top: 0;
+  right: 10%;
 }
 .page-in-animate .page-in-text .page-in-title {
-  width: 5rem;
-  font-family: hyChengXingJ;
-  font-size: 3.666rem;
-  color: #a52604;
-}
-.page-in-animate .page-in-text .page-in-introduce {
-  width: 2rem;
-  font-family: hyShangWeiShouShuW;
-  font-size: 1.233rem;
-  color: #000000;
-  letter-spacing: 0.1rem;
-}
-.page-in-animate .page-in-guo {
-  position: absolute;
-  left: 10%;
-  width: 12rem;
-  height: 12rem;
-  overflow: hidden;
-}
-.page-in-animate .page-in-guo .page-in-guo-j {
-  position: relative;
-  display: block;
-  top: -25%;
-  left: -30%;
-  width: 18.666rem;
-  height: 18.666rem;
-}
-.page-in-animate .page-in-guo img {
-  width: 100%;
-}
-.page-in-animate .page-in-end {
-  position: absolute;
-  left: 12.5%;
-  z-index: 2;
-}
-.page-in-animate .page-in-end a {
-  cursor: default;
-  display: none;
-  width: 17.4666rem;
-  height: 11.9333rem;
-}
-.page-in-animate .page-in-end a img {
-  width: 100%;
-}
-.page-in-animate .page-in-over-circular {
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background: #cccccc;
-  border-radius: 100%;
-  z-index: 10000;
-  -ms-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.page-in-animate .end-page-in-animate {
-  position: absolute;
-  top: 50%;
-  right: 1%;
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.page-in-animate .end-page-in-animate a {
-  width: 4rem;
-  height: 4rem;
-  display: none;
-  overflow: hidden;
-}
-.page-in-animate .end-page-in-animate a img {
-  width: 120%;
-  height: 120%;
+  font-size: 2rem;
 }
 @-ms-keyframes flowerRotate {
   0% {
