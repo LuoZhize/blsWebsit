@@ -17,7 +17,7 @@
             <!--login && search-->
             <div class="nav-top-fun pull-right">
                 <form class="nav-search" role="search">
-                    <input type="text" class="nav-top-input-search" placeholder="搜索关键词">
+                    <input type="text" class="nav-top-input-search" placeholder="搜索">
                     <a class="nav-top-search">
                         <img src="../img/searchIcon.png" alt="">
                     </a>
@@ -70,9 +70,6 @@
                 </a></li>
             </ul>
         </div>
-        <a class="nav-down">
-            <img src="../img/nav-down.png" />
-        </a>
     </nav>
 </header>
 <!--侧边栏-->
@@ -81,7 +78,7 @@
         <div class="nav-slide-logo">
             <a class="nav-slide-logo-img"><img src="../img/logo.png"></a>
             <div class="nav-slide-name">
-                <p>Balinshi miningCompany</p>
+                <p>BaLinShi Mining Company, Ltd.</p>
                 <p>巴林石矿业有限公司</p>
             </div>
         </div>
@@ -94,6 +91,9 @@
     </div>
 </aside>
 <!--分页及内容-->
+<a class="nav-down">
+    <img src="../img/nav-down.png" />
+</a>
 <div class="container-fluid">
     <div class="page-wrap">
         <ul class="page-list">
@@ -103,7 +103,10 @@
                 </div>
                 <div class="page-about-our-wrap">
                     <div class="page-about-our-info">
-                        <span class="page-about-our-right pull-right"></span>
+                        <div class="page-about-our-right pull-right">
+                            <!--绘制地图-->
+                            <div id="map"></div>
+                        </div>
                         <div class="page-about-our-title">
                             <p class="page-about-our-title-all">公司介绍</p>
                             <p>中国安华·巴林石矿业有限公司位于内蒙古赤峰市巴林右旗大板镇查干沐沦街中段，交通便利。公司始建于1973年，是以非金属资源开发为</p>
@@ -180,6 +183,7 @@
         </div>
         <div class="col-sm-12">
             <button type="submit" class="btn page-login-login">登录</button>
+            <a class="forget-password">忘记密码？</a>
         </div>
         <div class="col-sm-12 page-login-hint">
             <span>还没有账号？</span>
@@ -212,11 +216,11 @@
     <div class="footer-content">
         <div class="footer-content-info">
             <div class="footer-content-info-l">
-                <p class="footer-content-address">公司地址:内蒙古赤峰市巴林右旗巴林石</p>
-                <p class="footer-content-tel">电话:17746520099</p>
-                <p class="footer-content-email">邮箱:1256689@163.com</p>
+                <p class="footer-content-address">公司地址：内蒙古赤峰市巴林右旗巴林石</p>
+                <p class="footer-content-tel">电话：17746520099</p>
+                <p class="footer-content-email">邮箱：1256689@163.com</p>
             </div>
-            <div class="footer-content-info-r"><a class="footer-content-info-qr-code"><img src="../img/qr-code.png"/></a><p>微信公众号</p></div>
+            <div class="footer-content-info-r"><a class="footer-content-info-qr-code"><img src="../img/qr-code.png"/></a><p>扫一扫关注公众号</p></div>
         </div>
         <div class="footer-content-footer">
             <p>版权所有：巴林石矿业有限公司</p>
@@ -224,9 +228,10 @@
     </div>
 </footer>
 </body>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=PbG5AHVNk2uw9BtVZ5sUvpo2dKAtqeIh"></script>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/textPage.js"></script>
+<script type="text/javascript" src="../js/page.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
 <script>
 </script>

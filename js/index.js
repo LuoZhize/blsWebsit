@@ -1,111 +1,125 @@
-// $('.page-in-over-circular').animate({//圆的扩散
-//     width: '120%',
-//     height: 41.5 + 'rem'
-// }, 500, 'linear', function () {//回调显示首页
-//     $(this).hide();
-//     $('.page-in-animate').hide();
-//     $(document).ready(function () {
-//         $('.page-in-animate').hide();
-//         $('header').show();
-//         $('aside').show();
-//         $('footer').show();
-//         $('.nav-down').show();
-//         $('.container-fluid').show();
-//     });
-// });
 let heightWin = $(window).height();
 startAnimation();//首页动画
 navSlide();//nav show
 mouseScroll();//screen scroll
 shortsClick();//shorts event
+carveClick();//carve event
 loginClick();//login and register event
 consultationClick();//consultation event
 bottomNavClick(heightWin);//bottom nav event
 nsShortsClick();//ns shorts event click
 lrClick();//lr click event
 textPageEvent();//文字分页
+ourMap();//关于我们地图
 
 function startAnimation() {
-    $('.page-in-animate-bj-l').animate({left: '0'}, 2500, 'swing', function () {//mountain left
+    $('img').on('mousedown',function (e) {//禁止图片拖动
+        e.preventDefault()
+    });
+    $('.page-in-station-horse').animate({left: '4rem'},2500,'linear',function () {
+        $('.page-in-station-horse').animate({left: '10rem'},500,'linear',function () {
+            $('body').append('<audio src="../blsWebsit/img/horse-call.mp3" autoplay=autoplay></audio>');//音效
+            $('.page-in-station-horse').css({'transform': 'rotateZ(0deg)','transition-duration': '2s'});
+            $('.horse-shadow').show(0);
+            $('.horse-shadow').css({'transform': 'rotateZ(0deg)','transition-duration': '2s'});
+        });
+    });
+    setTimeout(function () {
+        move();
+    },1000)
+}
+
+function move() {
+    $('.page-in-yun-l').animate({right:'43%'},1000,'swing',function () {//yun move
 
     });
-    $('.page-in-animate-bj-r').animate({right: '0'}, 2500, 'swing', function () {//mountain right
-        $(".page-in-water-img").css('top', $(window).height() / 1.5 + 'px').fadeIn(2000);
-        $('.page-in-text').css('top', $(window).height() / 3 + 'px').show();
-        $('.page-in-end').css('top', $(window).height() / 6 + 'px');
+    $('.page-in-yun-r').animate({right: '10%'},1000,'swing',function () {//yun move
+
     });
-    setTimeout(function () {//shorts fadein
-        $(".page-in-animate-content").css('top', $(window).height() / 3 + 'px').fadeIn(2000);
-    }, 1500);
-    setTimeout(function () {//打印字animation
+    setTimeout(function () {//yun hide
+        $('.page-in-yun-l').fadeOut(500);
+        $('.page-in-yun-r').fadeOut(500);
+    },500);
+    setTimeout(function () {//sun show
+        $('.page-in-sun').fadeIn(1000);
+    },700);
+    setTimeout(function () {//打印字animation（延时）
         let index = 0, indexIn = 0;
-        let str = "国石国礼", strIn = "一品巴林，千年中国印";
+        let str = $('.page-in-title-bf').text(), strIn = $('.page-in-introduce-bf').text();
         let timerTitle, timerIntroduce, endAnimate;
+        $('.page-in-sun').animate({opacity: '0.4'},1000,function () {//太阳变淡
+            function type() {//title 打印
+                if (index === str.length) {//判断字数
+                    clearInterval(timerTitle);//清空定时器
 
-        function type() {//title 打印
-            if (index === str.length) {//判断字数
-                clearInterval(timerTitle);//清空定时器
-
-                function typeIn() {//introduce 打印
-                    // let endAnimate;
-                    if (indexIn === strIn.length) {
-                        clearInterval(timerIntroduce);
-                        $('.page-in-end-img').fadeIn(1000);//墨水 img show
-                        $('.end-page-in-animate-img').css('display', 'inline-block').click(function () {//click end animation
-                            clearTimeout(endAnimate);
-                            $('.page-in-over-circular').animate({//圆的扩散
-                                width: '120%',
-                                height: 41.5 + 'rem'
-                            }, 500, 'linear', function () {//回调显示首页
-                                $(this).hide();
-                                $('.page-in-animate').hide();
-                                $(document).ready(function () {
-                                    $('.page-in-animate').hide();
-                                    $('header').show();
-                                    $('aside').show();
-                                    $('footer').show();
-                                    $('.nav-down').show();
-                                    $('.container-fluid').show();
+                    function typeIn() {//introduce 打印
+                        // let endAnimate;
+                        if (indexIn === strIn.length) {
+                            clearInterval(timerIntroduce);
+                            $('.page-in-end').fadeIn(200);//logo img show
+                            setTimeout(function () {//最后箭头的延时
+                                $('.end-page-in-animate-img').css('display', 'inline-block').click(function () {//click end animation
+                                    clearTimeout(endAnimate);
+                                    $('.page-in-over-circular').animate({//圆的扩散
+                                        width: '120%',
+                                        height: 41.5 + 'rem'
+                                    }, 500, 'linear', function () {//回调显示首页
+                                        $(this).hide();
+                                        $('.page-in-animate').hide();
+                                        $(document).ready(function () {
+                                            $('.page-in-animate').hide();
+                                            $('header').show();
+                                            $('aside').show();
+                                            $('footer').show();
+                                            $('.nav-down').show();
+                                            $('.container-fluid').show();
+                                        });
+                                    });
                                 });
-                            });
-                        });
-                        endAnimate = setTimeout(function () {//等待十秒
-                            $('.page-in-over-circular').animate({
-                                width: '120%',
-                                height: 41.5 + 'rem'
-                            }, 500, 'linear', function () {//圆的扩散
-                                $(this).hide();
-                                $('.page-in-animate').hide();
-                                $(document).ready(function () {
-                                    $('.page-in-animate').hide();
-                                    $('header').show();
-                                    $('aside').show();
-                                    $('footer').show();
-                                    $('.nav-down').show();
-                                    $('.container-fluid').show();
-                                });
-                            });
-                        }, 10000);
+                                endAnimate = setTimeout(function () {//等待十秒
+                                    $('.page-in-over-circular').animate({
+                                        width: '120%',
+                                        height: 41.5 + 'rem'
+                                    }, 500, 'linear', function () {//圆的扩散
+                                        $(this).hide();
+                                        $('.page-in-animate').hide();
+                                        $(document).ready(function () {
+                                            $('.page-in-animate').hide();
+                                            $('header').show();
+                                            $('aside').show();
+                                            $('footer').show();
+                                            $('.nav-down').show();
+                                            $('.container-fluid').show();
+                                        });
+                                    });
+                                }, 10000);
+                            },1000);
+                        }
+                        $(".page-in-introduce").text(strIn.substring(0, indexIn++));//显示字
                     }
-                    $(".page-in-introduce").text(strIn.substring(0, indexIn++));//显示字
+
+                    timerIntroduce = setInterval(typeIn, 100);
                 }
-
-                timerIntroduce = setInterval(typeIn, 100);
+                $(".page-in-title").text(str.substring(0, index++));
             }
-            $(".page-in-title").text(str.substring(0, index++));
-        }
 
-        timerTitle = setInterval(type, 300);
-    }, 5000);
+            timerTitle = setInterval(type, 300);
+        });
+    }, 2500);
 }
 
 function nsShortsClick() {
-    $('.page-ns-item').click(function () {
+    $('.page-ns-item,.page-place-ns-sub-title').click(function () {
         window.location.href = "../page/page-ns-sub.html";
     });
     $('.page-place-ns').click(function () {
         window.location.href = "../page/page-ns-store.html";
     });
+    $('.page-ns-sub-detail').click(function () {
+        window.location.href = "page-ns-sub-sub.html";
+    });
+    let listLength = $('.page-ns-sub-list>li').length;
+    nsPageList(listLength,4);//分页
 }
 
 function bottomNavClick(heightWin) {
@@ -115,7 +129,7 @@ function bottomNavClick(heightWin) {
         if (e.clientY >= heightWin / 1.02) {//move （y == bottom） bottom nav show
             $footerZhe.slideDown(600);
             $footerContent.slideDown(600);
-        } else if (e.clientY < heightWin / 1.35) {
+        } else if (e.clientY < heightWin / 1.25) {
             $footerZhe.slideUp(400);
             $footerContent.slideUp(400);
         }
@@ -137,7 +151,34 @@ function consultationClick() {
         $pageConsultationContent.css('background', 'transparent');
         window.location.href = "../page/page-consultation-content.html";
     });
-    $('#page-consultation-content').pagenation();//分页
+    //list hover
+//     background: url("../img/page-consultation-list-bj.png") no-repeat;
+//     -moz-background-size: 100%;
+//     background-size: 100%;
+// {
+//         color: white;
+//     }
+//  {
+//         color: white;
+//     }
+    $('.page-consultation-list li').mouseenter(function () {
+        $(this).children('.page-consultation-item-title,.page-consultation-item-info').css({'color': 'white'});
+        $(this).css({
+            'background' : 'url("../img/page-consultation-list-bj.png") no-repeat',
+            '-moz-background-size' : '100%',
+            '-o-background-size' : '100%',
+            'background-size' : '100%'
+        })
+    });
+    $('.page-consultation-list li').mouseleave(function () {
+        $(this).children('.page-consultation-item-info').css({'color': '#999999'});
+        $(this).children('.page-consultation-item-title').css({'color': '#000000'});
+        $(this).css({
+            'background' : '#ffffff',
+        })
+    });
+    let listLength = $('.page-consultation-list>li').length;
+    consultationPageList(listLength,4);//分页
 }
 
 function loginClick() {
@@ -197,30 +238,49 @@ function loginClick() {
 }
 
 function shortsClick() {
-    let $pageShorts = $('.page-shorts');
     let $pageShortsZhe = $('.page-shorts-zhe');
     let $pageShortsSubDialog = $('.page-shorts-sub-dialog');
+    let subNavClick = 0, navClisk;
     $('.nav-top-menu>li').eq(1).click(function () {//点击导航栏奇石鉴赏返回主页
-        $pageShorts.css({
-            'background': 'url("../blsWebsit/img/page-shorts-bg.png") no-repeat',
-            '-moz-background-size': '100%',
-            '-o-background-size': '100%',
-            'background-size': '100%'
-        });
         window.location.href = "../page/page-shorts.html";
     });
     $('.page-shorts-list>li').click(function () {//奇石鉴赏点击出现对应的子页面
-        $pageShorts.css({
-            'background': 'url("../blsWebsit/img/page-shorts-sub-bg.png") no-repeat',
-            '-moz-background-size': '100%',
-            '-o-background-size': '100%',
-            'background-size': '100%'
-        });
         window.location.href = "../page/page-shorts-sub.html";
     });
     $('.page-shorts-sub-list-item').click(function () {//奇石鉴赏子页面点击出现弹窗
         $pageShortsZhe.show();
         $pageShortsSubDialog.show();
+    });
+    //父页面列表
+    $('.page-shorts-list li').mouseenter(function () {
+        $(this).children('.page-shorts-item-info').children('span').css({'color': 'rgb(226, 186, 96)'});
+        $(this).children('.page-shorts-item-top').css({
+            'background' : 'url("../img/page-short-item-on.png") no-repeat',
+            '-moz-background-size' : '100%',
+            '-o-background-size' : '100%',
+            'background-size' : '100%'
+        })
+    });
+    $('.page-shorts-list li').mouseleave(function () {
+        $(this).children('.page-shorts-item-info').children('span').css({'color': '#ffffff'});
+        $(this).children('.page-shorts-item-top').css({
+            'background' : 'url("../img/page-short-item-off.png") no-repeat',
+            '-moz-background-size' : '100%',
+            '-o-background-size' : '100%',
+            'background-size' : '100%'
+        })
+    });
+    //子页面导航栏
+    $('.page-shorts-sub-nav li').click(function () {
+        $(this).css({'color':'rgb(226, 186, 96)','border-bottom':'0.1rem solid rgb(226, 186, 96)'}).siblings().css({'color':'#ffffff','border-bottom':'0.1rem solid transparent'});
+        subNavClick = $(this).index();
+    });
+    $('.page-shorts-sub-nav li').mouseleave(function () {
+        $(this).css({'color': '#ffffff', 'border-bottom': '0.1rem solid transparent'});
+        $('.page-shorts-sub-nav li').eq((subNavClick)).css({'color':'rgb(226, 186, 96)','border-bottom':'0.1rem solid rgb(226, 186, 96)'});
+    });
+    $('.page-shorts-sub-nav li').mouseenter(function () {
+        $(this).css({'color':'rgb(226, 186, 96)','border-bottom':'0.1rem solid rgb(226, 186, 96)'});
     });
     $('.page-shorts-sub-dialog-close').click(function () {//关闭弹窗
         $pageShortsZhe.hide();
@@ -228,14 +288,24 @@ function shortsClick() {
     });
     $('.three-d').click(function () {//3d效果
 
-    })
+    });
+    $('.page-shorts-list li').mouseenter(function () {
+        $(this).addClass('shorts-li-hover').siblings().removeClass('shorts-li-hover');
+    });
+    let listLength = $('.page-shorts-sub-list-all>li').length;
+    shortSubPageList(listLength,10);//分页
+}
+
+function carveClick() {
+    let listLength = $('.page-carve-bottom-list>li').length;
+    carvePageList(listLength,3);//分页
 }
 
 function navSlide() {
     let navDown = 0;//navTop slideDown(1)/slideUp(0)
     let $navUser = $('.nav-user');
     let $navTopWrap = $('.nav-top-wrap');
-    navSearh(5, 0.5, 0);
+    // navSearh(5, 0.5, 0);
     //user
     $navUser.mouseenter(function () {//login/logOff
         $(this).children('.nav-user-menu').show();
@@ -255,6 +325,7 @@ function navSlide() {
                 '-moz-transform': 'rotateZ(0deg)',
                 'transform': 'rotateZ(0deg)'
             });
+            $('.nav-down').animate({'top': '2%'},500);
             $navTopWrap.slideUp();
             navSearh(0, 0, 500);//nav search width reduce
             navDown = 1;
@@ -264,6 +335,7 @@ function navSlide() {
                 '-moz-transform': 'rotateZ(-180deg)',
                 'transform': 'rotateZ(-180deg)'
             });
+            $('.nav-down').animate({'top': '6.5%'},500);
             $navTopWrap.slideDown();
             navSearh(5, 0.5, 1000);//nav search width add
             navDown = 0;
@@ -376,6 +448,116 @@ function prePage(num) {
     $PageIndex.eq(num - 1).show();
 }
 
+function ourMap() {
+    let map = new BMap.Map("map");//百度地图
+    let point = new BMap.Point(118.67047, 43.540184);//中心点经纬
+    map.centerAndZoom(point, 12);//初始化地图①设置地图的中心点，②缩放范围3-19
+    map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+    addMarker(point);
+
+    function addMarker(point) {
+        let iconSize = new BMap.Size(30, 35),//图标可视区域的大小
+            iconPath = "../img/mapBiaoZhu.png";//图标路径
+        let myIcon = new BMap.Icon(iconPath, iconSize, {
+            anchor: new BMap.Size(10, 35),// 指定定位位置
+        })
+        let marker = new BMap.Marker(point, {icon: myIcon});//创建标注对象
+        map.addOverlay(marker);//添加到地图
+    }
+}
+
+function shortSubPageList(length, pageLength) {
+    if (length > 10) {
+        $('.short-page-list').show();
+        $('.page-shorts-sub-list-all li:lt(0)').hide();
+        $('.page-shorts-sub-list-all li:gt(9)').hide();
+    } else {
+        $('.short-page-list').hide();
+    }
+    $('.short-page-list').page({
+        leng: Math.ceil(length / pageLength), //分页总数
+        activeClass: 'activ-page-color', //active 类样式定义
+        firstPage: '',
+        lastPage: '',
+        prv: '',
+        next: '',
+        clickBack: function(page) {//click回调
+            $('.page-shorts-sub-list-all li').show();
+            $('.page-shorts-sub-list-all li:lt('+ (page - 1) * 10 +')').hide();
+            $('.page-shorts-sub-list-all li:gt('+ (page * 10 - 1) +')').hide();
+        }
+    });
+}
+
+function consultationPageList(length, pageLength) {
+    if (length > 4) {
+        $('.consultation-page-list').show();
+        $('.page-consultation-list li:lt(0)').hide();
+        $('.page-consultation-list li:gt(3)').hide();
+    } else {
+        $('.consultation-page-list').hide();
+    }
+    $('.consultation-page-list').page({
+        leng: Math.ceil(length / pageLength), //分页总数
+        activeClass: 'activ-page-color', //active 类样式定义
+        firstPage: '',
+        lastPage: '',
+        prv: '',
+        next: '',
+        clickBack: function(page) {//click回调
+            $('.page-consultation-list li').show();
+            $('.page-consultation-list li:lt('+ (page - 1) * 4 +')').hide();
+            $('.page-consultation-list li:gt('+ (page * 4 - 1) +')').hide();
+        }
+    });
+}
+
+function carvePageList(length, pageLength) {
+    if (length > 3) {
+        $('.carve-page-list').show();
+        $('.page-carve-bottom-list li:lt(0)').hide();
+        $('.page-carve-bottom-list li:gt(2)').hide();
+    } else {
+        $('.carve-page-list').hide();
+    }
+    //重新设定总的leng
+    $('.carve-page-list').page({
+        leng: Math.ceil(length / pageLength), //分页总数
+        activeClass: 'activ-page-color', //active 类样式定义
+        firstPage: '',
+        lastPage: '',
+        prv: '',
+        next: '',
+        clickBack: function(page) {//click回调
+            $('.page-carve-bottom-list li').show();
+            $('.page-carve-bottom-list li:lt('+ (page - 1) * 3 +')').hide();
+            $('.page-carve-bottom-list li:gt('+ (page * 3 - 1) +')').hide();
+        }
+    });
+}
+
+function nsPageList(length, pageLength) {
+    if (length > 4) {
+        $('.ns-sub-page-list').show();
+        $('.page-ns-sub-list li:lt(0)').hide();
+        $('.page-ns-sub-list li:gt(3)').hide();
+    } else {
+        $('.ns-sub-page-list').hide();
+    }
+    $('.ns-sub-page-list').page({
+        leng: Math.ceil(length / pageLength), //分页总数
+        activeClass: 'activ-page-color', //active 类样式定义
+        firstPage: '',
+        lastPage: '',
+        prv: '',
+        next: '',
+        clickBack: function(page) {//click回调
+            $('.page-ns-sub-list li').show();
+            $('.page-ns-sub-list li:lt('+ (page - 1) * 4 +')').hide();
+            $('.page-ns-sub-list li:gt('+ (page * 4 - 1) +')').hide();
+        }
+    });
+}
 /**
  * value 输入框里的直
  * pageIndexLength 总长度

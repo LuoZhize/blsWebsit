@@ -17,7 +17,7 @@
             <!--login && search-->
             <div class="nav-top-fun pull-right">
                 <form class="nav-search" role="search">
-                    <input type="text" class="nav-top-input-search" placeholder="搜索关键词">
+                    <input type="text" class="nav-top-input-search" placeholder="搜索">
                     <a class="nav-top-search">
                         <img src="../img/searchIcon.png" alt="">
                     </a>
@@ -70,9 +70,6 @@
                 </a></li>
             </ul>
         </div>
-        <a class="nav-down">
-            <img src="../img/nav-down.png" />
-        </a>
     </nav>
 </header>
 <!--侧边栏-->
@@ -81,7 +78,7 @@
         <div class="nav-slide-logo">
             <a class="nav-slide-logo-img"><img src="../img/logo.png"></a>
             <div class="nav-slide-name">
-                <p>Balinshi miningCompany</p>
+                <p>BaLinShi Mining Company, Ltd.</p>
                 <p>巴林石矿业有限公司</p>
             </div>
         </div>
@@ -94,6 +91,9 @@
     </div>
 </aside>
 <!--分页及内容-->
+<a class="nav-down">
+    <img src="../img/nav-down.png" />
+</a>
 <div class="container-fluid">
     <div class="page-wrap">
         <ul class="page-list">
@@ -144,28 +144,36 @@
                             <a class="page-carve-top-down"><img src="../img/page-carve-slide-down.png" /></a>
                         </div>
                     </div>
-                    <div id="carousel-example-generic-carve" class="carousel slide" data-ride="carousel">
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <a><img src="../img/carve-master-carousel.png" alt=""></a>
-                                <a><img src="../img/carve-master-carousel.png" alt=""></a>
-                                <a><img src="../img/carve-master-carousel.png" alt=""></a>
-                            </div>
-                            <div class="item">
-                                <a><img src="../img/carve-master-carousel.png" alt=""></a>
-                                <a><img src="../img/carve-master-carousel.png" alt=""></a>
-                                <a><img src="../img/carve-master-carousel.png" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example-generic-carve" role="button" data-slide="prev">
-                            <span class="carve-master-carousel-left" aria-hidden="true"></span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic-carve" role="button" data-slide="next">
-                            <span class="carve-master-carousel-right" aria-hidden="true"></span>
-                        </a>
-                    </div>
+                    <ul class="page-carve-bottom-list">
+                        <li class="page-carve-bottom-item">
+                            <a><img src="../img/carve-master-carousel.png" alt=""></a>
+                        </li>
+                        <li class="page-carve-bottom-item">
+                            <a><img src="../img/carve-master-carousel.png"/></a>
+                        </li>
+                        <li class="page-carve-bottom-item">
+                            <a><img src="../img/carve-master-carousel.png" /></a>
+                        </li>
+                        <li class="page-carve-bottom-item">
+                            <a><img src="../img/carve-master-carousel.png"/></a>
+                        </li>
+                        <li class="page-carve-bottom-item">
+                            <a><img src="../img/carve-master-carousel.png" /></a>
+                        </li>
+                        <li class="page-carve-bottom-item">
+                            <a><img src="../img/carve-master-carousel.png"/></a>
+                        </li>
+                        <li class="page-carve-bottom-item">
+                            <a><img src="../img/carve-master-carousel.png" /></a>
+                        </li>
+                        <li class="page-carve-bottom-item">
+                            <a><img src="../img/carve-master-carousel.png"/></a>
+                        </li>
+                        <li class="page-carve-bottom-item">
+                            <a><img src="../img/carve-master-carousel.png" /></a>
+                        </li>
+                    </ul>
+                    <div class="carve-page-list"></div>
                 </div>
             </li>
         </ul>
@@ -199,6 +207,7 @@
         </div>
         <div class="col-sm-12">
             <button type="submit" class="btn page-login-login">登录</button>
+            <a class="forget-password">忘记密码？</a>
         </div>
         <div class="col-sm-12 page-login-hint">
             <span>还没有账号？</span>
@@ -231,11 +240,11 @@
     <div class="footer-content">
         <div class="footer-content-info">
             <div class="footer-content-info-l">
-                <p class="footer-content-address">公司地址:内蒙古赤峰市巴林右旗巴林石</p>
-                <p class="footer-content-tel">电话:17746520099</p>
-                <p class="footer-content-email">邮箱:1256689@163.com</p>
+                <p class="footer-content-address">公司地址：内蒙古赤峰市巴林右旗巴林石</p>
+                <p class="footer-content-tel">电话：17746520099</p>
+                <p class="footer-content-email">邮箱：1256689@163.com</p>
             </div>
-            <div class="footer-content-info-r"><a class="footer-content-info-qr-code"><img src="../img/qr-code.png"/></a><p>微信公众号</p></div>
+            <div class="footer-content-info-r"><a class="footer-content-info-qr-code"><img src="../img/qr-code.png"/></a><p>扫一扫关注公众号</p></div>
         </div>
         <div class="footer-content-footer">
             <p>版权所有：巴林石矿业有限公司</p>
@@ -245,8 +254,6 @@
 </body>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/textPage.js"></script>
+<script type="text/javascript" src="../js/page.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
-<script>
-</script>
 </html>

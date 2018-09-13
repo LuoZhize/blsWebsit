@@ -17,7 +17,7 @@
             <!--login && search-->
             <div class="nav-top-fun pull-right">
                 <form class="nav-search" role="search">
-                    <input type="text" class="nav-top-input-search" placeholder="搜索关键词">
+                    <input type="text" class="nav-top-input-search" placeholder="搜索">
                     <a class="nav-top-search">
                         <img src="img/searchIcon.png" alt="">
                     </a>
@@ -70,9 +70,6 @@
                 </a></li>
             </ul>
         </div>
-        <a class="nav-down" style="display: none">
-            <img src="img/nav-down.png" />
-        </a>
     </nav>
 </header>
 <!--侧边栏-->
@@ -81,7 +78,7 @@
         <div class="nav-slide-logo">
             <a class="nav-slide-logo-img"><img src="img/logo.png"></a>
             <div class="nav-slide-name">
-                <p>Balinshi miningCompany</p>
+                <p>BaLinShi Mining Company, Ltd.</p>
                 <p>巴林石矿业有限公司</p>
             </div>
         </div>
@@ -94,6 +91,9 @@
     </div>
 </aside>
 <!--分页及内容-->
+<a class="nav-down" style="display: none">
+    <img src="img/nav-down.png" />
+</a>
 <div class="container-fluid" style="display: none">
     <div class="page-wrap">
         <ul class="page-list">
@@ -145,45 +145,44 @@
                         <img src="img/home-carve-flower.png" />
                         <p>名家传记</p>
                     </a>
-                    <a class="page-home-offForum" href="#">
+                    <div class="page-home-offForum">
                         <img src="img/home-carve-flower.png" />
-                        <p>官方论坛</p>
+                        <a class="page-home-offForum-title">官方论坛</a>
                         <ul class="page-home-offForum-content">
-                            <li>
+                            <li><a>
                                 <span>热烈庆祝我公司新官网上线</span>
                                 <span>2018-08-10</span>
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a>
                                 <span>热烈庆祝我公司新官网上线</span>
                                 <span>2018-08-10</span>
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a>
                                 <span>热烈庆祝我公司新官网上线</span>
                                 <span>2018-08-10</span>
-                            </li>
+                            </a></li>
                         </ul>
-                    </a>
-                    <a class="page-home-newDy" href="page/page-consultation-content.html">
+                    </div>
+                    <div class="page-home-newDy">
                         <img src="img/home-lr-flower.png" />
-                        <p>新闻动态</p>
+                        <a class="page-home-newDy-title" href="page/page-consultation-content.html">新闻动态</a>
                         <ul class="page-home-newDy-content">
-                            <li>
+                            <li><a>
                                 <span>热烈庆祝我公司新官网上线</span>
                                 <span>2018-08-10</span>
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a>
                                 <span>热烈庆祝我公司新官网上线</span>
                                 <span>2018-08-10</span>
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a>
                                 <span>热烈庆祝我公司新官网上线</span>
                                 <span>2018-08-10</span>
-                            </li>
+                            </a></li>
                         </ul>
-                    </a>
+                    </div>
                 </div>
             </li>
-            <li id="page-shorts" class="page-item page-shorts"></li>
         </ul>
     </div>
 </div>
@@ -215,6 +214,7 @@
         </div>
         <div class="col-sm-12">
             <button type="submit" class="btn page-login-login">登录</button>
+            <a class="forget-password">忘记密码？</a>
         </div>
         <div class="col-sm-12 page-login-hint">
             <span>还没有账号？</span>
@@ -242,12 +242,22 @@
     <a class="page-return-login"><img src="img/page-login-return.png"/></a>
 </div>
 <div class="page-in-animate">
-    <a class="page-in-station-horse"><img src="img/page-in-station-horse.png" alt="" /></a>
-    <a class="page-in-sun"><img src="img/page-in-sun.png" alt="" /></a>
-    <a class="page-in-end"><img src="img/page-in-end-img.png" alt="" /></a>
+    <a class="page-in-station-horse"><img src="img/page-in-walk-horse.png" /></a>
+    <span class="horse-shadow"></span>
+    <a class="page-in-sun"><img src="img/page-in-sun-r.png" alt="" /></a>
+    <a class="page-in-yun-l"><img src="img/page-in-yun-l.png" alt="" /></a>
+    <a class="page-in-yun-r"><img src="img/page-in-yun-r.png" alt="" /></a>
+    <a class="page-in-end"><img src="img/logo.png" /></a>
     <div class="page-in-text">
+        <!--<img src="img/sun-text-animate.gif" />-->
         <p class="page-in-title"></p>
         <p class="page-in-introduce"></p>
+    </div>
+    <a class="end-page-in-animate-img"><img src="img/end-page-in-animate-img.png" /></a>
+    <a class="page-in-over-circular"></a>
+    <div class="page-in-text-bf">
+        <span id="page-in-title-bf" class="page-in-title-bf">國石國禮</span>
+        <span class="page-in-introduce-bf">一品巴林，千年中國印</span>
     </div>
 </div>
 <!--脚部-->
@@ -256,11 +266,11 @@
     <div class="footer-content">
         <div class="footer-content-info">
             <div class="footer-content-info-l">
-                <p class="footer-content-address">公司地址:内蒙古赤峰市巴林右旗巴林石</p>
-                <p class="footer-content-tel">电话:17746520099</p>
-                <p class="footer-content-email">邮箱:1256689@163.com</p>
+                <p class="footer-content-address">公司地址：内蒙古赤峰市巴林右旗巴林石</p>
+                <p class="footer-content-tel">电话：17746520099</p>
+                <p class="footer-content-email">邮箱：1256689@163.com</p>
             </div>
-           <div class="footer-content-info-r"><a class="footer-content-info-qr-code"><img src="img/qr-code.png"/></a><p>微信公众号</p></div>
+           <div class="footer-content-info-r"><a class="footer-content-info-qr-code"><img src="img/qr-code.png"/></a><p>扫一扫关注公众号</p></div>
         </div>
         <div class="footer-content-footer">
             <p>版权所有：巴林石矿业有限公司</p>
@@ -270,6 +280,7 @@
 </body>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/page.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script>
 </script>
