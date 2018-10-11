@@ -16,16 +16,16 @@
         <div class="nav-top-wrap">
             <!--login && search-->
             <div class="nav-top-fun pull-right">
-                <form class="nav-search" role="search">
+                <form class="nav-search">
                     <input type="text" class="nav-top-input-search" placeholder="搜索">
-                    <a class="nav-top-search">
+                    <div id="searchBtn" class="nav-top-search">
                         <img src="../img/searchIcon.png" alt="">
-                    </a>
+                    </div>
                 </form>
                 <div class="nav-user pull-right">
-                    <a class="nav-top-user">
+                    <div class="nav-top-user">
                         <img src="../img/userIcon.png" alt="">
-                    </a>
+                    </div>
                     <span class="caret"></span>
                     <ul class="nav-user-menu">
                         <li><a class="nav-login">
@@ -39,7 +39,7 @@
             </div>
             <!--nav-top-->
             <ul class="nav-top-menu text-center pull-right">
-                <li><a href="../index.html">
+                <li><a href="home.html">
                     <span>首页</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
@@ -76,7 +76,7 @@
 <aside>
     <div class="nav-slide pull-left">
         <div class="nav-slide-logo">
-            <a class="nav-slide-logo-img"><img src="../img/logo.png"></a>
+            <a class="nav-slide-logo-img" href="home.html"><img src="../img/logo.png"></a>
             <div class="nav-slide-name">
                 <p>BaLinShi Mining Company, Ltd.</p>
                 <p>巴林石矿业有限公司</p>
@@ -90,10 +90,7 @@
         </div>
     </div>
 </aside>
-<!--分页及内容-->
-<a class="nav-down">
-    <img src="../img/nav-down.png" />
-</a>
+<!--内容-->
 <div class="container-fluid">
     <div class="page-wrap">
         <ul class="page-list">
@@ -101,51 +98,54 @@
                 <div class="page-ns-head">
                     <div class="page-ns-head-line"><span class="page-ns-title">国石文化</span></div>
                     <!--列表页头部-->
-                    <a class="page-place"><span class="page-ns-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>&nbsp;>&nbsp;<span class="page-place-ns">国石文化</span></a>
+                    <div class="page-place"><span class="page-ns-head-home"></span><span>您现在的位置：&nbsp;</span>
+                        <a href="home.html"><span class="page-place-home">首页</span></a>&nbsp;>&nbsp;
+                        <a href="javascript:void(0)"><span class="page-place-ns">国石文化</span></a></div>
                 </div>
                 <!--列表页-->
                 <div class="page-ns-list">
                     <div class="page-ns-item page-ns-history">
-                        <a class="page-ns-diamond-flower"><img src="../img/page-ns-diamond-flower.png"></a>
+                        <a class="page-ns-diamond-flower" href="page-ns-sub.html"><div class="page-ns-diamond-flower-img"><img src="../img/page-ns-diamond-flower.png"></div>
                         <div class="page-ns-item-content">
                             <p class="page-ns-item-title">巴林历史</p>
                             <p class="page-ns-item-info">赤峰彩石，自然首推巴林石。巴林石是以高领石、地开石为主，同时含叶腊石的彩石。巴林石就文化而言，历史悠久，底蕴丰厚。</p>
-                        </div>
+                        </div></a>
                     </div>
                     <div class="page-ns-item page-ns-legend">
-                        <a class="page-ns-flower"><img src="../img/home-lr-flower.png"></a>
+                        <a class="page-ns-flower" href="page-ns-sub.html"><div class="page-ns-flower-img"><img src="../img/home-lr-flower.png"></div>
                         <div class="page-ns-item-content">
                             <p class="page-ns-item-title">巴林石传说</p>
                             <p class="page-ns-item-info">赤峰彩石，自然首推巴林石。巴林石是以高领石、地开石为主，同时含叶腊石的彩石。巴林石就文化而言，历史悠久，底蕴丰厚。</p>
-                        </div>
+                        </div></a>
                     </div>
                     <div class="page-ns-item page-ns-seal">
-                        <a class="page-ns-flower"><img src="../img/home-lr-flower.png"></a>
+                        <a class="page-ns-flower" href="page-ns-sub.html"><div class="page-ns-flower-img"><img src="../img/home-lr-flower.png"></div>
                         <div class="page-ns-item-content">
                             <p class="page-ns-item-title">巴林石印章</p>
                             <p class="page-ns-item-info">赤峰彩石，自然首推巴林石。巴林石是以高领石、地开石为主，同时含叶腊石的彩石。巴林石就文化而言，历史悠久，底蕴丰厚。</p>
-                        </div>
+                        </div></a>
                     </div>
                     <div class="page-ns-item page-ns-love">
-                        <a class="page-ns-flower"><img src="../img/home-lr-flower.png"></a>
+                        <a class="page-ns-flower" href="page-ns-sub.html"><div class="page-ns-flower-img"><img src="../img/home-lr-flower.png"></div>
                         <div class="page-ns-item-content">
                             <p class="page-ns-item-title">巴林石爱心公益</p>
                             <p class="page-ns-item-info">赤峰彩石，自然首推巴林石。巴林石是以高领石、地开石为主，同时含叶腊石的彩石。巴林石就文化而言，历史悠久，底蕴丰厚。</p>
-                        </div>
+                        </div></a>
                     </div>
                     <div class="page-ns-item page-ns-art-work">
-                        <a class="page-ns-diamond-flower"><img src="../img/page-ns-diamond-flower.png"></a>
+                        <a class="page-ns-diamond-flower" href="page-ns-sub.html"><div class="page-ns-diamond-flower-img"><img src="../img/page-ns-diamond-flower.png"></div>
                         <div class="page-ns-item-content">
                             <p class="page-ns-item-title">巴林石工艺品</p>
                             <p class="page-ns-item-info">赤峰彩石，自然首推巴林石。巴林石是以高领石、地开石为主，同时含叶腊石的彩石。巴林石就文化而言，历史悠久，底蕴丰厚。</p>
-                        </div>
+                        </div></a>
                     </div>
                 </div>
             </li>
         </ul>
     </div>
 </div>
-<div class="page-shorts-zhe"></div>
+<div class="page-login-zhe"></div>
+<!--登录-->
 <div class="page-login">
     <!--登录-->
     <div class="page-login-nav">
@@ -173,11 +173,11 @@
         </div>
         <div class="col-sm-12">
             <button type="submit" class="btn page-login-login">登录</button>
-            <a class="forget-password">忘记密码？</a>
+            <a href="javascript:void(0)" class="forget-password">忘记密码？</a>
         </div>
         <div class="col-sm-12 page-login-hint">
             <span>还没有账号？</span>
-            <a class="page-login-register">立即注册</a>
+            <a href="javascript:void(0)" class="page-login-register">立即注册</a>
         </div>
     </form>
     <!--注册界面-->
@@ -194,11 +194,11 @@
         </div>
         <div class="col-sm-12 page-register-hint">
             <span>注册代表你已同意</span>
-            <a class="page-login-register">《巴林石矿业协议》</a>
+            <a href="javascript:void(0)" class="page-login-register">《巴林石矿业协议》</a>
         </div>
     </form>
-    <a class="page-login-close"><img src="../img/page-shorts-dialog-close.png"/></a>
-    <a class="page-return-login"><img src="../img/page-login-return.png"/></a>
+    <div class="page-login-close"><img src="../img/page-shorts-dialog-close.png"/></div>
+    <div class="page-return-login"><img src="../img/page-login-return.png"/></div>
 </div>
 <!--脚部-->
 <footer>
@@ -220,8 +220,5 @@
 </body>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/page.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
-<script>
-</script>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>巴林石</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <script src="../js/rem.js"></script>
+    <script type="text/javascript" src="../js/rem.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
@@ -28,10 +28,10 @@
                     </div>
                     <span class="caret"></span>
                     <ul class="nav-user-menu">
-                        <li><a href="javascript:void(0)" class="nav-login">
+                        <li><a  href="javascript:void(0)" class="nav-login">
                             <span>登录</span>
                         </a></li>
-                        <li><a href="javascript:void(0)" class="nav-login-off">
+                        <li><a  href="javascript:void(0)" class="nav-login-off">
                             <span>注销</span>
                         </a></li>
                     </ul>
@@ -40,14 +40,14 @@
             <!--nav-top-->
             <ul class="nav-top-menu text-center pull-right">
                 <li><a href="home.html">
-                    <span>首页</span>
-                    <span class="col-line"></span>
-                    <span class="row-line"></span>
-                </a></li>
-                <li><a href="page-shorts.html">
-                    <span style="color: #e2ba60">奇石鉴赏</span>
+                    <span style="color: #e2ba60">首页</span>
                     <span class="col-line"></span>
                     <span class="row-line" style="background: #e2ba60"></span>
+                </a></li>
+                <li><a  href="page-shorts.html">
+                    <span>奇石鉴赏</span>
+                    <span class="col-line"></span>
+                    <span class="row-line"></span>
                 </a></li>
                 <li><a href="page-ns-store.html">
                     <span>国石文化</span>
@@ -84,8 +84,8 @@
         </div>
         <div class="nav-slide-title">
             <div>
-                <p>奇石</p>
-                <p>鉴赏</p>
+                <p>首</p>
+                <p>页</p>
             </div>
         </div>
     </div>
@@ -94,25 +94,91 @@
 <div class="container-fluid">
     <div class="page-wrap">
         <ul class="page-list">
-            <li class="page-item page-shorts">
-                <div  class="carousel-shorts">
-                    <!--
-                    controlsList='nofullscreen nodownload noremote footbar'
-                    去掉video原生的下载按钮和放大功能
-                    nofullscreen 去掉增加放大功能
-                    -->
-                    <video controls controlsList='nodownload noremote footbar'>
-                        <source src="../img/movie.mp4" type="video/mp4">
-                        您的浏览器不支持播放该视频
-                    </video>
+            <li class="page-item page-home">
+                <div class="page-home-top">
+                    <a class="page-home-shorts" href="../page/page-shorts.html">
+                        <img src="../img/home-shorts-img.png">
+                        <p>奇石鉴赏</p>
+                    </a>
+                    <div id="carousel-example-generic-home" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic-home" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic-home" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic-home" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <a href="javascript:void(0)"><img src="../img/page-carousel-img.png" alt="" /></a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:void(0)"><img src="../img/page-carousel-img.png" alt="" /></a>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:void(0)"><img src="../img/page-carousel-img.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic-home" role="button" data-slide="prev">
+                            <span class="carouselIcon carousel-left" aria-hidden="true"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic-home" role="button" data-slide="next">
+                            <span class="carouselIcon carousel-right" aria-hidden="true"></span>
+                        </a>
+                    </div>
                 </div>
-                <ul class="page-shorts-list">
-                    <li><a href="page-shorts-sub.html"><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>鸡血石</span><div><img src="../img/page-shorts-item1.png" alt=""></div></div></a></li>
-                    <li><a href="page-shorts-sub.html"><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>福黄石</span><div><img src="../img/page-shorts-item2.png" alt=""></div></div></a></li>
-                    <li><a href="page-shorts-sub.html"><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>冻石</span><div><img src="../img/page-shorts-item3.png" alt=""></div></div></a></li>
-                    <li><a href="page-shorts-sub.html"><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>彩石</span><div><img src="../img/page-shorts-item4.png" alt=""></div></div></a></li>
-                    <li><a href="page-shorts-sub.html"><span class="page-shorts-item-top"></span><div class="page-shorts-item-info"><span>图案石</span><div><img src="../img/page-shorts-item5.png" alt=""></div></div></a></li>
-                </ul>
+                <div class="page-home-content">
+                    <a class="page-home-shop" href="page-ns-store.html">
+                        <img class="page-home-ns-flower"  src="../img/home-lr-flower.png" />
+                        <img class="page-home-ns-img"  src="../img/home-ns-img.png" />
+                        <p>国石文化</p>
+                    </a>
+                    <a class="page-home-LR" href="page-LR.html">
+                        <img src="../img/home-lr-flower.png" />
+                        <p>领导班子</p>
+                    </a>
+                    <a class="page-home-carveMaster" href="page-carve-master.html">
+                        <img src="../img/home-carve-flower.png" />
+                        <p>名家传记</p>
+                    </a>
+                    <div class="page-home-offForum">
+                        <img src="../img/home-carve-flower.png" />
+                        <a href="javascript:void(0);" class="page-home-offForum-title">官方论坛</a>
+                        <ul class="page-home-offForum-content">
+                            <li><a href="javascript:void(0);">
+                                <span>热烈庆祝我公司新官网上线</span>
+                                <span>2018-08-10</span>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <span>热烈庆</span>
+                                <span>2018-08-10</span>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <span>热烈庆祝我公司新官网上线</span>
+                                <span>2018-08-10</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="page-home-newDy">
+                        <img src="../img/home-lr-flower.png" />
+                        <a class="page-home-newDy-title" href="page-consultation-content.html">新闻动态</a>
+                        <ul class="page-home-newDy-content">
+                            <li><a href="javascript:void(0);">
+                                <span>热烈庆祝我公司新官网上线</span>
+                                <span>2018-08-10</span>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <span>热烈</span>
+                                <span>2018-08-10</span>
+                            </a></li>
+                            <li><a href="javascript:void(0);">
+                                <span>热烈庆祝我公司新官网上线</span>
+                                <span>2018-08-10</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
@@ -150,7 +216,7 @@
         </div>
         <div class="col-sm-12 page-login-hint">
             <span>还没有账号？</span>
-            <a href="javascript:void(0)" class="page-login-register">立即注册</a>
+            <a href="javascript:void(0);" class="page-login-register">立即注册</a>
         </div>
     </form>
     <!--注册界面-->
@@ -167,14 +233,14 @@
         </div>
         <div class="col-sm-12 page-register-hint">
             <span>注册代表你已同意</span>
-            <a href="javascript:void(0)" class="page-login-register">《巴林石矿业协议》</a>
+            <a href="javascript:void(0);" class="page-login-register">《巴林石矿业协议》</a>
         </div>
     </form>
     <div class="page-login-close"><img src="../img/page-shorts-dialog-close.png"/></div>
     <div class="page-return-login"><img src="../img/page-login-return.png"/></div>
 </div>
 <!--脚部-->
-<footer>
+<footer style="display: none">
     <div class="footer-zhe"></div>
     <div class="footer-content">
         <div class="footer-content-info">
@@ -183,7 +249,7 @@
                 <p class="footer-content-tel">电话：17746520099</p>
                 <p class="footer-content-email">邮箱：1256689@163.com</p>
             </div>
-            <div class="footer-content-info-r"><a class="footer-content-info-qr-code"><img src="../img/qr-code.png"/></a><p>扫一扫关注公众号</p></div>
+            <div class="footer-content-info-r"><a href="javascript:void(0);" class="footer-content-info-qr-code"><img src="../img/qr-code.png"/></a><p>扫一扫关注公众号</p></div>
         </div>
         <div class="footer-content-footer">
             <p>版权所有：巴林石矿业有限公司</p>

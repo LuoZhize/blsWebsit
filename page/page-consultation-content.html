@@ -16,22 +16,22 @@
         <div class="nav-top-wrap">
             <!--login && search-->
             <div class="nav-top-fun pull-right">
-                <form class="nav-search" role="search">
+                <form class="nav-search">
                     <input type="text" class="nav-top-input-search" placeholder="搜索">
-                    <a class="nav-top-search">
+                    <div id="searchBtn" class="nav-top-search">
                         <img src="../img/searchIcon.png" alt="">
-                    </a>
+                    </div>
                 </form>
                 <div class="nav-user pull-right">
-                    <a class="nav-top-user">
+                    <div class="nav-top-user">
                         <img src="../img/userIcon.png" alt="">
-                    </a>
+                    </div>
                     <span class="caret"></span>
                     <ul class="nav-user-menu">
-                        <li><a class="nav-login">
+                        <li><a href="javascript:void(0);" class="nav-login">
                             <span>登录</span>
                         </a></li>
-                        <li><a class="nav-login-off">
+                        <li><a href="javascript:void(0);" class="nav-login-off">
                             <span>注销</span>
                         </a></li>
                     </ul>
@@ -39,7 +39,7 @@
             </div>
             <!--nav-top-->
             <ul class="nav-top-menu text-center pull-right">
-                <li><a href="../index.html">
+                <li><a href="home.html">
                     <span>首页</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
@@ -76,7 +76,7 @@
 <aside>
     <div class="nav-slide pull-left">
         <div class="nav-slide-logo">
-            <a class="nav-slide-logo-img"><img src="../img/logo.png"></a>
+            <a class="nav-slide-logo-img" href="home.html"><img src="../img/logo.png"></a>
             <div class="nav-slide-name">
                 <p>BaLinShi Mining Company, Ltd.</p>
                 <p>巴林石矿业有限公司</p>
@@ -90,20 +90,20 @@
         </div>
     </div>
 </aside>
-<!--分页及内容-->
-<a class="nav-down">
-    <img src="../img/nav-down.png" />
-</a>
+<!--内容-->
 <div class="container-fluid">
     <div class="page-wrap">
         <ul class="page-list">
             <li class="page-item page-consultation-content">
                 <div class="page-consultation-head">
-                    <div class="page-consultation-head-line"><span class="page-consultation-title">咨讯</span></div>
-                    <a class="page-place"><span class="page-consultation-head-home"></span><span>您现在的位置：&nbsp;</span><span class="page-place-home">首页</span>&nbsp;>&nbsp;<span class="page-place-consultation">资讯</span></a>
+                    <div class="page-consultation-head-line"><span class="page-consultation-title">咨讯中心</span></div>
+                    <div class="page-place"><span class="page-consultation-head-home"></span><span>您现在的位置：&nbsp;</span>
+                        <a href="home.html"><span class="page-place-home">首页</span></a>&nbsp;>&nbsp;
+                        <a href="javascript:void(0)"><span class="page-place-consultation">资讯</span></a></div>
                 </div>
                 <!--咨询介绍页-->
                 <div class="page-consultation-notice">
+                    <a href="../page/page-consultation-sub.html">
                     <img class="page-consultation-notice-img" src="../img/page-consulation-top.png">
                     <div class="page-consultation-notice-info">
                         <p class="page-consultation-notice-title">公司重要公告</p>
@@ -113,66 +113,55 @@
                             子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
                             子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、
                             子公司巴林石质地温润巴林石（集团）有限责任公司是以资源开发为主，多产业组合的集团化企业，公司下辖巴林石矿、巴林奇石馆和五个分、子公司巴林石质地温润</p>
-                    </div>
+                    </div></a>
                 </div>
                 <ul class="page-consultation-list">
-                    <li class="page-consultation-item">
+                    <li class="page-consultation-item"><a href="../page/page-consultation-sub.html">
                         <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
                         <p class="page-consultation-item-time">2018-08-18</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
-                    <li class="page-consultation-item">
+                        <div class="page-consultation-item-img">
+                            <span><img src="../img/page-consultation-item-img.png"></span>
+                        </div>
+                    </a></li>
+                    <li class="page-consultation-item"><a href="../page/page-consultation-sub.html">
                         <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
                         <p class="page-consultation-item-time">2018-08-18</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
-                    <li class="page-consultation-item">
+                        <div class="page-consultation-item-img">
+                            <span><img src="../img/page-consultation-item-img.png"></span>
+                        </div>
+                    </a></li>
+                    <li class="page-consultation-item"><a href="../page/page-consultation-sub.html">
                         <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
                         <p class="page-consultation-item-time">2018-08-18</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
-                    <li class="page-consultation-item">
+                        <div class="page-consultation-item-img">
+                            <span><img src="../img/page-consultation-item-img.png"></span>
+                        </div>
+                    </a></li>
+                    <li class="page-consultation-item"><a href="../page/page-consultation-sub.html">
                         <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
                         <p class="page-consultation-item-time">2018-08-18</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-08-19</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-08-19</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-08-19</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-08-19</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-09-19</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
-                    <li class="page-consultation-item">
-                        <p class="page-consultation-item-title">”弘扬经典，铸造辉煌-20180·中国当代工艺美术双年展“开幕式</p>
-                        <p class="page-consultation-item-time">2018-08-19</p>
-                        <a class="page-consultation-item-img"><img src="../img/page-consultation-item-img.png"></a>
-                    </li>
+                        <div class="page-consultation-item-img">
+                            <span><img src="../img/page-consultation-item-img.png"></span>
+                        </div>
+                    </a></li>
                 </ul>
-                <div class="consultation-page-list"></div>
+                <div class="pagination-style" aria-label="...">
+                    <ul class="pagination pagination-lg">
+                        <li><a href="javascript:void(0)"></a></li>
+                        <li><a href="javascript:void(0)">1</a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li><a href="javascript:void(0)"></a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </div>
 </div>
-<div class="page-shorts-zhe"></div>
+<div class="page-login-zhe"></div>
+<!--登录-->
 <div class="page-login">
     <!--登录-->
     <div class="page-login-nav">
@@ -200,10 +189,11 @@
         </div>
         <div class="col-sm-12">
             <button type="submit" class="btn page-login-login">登录</button>
+            <a href="javascript:void(0)" class="forget-password">忘记密码？</a>
         </div>
         <div class="col-sm-12 page-login-hint">
             <span>还没有账号？</span>
-            <a class="page-login-register">立即注册</a>
+            <a href="javascript:void(0)" class="page-login-register">立即注册</a>
         </div>
     </form>
     <!--注册界面-->
@@ -220,11 +210,11 @@
         </div>
         <div class="col-sm-12 page-register-hint">
             <span>注册代表你已同意</span>
-            <a class="page-login-register">《巴林石矿业协议》</a>
+            <a href="javascript:void(0)" class="page-login-register">《巴林石矿业协议》</a>
         </div>
     </form>
-    <a class="page-login-close"><img src="../img/page-shorts-dialog-close.png"/></a>
-    <a class="page-return-login"><img src="../img/page-login-return.png"/></a>
+    <div class="page-login-close"><img src="../img/page-shorts-dialog-close.png"/></div>
+    <div class="page-return-login"><img src="../img/page-login-return.png"/></div>
 </div>
 <!--脚部-->
 <footer>
@@ -246,8 +236,5 @@
 </body>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/page.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
-<script>
-</script>
 </html>

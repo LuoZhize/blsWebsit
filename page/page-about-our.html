@@ -16,22 +16,22 @@
         <div class="nav-top-wrap">
             <!--login && search-->
             <div class="nav-top-fun pull-right">
-                <form class="nav-search" role="search">
+                <form class="nav-search">
                     <input type="text" class="nav-top-input-search" placeholder="搜索">
-                    <a class="nav-top-search">
+                    <div id="searchBtn" class="nav-top-search">
                         <img src="../img/searchIcon.png" alt="">
-                    </a>
+                    </div>
                 </form>
                 <div class="nav-user pull-right">
-                    <a class="nav-top-user">
+                    <div class="nav-top-user">
                         <img src="../img/userIcon.png" alt="">
-                    </a>
+                    </div>
                     <span class="caret"></span>
                     <ul class="nav-user-menu">
-                        <li><a class="nav-login">
+                        <li><a href="javascript:void(0)" class="nav-login">
                             <span>登录</span>
                         </a></li>
-                        <li><a class="nav-login-off">
+                        <li><a href="javascript:void(0)" class="nav-login-off">
                             <span>注销</span>
                         </a></li>
                     </ul>
@@ -39,7 +39,7 @@
             </div>
             <!--nav-top-->
             <ul class="nav-top-menu text-center pull-right">
-                <li><a href="../index.html">
+                <li><a href="home.html">
                     <span>首页</span>
                     <span class="col-line"></span>
                     <span class="row-line"></span>
@@ -76,7 +76,7 @@
 <aside>
     <div class="nav-slide pull-left">
         <div class="nav-slide-logo">
-            <a class="nav-slide-logo-img"><img src="../img/logo.png"></a>
+            <a class="nav-slide-logo-img" href="home.html"><img src="../img/logo.png"></a>
             <div class="nav-slide-name">
                 <p>BaLinShi Mining Company, Ltd.</p>
                 <p>巴林石矿业有限公司</p>
@@ -90,16 +90,13 @@
         </div>
     </div>
 </aside>
-<!--分页及内容-->
-<a class="nav-down">
-    <img src="../img/nav-down.png" />
-</a>
+<!--内容-->
 <div class="container-fluid">
     <div class="page-wrap">
         <ul class="page-list">
             <li class="page-item page-about-our">
-                <div>
-                    <a class="page-about-our-top"><img src="../img/page-about-our-top.png"></a>
+                <div class="page-about-our-top">
+                    <img src="../img/page-about-our-top.png">
                 </div>
                 <div class="page-about-our-wrap">
                     <div class="page-about-our-info">
@@ -109,7 +106,10 @@
                         </div>
                         <div class="page-about-our-title">
                             <p class="page-about-our-title-all">公司介绍</p>
-                            <p>中国安华·巴林石矿业有限公司位于内蒙古赤峰市巴林右旗大板镇查干沐沦街中段，交通便利。公司始建于1973年，是以非金属资源开发为</p>
+                            <p>中国安华·巴林石矿业有限公司位于内蒙古赤峰市巴林右旗大板镇查干沐沦街中段，交通便利。公司始建于1973年，是以非金属资源开
+                                发为主，系产业组合的公司企业，下设巴林石矿业、天宝巴林石有限责任公司以及巴林石展览馆，现有职工近300人。巴林石矿业有限
+                                公司的发展历程，可以追溯到44年前。1973年初，地方国营矿山企业正式成立。
+                            </p>
                         </div>
                         <ul class="page-about-our-course-list">
                             <li class="page-about-our-course-text">
@@ -119,13 +119,18 @@
                             <li class="page-about-our-course-item">
                                 <p>1995年，其所属巴林奇石馆也落成典礼。</p></li>
                             <li class="page-about-our-course-item">
-                                <p>1997年，巴林石矿业与美雕一厂、美雕二厂合并，成立了巴林石工艺美术公司。</p></li>
+                                <p>1997年，通过整改企业、整合资源，成立了巴林石矿业有限公司。</p></li>
                             <li class="page-about-our-course-item">
-                                <p>1998年，其所属巴林奇石馆也落成典礼。</p></li>
+                                <p>1998年，巴林石矿业有限公司转为股份合作制企业，也掀开了企业发展的新篇章。</p></li>
                             <li class="page-about-our-course-item">
-                                <p>43年来，巴林石矿业有限公司经历了计划经济时代向市场经济时代的转型过度，见证了巴林石从草原无名之石到国石之石、四大名石的华丽蜕变。</p></li>
+                                <p>43年来，巴林石矿业有限公司经历了计划经济时代向市场经济时代的转型过度，见证了巴林石从草原无名之石到国石之石、
+                                    四大名石的华丽蜕变。
+                                </p></li>
                             <li class="page-about-our-course-item">
-                                <p>2017年，随着安华集团的强势入股，巴林石矿业有限公司迎来了新的春天，在经历了一系列重组整改措施之后巴林石矿业有限公司将重新出发，发挥更大的文化能量，承担更多的社会责任。</p></li>
+                                <p>2017年，随着安华集团的强势入股，巴林石矿业有限公司迎来了新的春天，在经历了一系列重组整改措施之后巴林石矿业有
+                                    限公司将重新出发，发挥更大的文化能量，承担更多的社会责任。今天，中国安华·巴林石矿业有限公司正在带领全体员工向
+                                    更高的目标迈进！
+                                </p></li>
                         </ul>
                     </div>
                     <div class="page-about-our-connection">
@@ -155,7 +160,8 @@
         </ul>
     </div>
 </div>
-<div class="page-shorts-zhe"></div>
+<div class="page-login-zhe"></div>
+<!--登录-->
 <div class="page-login">
     <!--登录-->
     <div class="page-login-nav">
@@ -187,7 +193,7 @@
         </div>
         <div class="col-sm-12 page-login-hint">
             <span>还没有账号？</span>
-            <a class="page-login-register">立即注册</a>
+            <a href="javascript:void(0);" class="page-login-register">立即注册</a>
         </div>
     </form>
     <!--注册界面-->
@@ -204,11 +210,11 @@
         </div>
         <div class="col-sm-12 page-register-hint">
             <span>注册代表你已同意</span>
-            <a class="page-login-register">《巴林石矿业协议》</a>
+            <a href="javascript:void(0);" class="page-login-register">《巴林石矿业协议》</a>
         </div>
     </form>
-    <a class="page-login-close"><img src="../img/page-shorts-dialog-close.png"/></a>
-    <a class="page-return-login"><img src="../img/page-login-return.png"/></a>
+    <div class="page-login-close"><img src="../img/page-shorts-dialog-close.png"/></div>
+    <div class="page-return-login"><img src="../img/page-login-return.png"/></div>
 </div>
 <!--脚部-->
 <footer>
@@ -231,8 +237,20 @@
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=PbG5AHVNk2uw9BtVZ5sUvpo2dKAtqeIh"></script>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/page.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
 <script>
+    $(document).ready(function () {
+        let map = new BMap.Map("map"),//百度地图
+            point = new BMap.Point(118.67047, 43.540184),//中心点经纬
+            iconSize = new BMap.Size(30, 35),//图标可视区域的大小
+            iconPath = "../img/mapBiaoZhu.png",//图标路径
+            myIcon = new BMap.Icon(iconPath, iconSize, {
+                anchor: new BMap.Size(10, 35),// 指定定位位置
+            }),
+            marker = new BMap.Marker(point, {icon: myIcon});//创建标注对象
+        map.centerAndZoom(point, 12);//初始化地图①设置地图的中心点，②缩放范围3-19
+        map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+        map.addOverlay(marker);//添加到地图
+    })
 </script>
 </html>
